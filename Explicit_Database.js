@@ -11,8 +11,9 @@ function Explicit_Database(){
     this.num_functions = 9;
     this.d_option_cons;
 
-    this.p_cons = initialize_p_cons(9);
-    this.f_cons = initialize_f_cons(9);
+    this.p_cons = initialize_p_cons(this.num_functions);
+    this.f_cons = initialize_f_cons(this.num_functions);
+    this.d_option_cons = initialize_d_option_cons();
 
     function initialize_p_cons(num){
 
@@ -62,6 +63,13 @@ function Explicit_Database(){
         f_cons[8]= new Functional_Constraint(8,25,30,new Array(false,true,true),7);
 
         return f_cons;
+    }
+
+    function initialize_d_option_cons(){
+
+        var array = [true,true,true];
+
+        return array;
     }
 
     this.fill_functions = function(input_File){
