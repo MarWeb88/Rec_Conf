@@ -1,0 +1,206 @@
+.container_left {
+    position:absolute;
+    left: 50px;
+    top:50px;
+    width: 580px;
+    height: 600px;
+    border-style: solid;
+    border-width: 1px;
+}
+.container_left_in {
+    position:absolute;
+    left: 0px;
+    top:0px;
+    width: 580px;
+    height: 460px;
+}
+
+.container_right {
+    position:absolute;
+    right: 50px;
+    top:50px;
+    width: 560px;
+    height: 600px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.option_input {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 250px;
+    border-style: solid;
+    border-width: 0.5px;
+    overflow: scroll;
+}
+
+.option_output {
+    position: absolute;
+    left:0px;
+    top:250px;
+    width: 100%;
+    height: 350px;
+    border-style: solid;
+    border-width: 0.5px;
+    overflow: hidden;
+}
+
+.option_output_full {
+    overflow: scroll;
+}
+
+.option_row0 {
+    position:absolute;
+    left: 0px;
+    width: 132.5px;
+    height:100%;
+    border-style: none;
+    border-width: 0.8px;
+}
+.option_row1 {
+    position:absolute;
+    left: 132.5px;
+    width: 132.5px;
+    height:100%;
+    border-style: none;
+    border-width: 0.8px;
+}
+.option_row2 {
+    position:absolute;
+    left: 265px;
+    width: 132.5px;
+    height:100%;
+    border-style: none;
+    border-width: 0.8px;
+}
+.option_row3 {
+    position:absolute;
+    left: 397.5px;
+    width: 132.5px;
+    height:100%;
+    border-style: none;
+    border-width: 0.8px;
+}
+
+.option_list_element {
+    position:relative;
+    width: 132.5px;
+    height:132.5px;
+    border-style: solid;
+    border-width: 0.8px;
+}
+
+.level1 {
+    background-color: brown;
+    position:absolute;
+    left:10px;
+    top:100px;
+    height:300px;
+    width:600px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transform: rotateY(45deg) rotateZ(-2deg) rotateX(-2.5deg);
+    transform: rotateY(45deg) rotateZ(-2deg) rotateX(-2.5deg);
+    z-index: 4;
+}
+
+.backside {
+    background-color: brown;
+    position:absolute;
+    left:-20px;
+    top:98px;
+    height:300px;
+    width:600px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transform: rotateY(45deg) rotateZ(-2deg) rotateX(-2.5deg);
+    transform: rotateY(45deg) rotateZ(-2deg) rotateX(-2.5deg);
+}
+
+.left_side {
+    background-color: brown;
+    position:absolute;
+    left: 59px;
+    top: 110px;
+    height: 300px;
+    width: 45px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transform: rotateY(-50deg) rotateZ(2.8deg) rotateX(-2.3deg);
+    transform: rotateY(-50deg) rotateZ(2.8deg) rotateX(-2.3deg);
+    z-index: 3;
+}
+
+.right_side {
+    background-color: brown;
+    position:absolute;
+    left: 485px;
+    top: 87px;
+    height: 300px;
+    width: 45px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-transform: rotateY(-50deg) rotateZ(2.8deg) rotateX(-2.3deg);
+    transform: rotateY(-50deg) rotateZ(2.8deg) rotateX(-2.3deg);
+    z-index: 1;
+}
+
+.top {
+    background-color: brown;
+    position: absolute;
+    left: 0px;
+    top: 64px;
+    height: 70px;
+    width: 600px;
+    border-style: solid;
+    border-width: 1px;
+    transform: rotateY(47deg) rotateZ(-2deg) rotateX(87deg);
+    z-index: 3;
+}
+
+.information_box {
+    position: absolute;
+    left: 0px;
+    top: 460px;
+    height: 140px;
+    width: 100%;
+}
+
+.level2 {
+    background-color: red;
+    position:relative;
+    height:150px;
+    width:100px;
+}
+
+.model_container {
+    position:relative;
+    width:100%;
+    height: 100%;
+}
+
+.icon {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+
+.option_functions {
+    position: absolute;
+    left: 240px;
+    width: 270px;
+}
+
+.option_purpose {
+    position: absolute;
+    left: 5px;
+    width: 230px;
+}
+
+.start_button {
+    position: absolute;
+    top: 200px;
+}

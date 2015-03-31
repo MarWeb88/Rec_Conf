@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="Main.css" type="text/css">
+
+    <script type="text/javascript" src="Main.js"></script>
+    <script type="text/javascript" src="Model.js"></script>
+    <script type="text/javascript" src="Input_Reader.js"></script>
+    <script type="text/javascript" src="Output_Writer.js"></script>
+    <script type="text/javascript" src="Input_File.js"></script>
+    <script type="text/javascript" src="Explicit_Database.js"></script>
+    <script type="text/javascript" src="Physical_Constraint.js"></script>
+    <script type="text/javascript" src="Functional_Constraint.js"></script>
+    <script type="text/javascript" src="Model_Calculator.js"></script>
+    <script type="text/javascript" src="Probability_Calculator.js"></script>
+    <script type="text/javascript" src="Implicit_Database.js"></script>
+    <script type="text/javascript" src="Object_Visualizer.js"></script>
+    <script type="text/javascript" src="Element.js"></script>
+    <script type="text/javascript" src="Weighting.js"></script>
+    <script type="text/javascript" src="Build_List.js"></script>
+
+    <!--
+    <script type="text/javascript" src="Data_Object_Initializer.js"></script>
+    <script type="text/javascript" src="Data_Object_Structure.js"></script>
+    <script type="text/javascript" src="Data_Object.js"></script>
+    -->
+
+
+</head>
+<body onload="main()">
+<div id="container_left" class="container_left">
+    <div id="container_left_in" class="container_left_in">
+
+
+    </div>
+    <div class="information_box">
+        <p><b>Dimensions:</b></p>
+        <div id="information_box_out"></div>
+    </div>
+
+</div>
+
+<div class="container_right">
+
+    <div class="option_input">
+        <b>Dimensions:</b>
+
+        <p>Height:<input id="height_input" name="height_input" type="text" size="10" maxlength="10">
+        Width:<input id="width_input" name="width_input" type="text" size="10" maxlength="10">
+        Depth:<input id="depth_input" name="depth_input" type="text" size="10" maxlength="10"></p>
+
+        <div class="option_purpose">
+        <b>Purpose:</b>
+        <p>
+            <select onchange="input_reader.translate_purp_func()" id="purpose_selection" name="purpose_selection" size="5">
+                <option selected>Wardrobe</option>
+                <option>Kitchen cupboard</option>
+                <option>Book shelf</option>
+                <option>File cabinet</option>
+                <option>Broom cabinet</option>
+                <option>China cabinet</option>
+                <option>Tool cabinet</option>
+                <option>Bedroom closet</option>
+                <option>Bathroom cabinet</option>
+                <option>Apothecary cabinet</option>
+                <option>Dresser</option>
+                <option>Shoe cabinet</option>
+                <option>Display cabinet</option>
+                <option>Office cabinet</option>
+                <option>Bedside cabinet</option>
+            </select>
+        </p>
+        </div>
+
+        <div class="option_functions">
+        <b>Functions:</b>
+        <p>
+        <input type="checkbox" size="25" name="colors" id="function0"> CD/DVD          <input type="checkbox" size="25" name="colors" id="function1"> Books      <input type="checkbox" name="colors" size="25" id="function2"> Jackets,Shirts <input type="checkbox" name="colors" size="25" id="function3"> Flexible
+
+        <input type="checkbox" size="25" name="colors" id="function4"> T-shirts,pants  <input type="checkbox" size="25" name="colors" id="function5"> Dishes     <input type="checkbox" size="25" name="colors" id="function6"> Food,Stuff     <input type="checkbox" size="25" name="colors" id="function7"> Shoes
+
+        <input size="25" type="checkbox" name="colors" id="function8"> Underwear
+        </p>
+        </div>
+
+        <div class="start_button">
+        <input type="button" name="start_button" value="Start"
+        onclick="start()">
+        </div>
+
+    </div>
+
+    <div id="option_output" class="option_output">
+
+        <div id="option_row0" class="option_row0" >
+
+        </div>
+        <div id="option_row1" class="option_row1" >
+
+        </div>
+        <div id="option_row2" class="option_row2" >
+
+        </div>
+        <div id="option_row3" class="option_row3" >
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
