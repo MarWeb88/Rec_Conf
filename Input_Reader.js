@@ -83,41 +83,40 @@ function Input_Reader(){
     function get_func_from_purp(name){
 
         switch(name){
-            case "Wardrobe": fill_options([2,4,8]); return;
+            case "Wardrobe": fill_options([2,4,8]); change_d_option_cons([true,true,true]); return;
 
-            case "Book shelf": fill_options([1]); return;
+            case "Book shelf": fill_options([1]); change_d_option_cons([true,false,false]); return;
 
-            case "Kitchen cupboard": fill_options([5,6]); return;
+            case "Kitchen cupboard": fill_options([5,6]); change_d_option_cons([true,true,true]); return;
 
-            case "File cabinet": fill_options([1]); return;
+            case "File cabinet": fill_options([1]); change_d_option_cons([true,true,true]); return;
 
-            case "Broom cabinet": fill_options([6]); return;
+            case "Broom cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
 
-            case "China cabinet": fill_options([5]); return;
+            case "China cabinet": fill_options([5]); change_d_option_cons([true,true,true]); return;
 
-            case "Tool cabinet": fill_options([6]); return;
+            case "Tool cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
 
-            case "Bedroom closet": fill_options([2,4,8]); return;
+            case "Bedroom closet": fill_options([2,4,8]); change_d_option_cons([true,true,true]); return;
 
-            case "Bathroom cabinet": fill_options([6]); return;
+            case "Bathroom cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
 
-            case "Apotecary cabinet": fill_options([6]); return;
+            case "Apotecary cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
 
-            case "Dresser": fill_options([6]); return;
+            case "Dresser": fill_options([6]); change_d_option_cons([true,true,true]); return;
 
-            case "Shoe cabinet": fill_options([6]); return;
+            case "Shoe cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
 
-            case "Display cabinet": fill_options([6]); return;
+            case "Display cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
 
-            case "Office cabinet": fill_options([6]); return;
+            case "Office cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
 
-            case "Bedside cabinet": fill_options([6]); return
+            case "Bedside cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return
         }
         alert("Value could not be found!");
     }
 
     function fill_options(values){
-
 
         for(var i=0; i<expl_db.num_functions; i++){
             if(is_in_Array(i,values)){
@@ -126,6 +125,11 @@ function Input_Reader(){
                 document.getElementById("function"+i).checked=false;
             }
         }
+    }
+
+    function change_d_option_cons(values){
+
+        expl_db.d_option_cons = values;
     }
 
     function is_in_Array(val,array){

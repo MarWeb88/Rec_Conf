@@ -89,7 +89,7 @@ function Output_Writer(){
                 element.style.height = el_height+"px";
                 element.style.backgroundColor = "white";
                 element.style.fontSize="9px";
-                element.innerHTML = get_Function_Name(option.rows[i][j].type);
+                element.innerHTML = get_Function_Name(option.rows[i][j].type)+get_Option_Name(option.rows[i][j].d_options);
                 element.style.textAlign="center";
 
 
@@ -137,6 +137,17 @@ function Output_Writer(){
             case 7:return "Shoes"
 
             case 8:return "Underwear"
+        }
+    }
+
+    function get_Option_Name(val){
+
+        switch(val){
+            case "0": return "(nd)"
+
+            case "1": return "(d)"
+
+            case "2": return "(dr)"
         }
     }
 }

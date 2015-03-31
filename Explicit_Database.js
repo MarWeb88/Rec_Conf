@@ -43,6 +43,7 @@ function Explicit_Database(){
     function initialize_f_cons(num){
 
         var f_cons = new Array(num);
+
         //CD,DVD
         f_cons[0]= new Functional_Constraint(0,20,30,new Array(true,false,true),1);
         //books,documents
@@ -67,7 +68,7 @@ function Explicit_Database(){
 
     function initialize_d_option_cons(){
 
-        var array = [true,true,true];
+        var array = new Array(true,true,true);
 
         return array;
     }
