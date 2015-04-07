@@ -92,6 +92,12 @@
     border-width: 0.8px;
 }
 
+.option_list_element_invis {
+    position:relative;
+    width: 132.5px;
+    height:132.5px;
+}
+
 .level1 {
     background-color: brown;
     position:absolute;
@@ -166,6 +172,24 @@
     top: 460px;
     height: 140px;
     width: 100%;
+    border-top: solid;
+    border-width: 1px;
+}
+
+.information_box_out {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 70%;
+}
+
+.information_box_icon_frame {
+    position: absolute;
+    left: 70%;
+    top: 0px;
+    height: 100%;
+    width: 30%;
 }
 
 .level2 {
@@ -188,10 +212,18 @@
     background-color: brown;
 }
 
-.option_functions {
+.option_functions_invis {
     position: absolute;
     left: 240px;
     width: 270px;
+    display: none;
+}
+
+.option_functions_vis {
+    position: absolute;
+    left: 240px;
+    width: 270px;
+    display: inline;
 }
 
 .option_purpose {
@@ -203,4 +235,10 @@
 .start_button {
     position: absolute;
     top: 200px;
+}
+
+.implicid_data_out {
+    position: absolute;
+    left: 240px;
+    width: 270px;
 }

@@ -23,16 +23,36 @@
     <script type="text/javascript" src="Weighting.js"></script>
     <script type="text/javascript" src="Build_List.js"></script>
 
+    <script src="js/three.js"></script>
+    <script src="examples/js/Detector.js"></script>
+    <script src="examples/js/renderers/CanvasRenderer.js"></script>
+    <script src="examples/js/renderers/Projector.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/threex.domevent.js"></script>
+
+    <script src="Model_Reducer.js"></script>
+    <script src="Bucket.js"></script>
+    <script src="Pointer_Element.js"></script>
+
+
+
 </head>
 <body onload="main()">
 <div id="container_left" class="container_left">
     <div id="container_left_in" class="container_left_in">
+        <div id="WebGLCanvas">
 
+        </div>
 
     </div>
     <div class="information_box">
-        <p><b>Dimensions:</b></p>
-        <div id="information_box_out"></div>
+        <!--<p><b>Dimensions:</b></p>-->
+        <div class="information_box_out" id="information_box_out"></div>
+        <div class="information_box_icon_frame" id="information_box_icon_frame">
+            <div class="information_box_icon" id="information_box_icon">
+
+            </div>
+        </div>
     </div>
 
 </div>
@@ -52,7 +72,7 @@
             <select onchange="input_reader.translate_purp_func()" id="purpose_selection" name="purpose_selection" size="5">
                 <option selected>Wardrobe</option>
                 <option>Kitchen cupboard</option>
-                <option>Book shelf</option>
+                <option>CD/Book shelf</option>
                 <option>File cabinet</option>
                 <option>Broom cabinet</option>
                 <option>China cabinet</option>
@@ -65,24 +85,28 @@
                 <option>Display cabinet</option>
                 <option>Office cabinet</option>
                 <option>Bedside cabinet</option>
+                <!--<option>Flexible Selection</option>-->
             </select>
         </p>
         </div>
 
-        <div class="option_functions">
+        <div id="option_functions" class="option_functions_invis">
         <b>Functions:</b>
         <p>
-        <input type="checkbox" size="25" name="colors" id="function0"> CD/DVD          <input type="checkbox" size="25" name="colors" id="function1"> Books      <input type="checkbox" name="colors" size="25" id="function2"> Jackets,Shirts <input type="checkbox" name="colors" size="25" id="function3"> Flexible
+        <input type="checkbox" size="25" name="colors" id="function0"> CD/DVD          <input type="checkbox" size="25" name="colors" id="function1"> Books      <input type="checkbox" name="colors" size="25" id="function2" checked> Jackets,Shirts <input type="checkbox" name="colors" size="25" id="function3"> Food
 
-        <input type="checkbox" size="25" name="colors" id="function4"> T-shirts,pants  <input type="checkbox" size="25" name="colors" id="function5"> Dishes     <input type="checkbox" size="25" name="colors" id="function6"> Food,Stuff     <input type="checkbox" size="25" name="colors" id="function7"> Shoes
+        <input type="checkbox" size="25" name="colors" id="function4" checked> T-shirts,pants  <input type="checkbox" size="25" name="colors" id="function5"> Dishes     <input type="checkbox" size="25" name="colors" id="function6"> Stuff     <input type="checkbox" size="25" name="colors" id="function7"> Shoes
 
-        <input size="25" type="checkbox" name="colors" id="function8"> Underwear
+        <input size="25" type="checkbox" name="colors" id="function8" checked> Underwear
         </p>
         </div>
+        <div id="implicid_data_out" class="implicid_data_out"></div>
 
         <div class="start_button">
         <input type="button" name="start_button" value="Start"
         onclick="start()">
+        <input type="button" name="reset_button" value="Reset"
+        onclick="impl_db.reset()">
         </div>
 
     </div>

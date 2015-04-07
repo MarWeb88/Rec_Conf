@@ -9,8 +9,6 @@ function Model_Reducer(){
 
     this.reduce_options = function(optionlist){
 
-        alert("start: "+optionlist);
-
         //check if there is an Interaction action
             //if, yes then fix other function weights, set Interaction = true
 
@@ -35,7 +33,6 @@ function Model_Reducer(){
         //Real Program
         var optionlist_reduced = new Array();
         var optionlist_reduced_counter = 0;
-        alert("1");
 
         if(impl_db.interaction_check == true){
             //case if there is a function selected in the 3D interface
@@ -107,6 +104,7 @@ function Model_Reducer(){
 
             }else{
                 alert("3-implicit data empty");
+                optionlist_reduced = optionlist;
             }
 
             if(optionlist_reduced.length > max_options){
@@ -124,6 +122,7 @@ function Model_Reducer(){
                     row_ar = new Array(1);
                     row_ar[0]= impl_db.row_num;
                 }
+
                 buckets = new Array(row_ar.length);
 
                 //create buckets
@@ -133,20 +132,24 @@ function Model_Reducer(){
 
                 //distribute elements in buckets
                 for(var i=0; i<optionlist_reduced.length; i++){
-                    buckets[optionlist_reduced[i].row_num-row_ar[0]].add(optionlist_reduced[i]);
+                    buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
                 }
 
                 //ensure that weightings are as different as possible
                 var cur_bucket = 0;
                 var optionlist_reduced_final_counter = 0;
-                var optionlist_reduced_final = optionlist_reduced;
+                //var optionlist_reduced_final = optionlist_reduced;
+                var optionlist_reduced_final = new Array();
 
+                //alert("4");
                 while(optionlist_reduced_final.length < max_options){
 
                     var ret_el = buckets[cur_bucket].select_Element();
 
                     if(ret_el != null){
                         optionlist_reduced_final[optionlist_reduced_final_counter] = ret_el;
+                        //change ID
+                        optionlist_reduced_final[optionlist_reduced_final_counter].ID = optionlist_reduced_final_counter;
                         optionlist_reduced_final_counter++;
                     }
 
@@ -154,7 +157,9 @@ function Model_Reducer(){
                     if(cur_bucket>buckets.length-1){
                         cur_bucket=0;
                     }
+
                 }
+                //alert("5");
                 optionlist_reduced = optionlist_reduced_final;
             }
         }

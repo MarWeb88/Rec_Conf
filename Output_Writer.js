@@ -6,6 +6,21 @@ function Output_Writer(){
 
     var number_elementrows = 4;
 
+    this.generate_info_icon = function(option){
+
+        var element = document.getElementById("information_box_icon");
+        element.className = "option_list_element";
+        element.style.height = "132.5px";
+        element.style.width = "132.5px";
+        document.getElementById("information_box_icon_frame").style.display="inline";
+
+        generate_icon(element,option);
+    }
+
+    this.delete_info_icon = function(){
+        document.getElementById("information_box_icon_frame").style.display="none";
+    }
+
     this.writeOptionlist = function(option_list){
 
         //alert("optionlist start");
@@ -27,7 +42,7 @@ function Output_Writer(){
 
             //list_element.innerHTML = option_list[i].description;
             //list_element.setAttribute('onclick','obj_visualizer.call_vis('+option_list[i].ID+')');
-            list_element.setAttribute('onclick','alert("Selected")');
+            list_element.setAttribute('onclick','obj_visualizer.call_vis('+option_list[i].ID+')');
             output_container.appendChild(list_element);
         }
 

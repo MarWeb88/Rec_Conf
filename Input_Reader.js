@@ -52,9 +52,7 @@ function Input_Reader(){
             alert("Depth is not a valid value. Must be a number between "+min_depth+" and "+max_depth);
             return false;
         }
-
         //read input functions
-
         var functions = new Array(9);
 
         for(var i=0; i<functions.length; i++){
@@ -66,52 +64,66 @@ function Input_Reader(){
                 functions[i]=false;
             }
         }
-
         var obj = new Input_File(height,width,depth,functions);
 
         return obj;
     }
 
     this.translate_purp_func = function(){
-
         var purpose_el = document.getElementById("purpose_selection");
-
         get_func_from_purp(purpose_el.value);
-
     }
 
     function get_func_from_purp(name){
 
         switch(name){
-            case "Wardrobe": fill_options([2,4,8]); change_d_option_cons([true,true,true]); return;
+            case "Wardrobe": fill_options([2,4,8]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Book shelf": fill_options([1]); change_d_option_cons([true,false,false]); return;
+            case "CD/Book shelf": fill_options([0,1]); display_functions("option_functions_invis");
+                change_d_option_cons([true,false,false]); return;
 
-            case "Kitchen cupboard": fill_options([5,6]); change_d_option_cons([true,true,true]); return;
+            case "Kitchen cupboard": fill_options([5,6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "File cabinet": fill_options([1]); change_d_option_cons([true,true,true]); return;
+            case "File cabinet": fill_options([1]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Broom cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
+            case "Broom cabinet": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "China cabinet": fill_options([5]); change_d_option_cons([true,true,true]); return;
+            case "China cabinet": fill_options([5]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Tool cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
+            case "Tool cabinet": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Bedroom closet": fill_options([2,4,8]); change_d_option_cons([true,true,true]); return;
+            case "Bedroom closet": fill_options([2,4,8]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Bathroom cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
+            case "Bathroom cabinet": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Apotecary cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
+            case "Apotecary cabinet": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Dresser": fill_options([6]); change_d_option_cons([true,true,true]); return;
+            case "Dresser": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Shoe cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
+            case "Shoe cabinet": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Display cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
+            case "Display cabinet": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Office cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return;
+            case "Office cabinet": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return;
 
-            case "Bedside cabinet": fill_options([6]); change_d_option_cons([true,true,true]); return
+            case "Bedside cabinet": fill_options([6]); display_functions("option_functions_invis");
+                change_d_option_cons([true,true,true]); return
+
+            case "Flexible Selection": fill_options([]); display_functions("option_functions_vis");
+                change_d_option_cons([true,true,true]); return
         }
         alert("Value could not be found!");
     }
@@ -139,5 +151,10 @@ function Input_Reader(){
             }
         }
         return false
+    }
+
+    function display_functions(name){
+        var function_Element = document.getElementById("option_functions");
+        function_Element.className =name;
     }
 }

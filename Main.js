@@ -19,11 +19,13 @@ var max_depth;
 
 var border_width_real;
 
+var l_options;
 var input_reader;
 var output_writer;
 var model;
 var obj_visualizer;
 var model_calc;
+var model_reducer;
 var prop_calc;
 var expl_db;
 var impl_db;
@@ -51,8 +53,11 @@ function main() {
     //initialize Model_Calculator
     model_calc = new Model_Calculator();
 
+    //initialize Model_Reducer
+    model_reducer = new Model_Reducer();
+
     //initialize Probability_Calculator
-    prop_calc = new Probability_Calculator();
+    //prop_calc = new Probability_Calculator();
 
     //initialize Input_Reader
     input_reader = new Input_Reader();
@@ -67,8 +72,9 @@ function main() {
 }
 
 function start(){
-
     //read Input
+
+    //input_reader.translate_purp_func();
     var input = input_reader.readInput();
 
     if(input == false){
@@ -78,10 +84,20 @@ function start(){
     expl_db.fill_functions(input);
 
     //start model calculator and create options
-    var options= model_calc.start_calc(input);
+    l_options= model_calc.start_calc(input);
+
+    //reduce options
+    //l_options = model_reducer.reduce_options(l_options);
+
+    var ausgabe = "Ausgabe ";
+    for(var i=0; i<l_options.length; i++){
+        ausgabe = ausgabe +l_options[i].ID+"; ";
+    }
+
+    alert(ausgabe);
 
     //present options to the user
-    output_writer.writeOptionlist(options);
+    output_writer.writeOptionlist(l_options);
 
 }
 

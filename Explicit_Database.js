@@ -50,13 +50,13 @@ function Explicit_Database(){
         f_cons[1]= new Functional_Constraint(1,30,40,new Array(true,false,false),2);
         //Jackets,Shirts
         f_cons[2]= new Functional_Constraint(2,130,max_height,new Array(false,true,false),3);
-        //Flexible
-        f_cons[3]= new Functional_Constraint(3,130,max_height,new Array(false,false,false),5);
+        //Food
+        f_cons[3]= new Functional_Constraint(3,130,50,new Array(false,false,false),5);
         //T-Shirts,pants
         f_cons[4]= new Functional_Constraint(4,25,45,new Array(false,true,false),4);
         //dishes
         f_cons[5]= new Functional_Constraint(5,30,50,new Array(false,true,false),6);
-        //food,stuff
+        //stuff
         f_cons[6]= new Functional_Constraint(6,30,50,new Array(false,true,true),8);
         //shoes
         f_cons[7]= new Functional_Constraint(7,20,30,new Array(false,true,false),9);
