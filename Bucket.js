@@ -27,18 +27,24 @@ function Bucket(num){
         }
     }
 
-    function delete_Element(element){
-
+    function delete_Element(head,element){
+        //alert("head "+head +" element "+element.previous+"  "+element.next);
         //alert(element);
-        if(element.previous == null){
-            this.head = element.next;
-            this.head.previous = null;
-        }else if(element.next == null){
+        if(element.previous == null && element.next == null){
+            head = null;
+
+        }else if(element.previous == null && element.next != null){
+            head = element.next;
+            head.previous = null;
+
+        }else if(element.previous != null && element.next == null){
             element.previous.next = null;
+
         }else{
             element.previous.next = element.next;
             element.next.previous = element.previous;
         }
+
     }
 
     this.select_Element = function(){
@@ -52,21 +58,22 @@ function Bucket(num){
 
         //go over list an save in temp file the weighting with greatest difference
         while(cur_el!=null){
+            //alert("ELement "+cur_el.element.ID +" next Element "+cur_el.next);
             //alert("Bucket "+this.row_num+" Element ID: "+cur_el.element.ID+" next: "+cur_el.next);
 
             var distance = distance_check(cur_el.element.weightings,this.average_weighting);
             //alert(distance +"   "+cur_maxdistance);
 
-            if(distance > cur_maxdistance){
+            if(distance >= cur_maxdistance){
                 cur_selection = cur_el;
                 cur_maxdistance = distance;
             }
             cur_el = cur_el.next;
-
+            //alert(cur_el);
         }
         //alert("4-0-3 "+cur_selection);
         if(cur_selection != null){
-            delete_Element(cur_selection);
+            delete_Element(this.head,cur_selection);
             return cur_selection.element;
         }else{
             return null;

@@ -7,6 +7,11 @@ function Model_Reducer(){
     var max_options = 6;
     //seperates the model in different lists
 
+    this.set_max_options = function(val){
+        max_options = val;
+        start();
+    }
+
     this.reduce_options = function(optionlist){
 
         //check if there is an Interaction action
@@ -33,11 +38,39 @@ function Model_Reducer(){
         //Real Program
         var optionlist_reduced = new Array();
         var optionlist_reduced_counter = 0;
+        var option_list_old = optionlist;
 
-        if(impl_db.interaction_check == true){
+        if(impl_db.interaction_check() == true){
             //case if there is a function selected in the 3D interface
-            alert("2-interaction true");
-            if(optionlist.length > max_options){
+            //alert("2-interaction true");
+
+            //reduce the number of variations on the selected function
+            for(var i=0; i<option_list_old.length; i++){
+                if(option_list_old[i].check_weighting(impl_db.selected_function)){
+                    //alert("bevor: "+option_list_old[i].ID);
+                    optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
+                    //alert("danach: "+optionlist_reduced[optionlist_reduced_counter].ID);
+                    optionlist_reduced_counter++;
+                }
+            }
+            option_list_old=clone(optionlist_reduced);
+
+
+            //reduce number of options on those with the same row_num
+            optionlist_reduced = new Array();
+            optionlist_reduced_counter = 0;
+
+            for(var i=0; i<option_list_old.length; i++){
+
+                if(option_list_old[i].check_row_num()){
+                    optionlist_reduced[optionlist_reduced_counter]=clone(option_list_old[i]);
+                    optionlist_reduced_counter++;
+                }
+            }
+            option_list_old=clone(optionlist_reduced);
+
+            /*if(optionlist.length > max_options){
+
                 //reduce the number of variations on the selected function
                 for(var i=0; i<optionlist.length; i++){
                     if(optionlist[i].check_weighting(impl_db.selected_function)){
@@ -59,109 +92,121 @@ function Model_Reducer(){
                         optionlist_reduced_counter++;
                     }
                 }
-            }
+            }*/
 
             if(optionlist_reduced.length > max_options){
                 //use probability information to reduce number of options
-
             }
         }else{
 
-            alert("2-interaction false");
+            //alert("2-interaction false");
 
             if(impl_db.is_filled()){
                 //case when there is no interaction, but already implicit information
-                alert("3-implicit data filled");
+                //alert("3-implicit data filled");
 
-                if(optionlist.length > max_options){
+                /*if(optionlist.length > max_options){
                     //reduce number of variations on those within max_distance
                     for(var i=0; i<optionlist.length; i++){
-                        if(optionlist.check_weighting_distance(1)){
+
+                        if(optionlist[i].check_weighting_distance(1)){
                             optionlist_reduced[optionlist_reduced_counter] = optionlist[i];
                             optionlist_reduced_counter++;
                         }
                     }
-                }
+                }*/
+                if(option_list_old.length > max_options){
+                    //reduce number of variations on those within max_distance
+                    for(var i=0; i<option_list_old.length; i++){
 
-                if(optionlist_reduced.length > max_options){
-                    //reduce number of options on those with the same row_num
-                    for(var i=0; i<optionlist_reduced.length; i++){
-                        if(optionlist_reduced[i].check_row_num()){
-                            var optionlist_temp = optionlist_reduced;
-                            optionlist_reduced = new Array();
-                            optionlist_reduced_counter = 0;
-
-                            optionlist_reduced[optionlist_reduced_counter]=optionlist_temp[i];
+                        if(option_list_old[i].check_weighting_distance(1)){
+                            optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
                             optionlist_reduced_counter++;
                         }
                     }
                 }
+                option_list_old=clone(optionlist_reduced);
+
+                //alert("2 "+optionlist_reduced.length);
+
+                if(optionlist_reduced.length > max_options){
+                    //reduce number of options on those with the same row_num
+                    optionlist_reduced = new Array();
+                    optionlist_reduced_counter = 0;
+
+                    for(var i=0; i<option_list_old.length; i++){
+
+                        if(option_list_old[i].check_row_num()){
+                            optionlist_reduced[optionlist_reduced_counter]=clone(option_list_old[i]);
+                            optionlist_reduced_counter++;
+                        }
+                    }
+                }
+                option_list_old=clone(optionlist_reduced);
+
+                //alert("3 " + optionlist_reduced.length);
 
                 if(optionlist_reduced.length > max_options){
                     //use probability information to reduce number of options
-
                 }
 
             }else{
-                alert("3-implicit data empty");
-                optionlist_reduced = optionlist;
+                //alert("3-implicit data empty");
+                optionlist_reduced=clone(option_list_old);
             }
 
-            if(optionlist_reduced.length > max_options){
-                //use sampling to reduce number of options under borderlimit
+        }
+        //ensure different option variants and different grasps
+        if(optionlist_reduced.length > max_options){
+            //use sampling to reduce number of options under borderlimit
 
-                var buckets;
-                var row_ar;
+            var buckets;
+            var row_ar;
 
-                //ensure that every row variation is there
-                if(!impl_db.is_filled()&&!impl_db.interaction_check()) {
-                    //if there is no interaction or implicit information
+            //ensure that every row variation is there
+            if(!impl_db.is_filled()&&!impl_db.interaction_check()) {
+                //if there is no interaction or implicit information
 
-                    row_ar = expl_db.get_possible_parts();
-                }else{
-                    row_ar = new Array(1);
-                    row_ar[0]= impl_db.row_num;
-                }
-
-                buckets = new Array(row_ar.length);
-
-                //create buckets
-                for(var i=0; i<row_ar.length; i++){
-                    buckets[i] = new Bucket(row_ar[i]);
-                }
-
-                //distribute elements in buckets
-                for(var i=0; i<optionlist_reduced.length; i++){
-                    buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
-                }
-
-                //ensure that weightings are as different as possible
-                var cur_bucket = 0;
-                var optionlist_reduced_final_counter = 0;
-                //var optionlist_reduced_final = optionlist_reduced;
-                var optionlist_reduced_final = new Array();
-
-                //alert("4");
-                while(optionlist_reduced_final.length < max_options){
-
-                    var ret_el = buckets[cur_bucket].select_Element();
-
-                    if(ret_el != null){
-                        optionlist_reduced_final[optionlist_reduced_final_counter] = ret_el;
-                        //change ID
-                        optionlist_reduced_final[optionlist_reduced_final_counter].ID = optionlist_reduced_final_counter;
-                        optionlist_reduced_final_counter++;
-                    }
-
-                    cur_bucket++;
-                    if(cur_bucket>buckets.length-1){
-                        cur_bucket=0;
-                    }
-
-                }
-                //alert("5");
-                optionlist_reduced = optionlist_reduced_final;
+                row_ar = expl_db.get_possible_parts();
+            }else{
+                row_ar = new Array(1);
+                row_ar[0]= impl_db.rows;
             }
+
+            buckets = new Array(row_ar.length);
+
+            //create buckets
+            for(var i=0; i<row_ar.length; i++){
+                buckets[i] = new Bucket(row_ar[i]);
+            }
+            //distribute elements in buckets
+            for(var i=0; i<optionlist_reduced.length; i++){
+                buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
+            }
+            //ensure that weightings are as different as possible
+            var cur_bucket = 0;
+            var optionlist_reduced_final_counter = 0;
+            //var optionlist_reduced_final = optionlist_reduced;
+            var optionlist_reduced_final = new Array();
+
+            while(optionlist_reduced_final.length < max_options){
+
+                var ret_el = buckets[cur_bucket].select_Element();
+
+                if(ret_el != null){
+                    optionlist_reduced_final[optionlist_reduced_final_counter] = ret_el;
+                    //change ID
+                    optionlist_reduced_final[optionlist_reduced_final_counter].ID = optionlist_reduced_final_counter;
+                    optionlist_reduced_final_counter++;
+                }
+
+                cur_bucket++;
+                if(cur_bucket>buckets.length-1){
+                    cur_bucket=0;
+                }
+
+            }
+            optionlist_reduced = optionlist_reduced_final;
         }
 
         return optionlist_reduced;

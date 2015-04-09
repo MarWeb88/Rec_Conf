@@ -41,19 +41,22 @@ function Object_Visualizer(){
         animate();
 
         //set_implicid information
-        impl_db.set_information(option.weightings,null,option.row_num);
+        impl_db.set_information(option.weightings,null,option.row_num,option.grasp,option.d_options);
         impl_db.show_information();
+
 
         //set info icon
         output_writer.generate_info_icon(option);
+
+        //start calculation with updated information
+        start();
+
 
     }
 
     function get_model_coordinates(option){
 
         var ret_ar = new Array(2);
-
-        alert(option.row_num+"  "+option.rows.length);
 
         ret_ar[0] = new Array(option.row_num);
         ret_ar[1] = new Array(option.row_num);
@@ -155,7 +158,7 @@ function Object_Visualizer(){
         //scene.add(cubes);
 
         // Load an image as texture
-        var neheTexture = new THREE.ImageUtils.loadTexture("images/wood5.jpg");
+        var neheTexture = new THREE.ImageUtils.loadTexture("images/erle.jpg");
 
         // Create a basic material with a texture. Activate the 'doubleSided'
         // attribute to force the rendering of both sides of each face (front and back).

@@ -30,16 +30,22 @@
     top:0px;
     left:0px;
     width: 100%;
-    height: 250px;
+    height: 230px;
     border-style: solid;
     border-width: 0.5px;
     overflow: scroll;
 }
 
+.more_button {
+    position: absolute;
+    left:0px;
+    top:580px;
+}
+
 .option_output {
     position: absolute;
     left:0px;
-    top:250px;
+    top:230px;
     width: 100%;
     height: 350px;
     border-style: solid;
@@ -51,7 +57,7 @@
     overflow: scroll;
 }
 
-.option_row0 {
+/*.option_row0 {
     position:absolute;
     left: 0px;
     width: 132.5px;
@@ -83,11 +89,35 @@
     border-style: none;
     border-width: 0.8px;
 }
-
+*/
+.option_row0 {
+    position:absolute;
+    left: 0px;
+    width: 176.6667px;
+    height:100%;
+    border-style: none;
+    border-width: 0.8px;
+}
+.option_row1 {
+    position:absolute;
+    left: 176.6667px;
+    width: 176.6667px;
+    height:100%;
+    border-style: none;
+    border-width: 0.8px;
+}
+.option_row2 {
+    position:absolute;
+    left: 353.34px;
+    width: 176.6667px;
+    height:100%;
+    border-style: none;
+    border-width: 0.8px;
+}
 .option_list_element {
     position:relative;
-    width: 132.5px;
-    height:132.5px;
+    width: 176.6667px;
+    height:165px;
     border-style: solid;
     border-width: 0.8px;
 }

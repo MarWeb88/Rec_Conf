@@ -11,11 +11,11 @@ function Model(row_num,ID,weightings){
     this.row_state = new Array(row_num);
     this.weightings = weightings;
     this.ID = ID;
+    this.grasp = null;
+    this.d_options = null;
 
     for(var i=0; i<row_num; i++){
-        //alert(i+" "+this.free_row_height);
         this.free_row_height[i] = this.row_height;
-        //alert(i+" "+this.free_row_height);
     }
 
     for(var i=0; i<row_num; i++){
@@ -43,8 +43,13 @@ function Model(row_num,ID,weightings){
     }
 
     this.check_weighting = function(selected_function){
+
         for(var i=0; i<this.weightings.length; i++){
             if(this.weightings[i] != impl_db.weights[i] && i != selected_function){
+                return false;
+            }
+            //alert("function "+selected_function+" : "+this.d_options[i]+ "  -  "+ impl_db.d_options[i]);
+            if(this.d_options[i] != impl_db.d_options[i] && i != selected_function){
                 return false;
             }
         }
@@ -52,11 +57,6 @@ function Model(row_num,ID,weightings){
     }
 
     this.check_row_num = function(){
-        /*if(this.row_num == impl_db.rows){
-            return true
-        }else{
-            return false
-        }*/
         return this.row_num == impl_db.rows;
     }
 

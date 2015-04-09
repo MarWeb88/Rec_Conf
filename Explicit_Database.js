@@ -10,6 +10,7 @@ function Explicit_Database(){
     this.functions;
     this.num_functions = 9;
     this.d_option_cons;
+    this.grasps = new Array("grasp1","grasp2","grasp3","grasp4","grasp5","grasp6");
 
     this.p_cons = initialize_p_cons(this.num_functions);
     this.f_cons = initialize_f_cons(this.num_functions);
@@ -45,30 +46,33 @@ function Explicit_Database(){
         var f_cons = new Array(num);
 
         //CD,DVD
-        f_cons[0]= new Functional_Constraint(0,20,30,new Array(true,false,true),1);
+        f_cons[0]= new Functional_Constraint(0,20,30,new Array(true,true,true,false,false,false),1);
         //books,documents
-        f_cons[1]= new Functional_Constraint(1,30,40,new Array(true,false,false),2);
+        f_cons[1]= new Functional_Constraint(1,30,40,new Array(true,false,false,false,false,false),2);
         //Jackets,Shirts
-        f_cons[2]= new Functional_Constraint(2,130,max_height,new Array(false,true,false),3);
+        f_cons[2]= new Functional_Constraint(2,130,max_height,new Array(false,false,false,true,true,true),3);
         //Food
-        f_cons[3]= new Functional_Constraint(3,130,50,new Array(false,false,false),5);
+        f_cons[3]= new Functional_Constraint(3,130,50,new Array(false,false,true,true,true,true),5);
         //T-Shirts,pants
-        f_cons[4]= new Functional_Constraint(4,25,45,new Array(false,true,false),4);
+        f_cons[4]= new Functional_Constraint(4,25,45,new Array(false,true,true,true,true,true),4);
         //dishes
-        f_cons[5]= new Functional_Constraint(5,30,50,new Array(false,true,false),6);
+        f_cons[5]= new Functional_Constraint(5,30,50,new Array(false,false,false,true,true,true),6);
         //stuff
-        f_cons[6]= new Functional_Constraint(6,30,50,new Array(false,true,true),8);
+        f_cons[6]= new Functional_Constraint(6,30,50,new Array(false,true,true,true,true,true),8);
         //shoes
-        f_cons[7]= new Functional_Constraint(7,20,30,new Array(false,true,false),9);
+        f_cons[7]= new Functional_Constraint(7,20,30,new Array(false,false,false,true,true,true),9);
         //underwear,socks
-        f_cons[8]= new Functional_Constraint(8,25,30,new Array(false,true,true),7);
+        f_cons[8]= new Functional_Constraint(8,25,30,new Array(false,true,true,true,true,true),7);
+
+        //before just 3 elements
 
         return f_cons;
     }
 
     function initialize_d_option_cons(){
 
-        var array = new Array(true,true,true);
+        //nothing,drawer behind door, drawer,
+        var array = new Array(true,true,true,true,true,true);
 
         return array;
     }
