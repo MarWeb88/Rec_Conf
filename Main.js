@@ -33,11 +33,11 @@ var impl_db;
 function main() {
 
      //initialize global dimension values
-     min_height = 100;
-     max_height = 250;
+     min_height = 80;
+     max_height = 220;
 
      min_width = 50;
-     max_width = 300;
+     max_width = 200;
 
      min_depth = 30;
      max_depth = 60;
@@ -62,6 +62,8 @@ function main() {
     //initialize Input_Reader
     input_reader = new Input_Reader();
 
+    input_reader.vis_input(false);
+
     //initialize Output_Writer
     output_writer = new Output_Writer();
 
@@ -82,8 +84,6 @@ function main() {
 }*/
 
 function start(){
-
-
     //read Input
 
     //input_reader.translate_purp_func();
@@ -91,6 +91,8 @@ function start(){
 
     if(input == false){
         return false;
+    }else{
+        input_reader.vis_input(true);
     }
     //Model Calculator
     expl_db.fill_functions(input);
@@ -98,21 +100,24 @@ function start(){
     //start model calculator and create options
     l_options= model_calc.start_calc(input);
 
-    var vorausgabe = "Vor Ausgabe ";
+    /*var vorausgabe = "Vor Ausgabe ";
     for(var i=0; i<l_options.length; i++){
         vorausgabe = vorausgabe +l_options[i].ID+"; ";
-    }
+    }*/
     //alert(vorausgabe);
+
+    //alert(l_options.length);
 
     //reduce options
     l_options = model_reducer.reduce_options(l_options);
 
-    var ausgabe = "Ausgabe ";
+    /*var ausgabe = "Ausgabe ";
     for(var i=0; i<l_options.length; i++){
         ausgabe = ausgabe +l_options[i].ID+"; ";
-    }
+    }*/
 
     //alert(ausgabe);
+
 
     //present options to the user
     output_writer.writeOptionlist(l_options);

@@ -36,7 +36,7 @@
     overflow: scroll;
 }
 
-.more_button {
+.output_changer {
     position: absolute;
     left:0px;
     top:580px;
@@ -271,4 +271,21 @@
     position: absolute;
     left: 240px;
     width: 270px;
+    font-size: 9px
+}
+
+.reset_button_vis {
+    display: inline;
+}
+
+.reset_button_invis {
+    display: none;
+}
+
+.exit_button {
+    font-size: 6px;
+}
+
+.implicid_headline {
+    font-size: 14px;
 }

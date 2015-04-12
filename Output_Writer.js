@@ -29,6 +29,10 @@ function Output_Writer(){
 
         clear_options();
 
+        if(option_list.length == 0){
+            alert("No suitable solution was found!");
+        }
+
         for(var i=0;i<option_list.length;i++){
 
             //define the number of visualized options for each row
@@ -61,6 +65,15 @@ function Output_Writer(){
             }
         }
         ret_val=ret_val+"<input type='radio' name='group1' value='Nothing'> Nothing</form>";
+
+        ret_val=ret_val+"<br>Select the option for which you want more recommendations: <form id='input_radio2' " +
+        "onchange='impl_db.detect_checked_interaction_button2()'>"
+
+        ret_val=ret_val +
+        "<input type='radio' name='group2' value='grasp'> Grasp " +
+        "<input type='radio' name='group2' value='Material'> Material" +
+        "<input type='radio' name='group2' value='Nothing'> Nothing " +
+        "</form>";
 
         element.innerHTML=ret_val;
 
@@ -124,7 +137,8 @@ function Output_Writer(){
                 element.style.backgroundColor = "white";
                 element.style.fontSize="9px";
                 element.innerHTML = get_Function_Name(option.rows[i][j].type)+"<br>"+
-                get_Option_Name(option.rows[i][j].d_options)+get_grasp_Name(option.grasp);
+                get_Option_Name(option.rows[i][j].d_options)+get_grasp_Name(option.grasp,option.rows[i][j].type)+
+                get_Material_Name(option.material);
 
                 element.style.textAlign="center";
 
@@ -163,7 +177,43 @@ function Output_Writer(){
 
     function get_Function_Name(type){
         switch (type){
-            case 0:return "CD/DVD"
+
+            case 0:return "CD/DVD 1"
+
+            case 1:return "CD/DVD 2"
+
+            case 2:return "Books 1"
+
+            case 3:return "Books 2"
+
+            case 4:return "Books 3"
+
+            case 5:return "Jackets 1"
+
+            case 6:return "Jackets 2"
+
+            case 7:return "Small Stuff 1"
+
+            case 8:return "Small Stuff 2"
+
+            case 9:return "Small Stuff 3"
+
+            case 10:return "Medium Stuff 1"
+
+            case 11:return "Medium Stuff 2"
+
+            case 12:return "Medium Stuff 3"
+
+            case 13:return "Large Stuff 1"
+
+            case 14:return "Large Stuff 2"
+
+            case 15:return "Large Stuff 3"
+
+            case 16:return "Shoes"
+
+
+            /*case 0:return "CD/DVD"
 
             case 1:return "Books"
 
@@ -175,11 +225,15 @@ function Output_Writer(){
 
             case 5:return "Dishes"
 
-            case 6:return "Stuff"
+            case 6:return "Small Stuff"
 
             case 7:return "Shoes"
 
             case 8:return "Underwear"
+
+            case 9:return "Medium Stuff"
+
+            case 10:return "Large Stuff"*/
         }
     }
 
@@ -200,28 +254,69 @@ function Output_Writer(){
         }
     }
 
-    function get_grasp_Name(val){
+    function get_grasp_Name(val,type){
 
-        switch(val){
-            case null: return "0"
 
-            case "grasp1": return "(1)"
 
-            case "grasp2": return "(2)"
+        if(type < 6){
+            return "0"
+        }else{
 
-            case "grasp3": return "(3)"
+            switch(val){
+                case null: return "0"
 
-            case "grasp4": return "(4)"
+                case "grasp1": return "(1)"
 
-            case "grasp5": return "(5)"
+                case "grasp2": return "(2)"
 
-            case "grasp6": return "(6)"
+                case "grasp3": return "(3)"
+
+                case "grasp4": return "(4)"
+
+                case "grasp5": return "(5)"
+
+                case "grasp6": return "(6)"
+            }
         }
     }
 
     function get_Function_Number(name){
         switch(name){
-            case "Nothing": return null
+            case "CD/DVD 1": return 0
+
+            case "CD/DVD 2": return 1
+
+            case "Books 1": return 2
+
+            case "Books 2": return 3
+
+            case "Books 3": return 4
+
+            case "Jackets 1": return 5
+
+            case "Jackets 2": return 6
+
+            case "Small Stuff 1": return 7
+
+            case "Small Stuff 2": return 8
+
+            case "Small Stuff 3": return 9
+
+            case "Medium Stuff 1": return 10
+
+            case "Medium Stuff 2": return 11
+
+            case "Medium Stuff 3": return 12
+
+            case "Large Stuff 1": return 13
+
+            case "Large Stuff 2": return 14
+
+            case "Large Stuff 3": return 15
+
+            case "Shoes": return 16
+
+            /*case "Nothing": return null
 
             case "CD/DVD": return 0
 
@@ -235,11 +330,34 @@ function Output_Writer(){
 
             case "Dishes": return 5
 
-            case "Stuff": return 6
+            case "Small Stuff": return 6
 
             case "Shoes": return 7
 
             case "Underwear": return 8
+
+            case "Medium Stuff": return 9
+
+            case "Large Stuff": return 10*/
+        }
+    }
+
+    function get_Material_Name(name){
+
+        switch(name){
+            case "images/erle.jpg": return "(E)"
+
+            case "images/wood5.jpg": return "(W)"
+
+            case "images/mahagoni.jpg": return "(M)"
+
+            case "images/apfel.jpg": return "(A)"
+
+            case "images/Buche.jpg": return "(B)"
+
+            case "images/fichte.jpg": return "(F)"
+
+            case "images/kirsche.jpg": return "(K)"
         }
     }
 }

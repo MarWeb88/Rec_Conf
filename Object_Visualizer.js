@@ -27,23 +27,23 @@ function Object_Visualizer(){
 
     this.call_vis = function(ID) {
 
-        /*var model = [[1, 1], [1, 0.5, 0.5], [0.666, 0.666, 0.666]];
-        model = [[1, 0.5, 0.5], [1, 0.2, 0.3, 0.5], [0.666, 0.666, 0.366, 0.3]];*/
-        // Initialize the scene
+        //alert("start with "+ID );
 
+        // Initialize the scene
         var option = l_options[ID];
+
+        //alert("has "+option.row_num+" rows "+option.grasp);
 
         var vis_model = get_model_coordinates(option);
 
-        initializeScene(vis_model[0],vis_model[1]);
+        initializeScene(vis_model[0],vis_model[1],option.material);
 
         // Animate the scene
         animate();
 
         //set_implicid information
-        impl_db.set_information(option.weightings,null,option.row_num,option.grasp,option.d_options);
+        impl_db.set_information(option.weightings,null,option.row_num,option.grasp,option.d_options,option.material);
         impl_db.show_information();
-
 
         //set info icon
         output_writer.generate_info_icon(option);
@@ -51,7 +51,9 @@ function Object_Visualizer(){
         //start calculation with updated information
         start();
 
+        impl_db.set_interaction_function(null);
 
+        //alert("ende");
     }
 
     function get_model_coordinates(option){
@@ -92,7 +94,7 @@ function Object_Visualizer(){
     }
 
     //Initialize scene
-    function initializeScene(vis_model,functions) {
+    function initializeScene(vis_model,functions,text_src) {
         // Check whether the browser supports WebGL. If so, instantiate the hardware accelerated
         // WebGL renderer. For antialiasing, we have to enable it. The canvas renderer uses
         // antialiasing by default.
@@ -158,7 +160,8 @@ function Object_Visualizer(){
         //scene.add(cubes);
 
         // Load an image as texture
-        var neheTexture = new THREE.ImageUtils.loadTexture("images/erle.jpg");
+
+        var neheTexture = new THREE.ImageUtils.loadTexture(text_src);
 
         // Create a basic material with a texture. Activate the 'doubleSided'
         // attribute to force the rendering of both sides of each face (front and back).

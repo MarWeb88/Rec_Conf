@@ -13,6 +13,7 @@ function Model(row_num,ID,weightings){
     this.ID = ID;
     this.grasp = null;
     this.d_options = null;
+    this.material = null;
 
     for(var i=0; i<row_num; i++){
         this.free_row_height[i] = this.row_height;
@@ -58,6 +59,14 @@ function Model(row_num,ID,weightings){
 
     this.check_row_num = function(){
         return this.row_num == impl_db.rows;
+    }
+
+    this.check_grasp = function() {
+        return this.grasp == impl_db.grasp || impl_db.grasp_selector == true;
+    }
+
+    this.check_material = function(){
+        return this.material == impl_db.material || impl_db.material_selector == true;
     }
 
     this.check_weighting_distance = function(max_distance){

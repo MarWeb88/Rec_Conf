@@ -65,43 +65,73 @@
 
         <p>Height:<input id="height_input" name="height_input" type="text" size="10" maxlength="10">
         Width:<input id="width_input" name="width_input" type="text" size="10" maxlength="10">
-        Depth:<input id="depth_input" name="depth_input" type="text" size="10" maxlength="10"></p>
+        Depth:<input id="depth_input" name="depth_input" type="text" size="10" maxlength="10">
+        <input class="reset_button_invis" type="button" id="reset_button" value="Reset"
+        onclick="location.reload()"></p>
 
         <div class="option_purpose">
         <b>Purpose:</b>
         <p>
             <select onchange="input_reader.translate_purp_func()" id="purpose_selection" name="purpose_selection" size="5">
-                <option selected>Wardrobe</option>
-                <option>Kitchen cupboard</option>
-                <option>CD/Book shelf</option>
-                <option>File cabinet</option>
+
+                <option>Wardrobe 1</option>
+                <option>Wardrobe 2</option>
+                <option>Wardrobe 3</option>
+                <option>Wardrobe 4</option>
+
+                <option>CD/Book shelf 1</option>
+                <option>CD/Book shelf 2</option>
+                <option>CD/Book shelf 3</option>
+                <option>CD/Book shelf 4</option>
+                <option>CD/Book shelf 5</option>
+                <option>CD/Book shelf 6</option>
+
+                <option>Kitchen cupboard 1</option>
+                <option>Kitchen cupboard 2</option>
+                <option>Kitchen cupboard 3</option>
+                <option>Kitchen cupboard 4</option>
+                <option>Kitchen cupboard 5</option>
+                <option>Kitchen cupboard 6</option>
+
+                <option>China cabinet 1</option>
+                <option>China cabinet 2</option>
+                <option>China cabinet 3</option>
+
+                <option>Shoe cabinet 1</option>
+                <option>Shoe cabinet 2</option>
+
+                <option>Dresser 1</option>
+                <option>Dresser 2</option>
+
+                <option>Broom cabinet 1</option>
+                <option>Broom cabinet 2</option>
+
+                <!--<option>File cabinet</option>
                 <option>Broom cabinet</option>
-                <option>China cabinet</option>
                 <option>Tool cabinet</option>
                 <option>Bedroom closet</option>
                 <option>Bathroom cabinet</option>
-                <option>Apothecary cabinet</option>
-                <option>Dresser</option>
-                <option>Shoe cabinet</option>
-                <option>Display cabinet</option>
                 <option>Office cabinet</option>
-                <option>Bedside cabinet</option>
-                <!--<option>Flexible Selection</option>-->
+                <option>Flexible Selection</option>-->
+
             </select>
         </p>
         </div>
-
+        <!--
         <div id="option_functions" class="option_functions_invis">
+
         <b>Functions:</b>
         <p>
         <input type="checkbox" size="25" name="colors" id="function0"> CD/DVD          <input type="checkbox" size="25" name="colors" id="function1"> Books      <input type="checkbox" name="colors" size="25" id="function2" checked> Jackets,Shirts <input type="checkbox" name="colors" size="25" id="function3"> Food
 
-        <input type="checkbox" size="25" name="colors" id="function4" checked> T-shirts,pants  <input type="checkbox" size="25" name="colors" id="function5"> Dishes     <input type="checkbox" size="25" name="colors" id="function6"> Stuff     <input type="checkbox" size="25" name="colors" id="function7"> Shoes
+        <input type="checkbox" size="25" name="colors" id="function4" checked> T-shirts,pants  <input type="checkbox" size="25" name="colors" id="function5"> Dishes     <input type="checkbox" size="25" name="colors" id="function6"> Small Stuff     <input type="checkbox" size="25" name="colors" id="function7"> Shoes
 
-        <input size="25" type="checkbox" name="colors" id="function8" checked> Underwear
+        <input size="25" type="checkbox" name="colors" id="function8" checked> Underwear  <input type="checkbox" size="25" name="colors" id="function9"> Medium Stuff  <input type="checkbox" size="25" name="colors" id="function10"> Large Stuff
         </p>
         </div>
-        <div id="implicid_data_out" class="implicid_data_out"></div>
+        -->
+        <div id="implicid_data_out" class="implicid_data_out">
+            </div>
 
         <!--<div class="start_button">
         <input type="button" name="start_button" value="Start"
@@ -127,9 +157,9 @@
 
         </div>
     </div>
-    <input class="more_button" type="button" name="more" value="All options"
-           onclick="model_reducer.set_max_options(1000)">
 
+    <input id="output_changer" class="output_changer" type="button" name="more" value="Full Mode"
+           onclick="model_reducer.set_max_options()">
 </div>
 
 </body>
