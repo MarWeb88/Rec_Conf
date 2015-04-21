@@ -9,11 +9,11 @@ function Explicit_Database(){
     this.depth;
     //this.num_functions = 11;//9
     this.num_functions = 17;
-    this.num_phys_cons = 9;
+    this.num_phys_cons = 5;
 
     this.functions = new Array(this.num_functions);
     this.d_option_cons;
-    this.grasps = new Array("grasp1","grasp2","grasp3");
+    this.grasps = new Array("Grasp 1","Grasp 2","Grasp 3");
     this.materials = new Array("images/erle.jpg","images/wood5.jpg","images/mahagoni.jpg","images/apfel.jpg",
         "images/Buche.jpg","images/fichte.jpg","images/kirsche.jpg");
 
@@ -36,13 +36,13 @@ function Explicit_Database(){
         //5 parts
         p_cons[4]= new Physical_Constraint(5,150,320);
         //6 parts
-        p_cons[5]= new Physical_Constraint(6,180,320);
+        /*p_cons[5]= new Physical_Constraint(6,180,320);
         //7 parts
         p_cons[6]= new Physical_Constraint(7,210,320);
         //8 parts
         p_cons[7]= new Physical_Constraint(8,240,320);
         //9 parts
-        p_cons[8]= new Physical_Constraint(9,270,320);
+        p_cons[8]= new Physical_Constraint(9,270,320);*/
 
         return p_cons;
     }

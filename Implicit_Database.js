@@ -32,10 +32,40 @@ function Implicit_Database(){
 
         this.set_information(null,null,null,null,null,null);
         this.selected_function = undefined;
+        this.material_selector=null;
+        this.grasp_selector = null;
 
         document.getElementById("implicid_data_out").innerHTML="";
         output_writer.delete_info_icon();
         output_writer.delete_interaction_functions();
+        start(0);
+    }
+
+    this.delete_rows = function(){
+        this.rows = null;
+        this.delete_interaction();
+        this.show_information();
+        start();
+    }
+
+    this.delete_grasp = function(){
+        this.grasp = null;
+        this.delete_interaction();
+        this.show_information();
+        start();
+    }
+
+    this.delete_material = function(){
+        this.material = null;
+        this.delete_interaction();
+        this.show_information();
+        start();
+    }
+
+    this.delete_weights = function(){
+        this.weights = null;
+        this.delete_interaction();
+        this.show_information();
         start();
     }
 
@@ -90,17 +120,38 @@ function Implicit_Database(){
     this.show_information = function(){
         var element = document.getElementById("implicid_data_out");
 
-        var implicit_out = "<p class='implicid_headline'><b>Current characteristics: </b></p>"+
-            "<input class='exit_button' type='button' value='X'> "+ this.rows+" Rows <br>"+
-            "<input class='exit_button' type='button' value='X'> "+ this.weights+" Weighting <br> "+
+        var implicit_out = "<p class='implicid_headline'><b>Current characteristics: </b></p>";
+
+        if(this.rows != null){
+            implicit_out += "<input onclick='impl_db.delete_rows()'" +
+            "class='exit_button' type='button' value='X'> "+ this.rows+" Rows <br>";
+        }
+        if(this.weights != null){
+            implicit_out += "<input onclick='impl_db.delete_weights()'" +
+            "class='exit_button' type='button' value='X'> "+
+            output_writer.get_Weighting_Description(this.weights)+" <br>";
+        }
+        if(this.grasp != null){
+            implicit_out += "<input onclick='impl_db.delete_grasp()'" +
+            "class='exit_button' type='button' value='X'> "+ this.grasp+" <br>";
+        }
+        if(this.material != null){
+            implicit_out+= "<input onclick='impl_db.delete_material()'" +
+            "class='exit_button' type='button' value='X'> "+ output_writer.get_Material_FullName(this.material);
+        }
             //"<input class='exit_button' type='button' value='X'> "+output_writer.get_F_Name(this.selected_function)+" <br> "+
-            "<input class='exit_button' type='button' value='X'> "+ this.grasp +" <br> "+
-            "<input class='exit_button' type='button' value='X'> "+ this.material;
 
         element.innerHTML= implicit_out;
 
         /*element.innerHTML=this.rows+" rows <br> weighting "+this.weights+" <br>  "+
         output_writer.get_F_Name(this.selected_function)+" <br> "+ this.grasp +" <br> "+ this.material;*/
+    }
+
+    this.delete_interaction = function(){
+        this.grasp_selector = null;
+        this.material_selector = null;
+        this.selected_function = undefined;
+        output_writer.delete_interaction_functions();
     }
 
 }

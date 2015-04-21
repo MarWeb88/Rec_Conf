@@ -84,6 +84,21 @@ function Output_Writer(){
         document.getElementById("information_box_out").innerHTML="";
     }
 
+    this.delete_interaction_funtions_values = function(){
+
+        var elements = document.getElementsByName("group1");
+
+        for(var i=0; i<elements.length; i++){
+            elements[i].checked = false;
+        }
+
+        elements = document.getElementsByName("group2");
+
+        for(var i=0; i<elements.length; i++){
+            elements[i].checked = false;
+        }
+    }
+
     function clear_options(){
         //deletes all existing options
 
@@ -136,7 +151,7 @@ function Output_Writer(){
                 element.style.height = el_height+"px";
                 element.style.backgroundColor = "white";
                 element.style.fontSize="9px";
-                element.innerHTML = get_Function_Name(option.rows[i][j].type)+"<br>"+
+                element.innerHTML = get_Function_Name(option.rows[i][j].type)+
                 get_Option_Name(option.rows[i][j].d_options)+get_grasp_Name(option.grasp,option.rows[i][j].type)+
                 get_Material_Name(option.material);
 
@@ -211,29 +226,6 @@ function Output_Writer(){
             case 15:return "Large Stuff 3"
 
             case 16:return "Shoes"
-
-
-            /*case 0:return "CD/DVD"
-
-            case 1:return "Books"
-
-            case 2:return "Jackets,Shirts"
-
-            case 3:return "Food"
-
-            case 4:return "T-Shirts,pants"
-
-            case 5:return "Dishes"
-
-            case 6:return "Small Stuff"
-
-            case 7:return "Shoes"
-
-            case 8:return "Underwear"
-
-            case 9:return "Medium Stuff"
-
-            case 10:return "Large Stuff"*/
         }
     }
 
@@ -256,26 +248,24 @@ function Output_Writer(){
 
     function get_grasp_Name(val,type){
 
-
-
-        if(type < 6){
-            return "0"
+        if(type < 5){
+            return "(0)"
         }else{
 
             switch(val){
-                case null: return "0"
+                case "no Grasp": return "(0)"
 
-                case "grasp1": return "(1)"
+                case "Grasp 1": return "(1)"
 
-                case "grasp2": return "(2)"
+                case "Grasp 2": return "(2)"
 
-                case "grasp3": return "(3)"
+                case "Grasp 3": return "(3)"
 
-                case "grasp4": return "(4)"
+                case "Grasp 4": return "(4)"
 
-                case "grasp5": return "(5)"
+                case "Grasp 5": return "(5)"
 
-                case "grasp6": return "(6)"
+                case "Grasp 6": return "(6)"
             }
         }
     }
@@ -315,30 +305,6 @@ function Output_Writer(){
             case "Large Stuff 3": return 15
 
             case "Shoes": return 16
-
-            /*case "Nothing": return null
-
-            case "CD/DVD": return 0
-
-            case "Books": return 1
-
-            case "Jackets,Shirts": return 2
-
-            case "Food": return 3
-
-            case "T-Shirts,pants": return 4
-
-            case "Dishes": return 5
-
-            case "Small Stuff": return 6
-
-            case "Shoes": return 7
-
-            case "Underwear": return 8
-
-            case "Medium Stuff": return 9
-
-            case "Large Stuff": return 10*/
         }
     }
 
@@ -359,5 +325,26 @@ function Output_Writer(){
 
             case "images/kirsche.jpg": return "(K)"
         }
+    }
+
+    this.get_Material_FullName = function(src){
+
+        var ar1 = src.split("/");
+        ar1 = ar1[1].split(".");
+
+        return ar1[0];
+    }
+
+    this.get_Weighting_Description = function(values){
+
+        var weighting_out = "Weighting: ";
+
+        for(var i=0; i<values.length; i++){
+
+            if(values[i]!= 0){
+                weighting_out += values[i]+" x "+get_Function_Name(i)+"; ";
+            }
+        }
+        return weighting_out;
     }
 }

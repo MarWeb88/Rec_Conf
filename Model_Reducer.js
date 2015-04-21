@@ -26,8 +26,71 @@ function Model_Reducer(){
         var optionlist_reduced;
         var optionlist_reduced_counter;
         var option_list_old = optionlist;
+        var version;
 
-        if(impl_db.is_filled()){
+        //Begin of Interaction Case
+        if(impl_db.interaction_check()||impl_db.interaction_check2()) {
+            //case with interaction
+
+            alert("1-2-3");
+            alert("in interaction 1: "+impl_db.interaction_check()+" 2: "+impl_db.interaction_check2());
+
+            if(impl_db.interaction_check()) {
+                version = 1;
+            }
+            if(impl_db.interaction_check2()){
+                version = 2;
+            }
+
+            optionlist_reduced = new Array();
+            optionlist_reduced_counter = 0;
+
+            //reduce the number of variations on the selected function
+            for(var i=0; i<option_list_old.length; i++){
+
+                if(version == 1){
+
+                    if(option_list_old[i].check_weighting(impl_db.selected_function)){
+
+                        optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
+                        optionlist_reduced_counter++;
+                    }
+                }
+                if(version == 2){
+                    if(option_list_old[i].check_weighting(-1)){ //check with invalid number
+
+                        optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
+                        optionlist_reduced_counter++;
+                    }
+                }
+            }
+            option_list_old=clone(optionlist_reduced);
+
+        }
+        //End of Interaction part
+
+        if (option_list_old.length > max_options || version != 0) {
+            //reduce number of options on those with the same grasp
+            optionlist_reduced = new Array();
+            optionlist_reduced_counter = 0;
+
+            for (var i = 0; i < option_list_old.length; i++) {
+
+                if (option_list_old[i].check_grasp() &&
+                    option_list_old[i].check_material() &&
+                    option_list_old[i].check_row_num() &&
+                    option_list_old[i].check_weighting_distance(1)
+                ) {
+                    optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
+                    optionlist_reduced_counter++;
+                }
+            }
+            option_list_old = clone(optionlist_reduced);
+        }else{
+            optionlist_reduced = clone(option_list_old);
+        }
+
+        /*if(impl_db.is_filled()){
             //case with implicit information
 
             var version;
@@ -70,7 +133,6 @@ function Model_Reducer(){
             }
             //End of Interaction part
 
-
             if (option_list_old.length > max_options || version != 0) {
                 //reduce number of options on those with the same grasp
                 optionlist_reduced = new Array();
@@ -79,7 +141,10 @@ function Model_Reducer(){
                 for (var i = 0; i < option_list_old.length; i++) {
 
                     if (option_list_old[i].check_grasp() &&
-                        option_list_old[i].check_material()) {
+                        option_list_old[i].check_material() &&
+                        option_list_old[i].check_row_num() &&
+                        option_list_old[i].check_weighting_distance(1)
+                    ) {
                         optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
                         optionlist_reduced_counter++;
                     }
@@ -88,49 +153,11 @@ function Model_Reducer(){
             }else{
                 optionlist_reduced = clone(option_list_old);
             }
-
-            //alert("3 " + optionlist_reduced.length);
-
-
-            if (option_list_old.length > max_options || version != 0) {
-                //reduce number of options on those with the same row_num
-                optionlist_reduced = new Array();
-                optionlist_reduced_counter = 0;
-
-                for (var i = 0; i < option_list_old.length; i++) {
-
-                    if (option_list_old[i].check_row_num()) {
-                        optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
-                        optionlist_reduced_counter++;
-                    }
-                }
-                option_list_old = clone(optionlist_reduced);
-            }else{
-                optionlist_reduced = clone(option_list_old);
-            }
-
-            if (option_list_old.length > max_options) {
-                //reduce number of variations on those within max_distance
-                optionlist_reduced = new Array();
-                optionlist_reduced_counter = 0;
-
-                for (var i = 0; i < option_list_old.length; i++) {
-
-                    if (option_list_old[i].check_weighting_distance(1)) {
-                        optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
-                        optionlist_reduced_counter++;
-                    }
-                }
-                option_list_old = clone(optionlist_reduced);
-            }else{
-                optionlist_reduced = clone(option_list_old);
-            }
-            //alert("4 " + optionlist_reduced.length);
 
         }else{
             //alert("3-implicit data empty");
             optionlist_reduced=clone(option_list_old);
-        }
+        }*/
 
         //Beginn of Standard Procedure
 

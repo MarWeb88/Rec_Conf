@@ -58,22 +58,25 @@ function Model(row_num,ID,weightings){
     }
 
     this.check_row_num = function(){
-        return this.row_num == impl_db.rows;
+        return impl_db.rows==null || this.row_num == impl_db.rows;
     }
 
     this.check_grasp = function() {
-        return this.grasp == impl_db.grasp || impl_db.grasp_selector == true;
+        return impl_db.grasp==null || this.grasp == impl_db.grasp || impl_db.grasp_selector == true;
     }
 
     this.check_material = function(){
-        return this.material == impl_db.material || impl_db.material_selector == true;
+        return impl_db.material==null || this.material == impl_db.material || impl_db.material_selector == true;
     }
 
     this.check_weighting_distance = function(max_distance){
-        for(var i=0; i<this.weightings.length; i++){
-            if(this.weightings[i] > impl_db.weights[i]+max_distance
-                || this.weightings[i] < impl_db.weights[i]-max_distance){
-                return false;
+        if(impl_db.weights != null) {
+
+            for (var i = 0; i < this.weightings.length; i++) {
+                if (this.weightings[i] > impl_db.weights[i] + max_distance
+                    || this.weightings[i] < impl_db.weights[i] - max_distance) {
+                    return false;
+                }
             }
         }
         return true;

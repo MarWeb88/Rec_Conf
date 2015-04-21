@@ -19,6 +19,7 @@ var max_depth;
 
 var border_width_real;
 
+var l_options_full;
 var l_options;
 var input_reader;
 var output_writer;
@@ -73,43 +74,28 @@ function main() {
 
 }
 
-/*function check_select(e){
-
-    if(e.target.id == 'information_box_icon' ){
-        return true;
-    }else{
-        //$('#bbb').hide();
-        alert("1");
-    }
-}*/
-
-function start(){
+function start(variant){
     //read Input
 
-    //input_reader.translate_purp_func();
-    var input = input_reader.readInput();
+    if(variant == 0) {
+        //input_reader.translate_purp_func();
+        var input = input_reader.readInput();
 
-    if(input == false){
-        return false;
-    }else{
-        input_reader.vis_input(true);
+        if (input == false) {
+            return false;
+        } else {
+            input_reader.vis_input(true);
+        }
+
+        //Model Calculator
+        expl_db.fill_functions(input);
+
+        //start model calculator and create options
+        l_options_full = model_calc.start_calc(input);
     }
-    //Model Calculator
-    expl_db.fill_functions(input);
-
-    //start model calculator and create options
-    l_options= model_calc.start_calc(input);
-
-    /*var vorausgabe = "Vor Ausgabe ";
-    for(var i=0; i<l_options.length; i++){
-        vorausgabe = vorausgabe +l_options[i].ID+"; ";
-    }*/
-    //alert(vorausgabe);
-
-    //alert(l_options.length);
 
     //reduce options
-    l_options = model_reducer.reduce_options(l_options);
+    l_options = model_reducer.reduce_options(l_options_full);
 
     /*var ausgabe = "Ausgabe ";
     for(var i=0; i<l_options.length; i++){
