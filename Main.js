@@ -71,6 +71,11 @@ function main() {
     //initialize Object_Visualizer
     obj_visualizer = new Object_Visualizer();
 
+    /*var mySlider = new dhtmlXSlider("sliderObj",100);
+    mySlider.setMin(150);
+    mySlider.setStep(1);
+    mySlider.linkTo("height_input");*/
+
 
 }
 

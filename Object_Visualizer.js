@@ -224,17 +224,17 @@ function Object_Visualizer(){
         mouseVector = new THREE.Vector2();
         raycaster = new THREE.Raycaster();
 
-        //webGL_element.setAttribute('onclick','obj_visualizer.onMouseMove()');
         webGL_element.addEventListener('click',onMouseMove,false);
 
         // Add OrbitControls so that we can pan around with the mouse.
         controls = new THREE.OrbitControls(camera, renderer.domElement);
-
     }
 
     function onMouseMove(e){
 
-        mouseVector.x = 2 * (e.clientX / canvasWidth) - 1;
+        alert("is clicked");
+
+        /*mouseVector.x = 2 * (e.clientX / canvasWidth) - 1;
         mouseVector.y = 1 - 2 * (e.clientY / canvasHeight);
 
         raycaster.setFromCamera( mouseVector, camera );
@@ -245,10 +245,8 @@ function Object_Visualizer(){
             impl_db.set_interaction_function(intersects[0].object.ID);
         }else{
             impl_db.set_interaction_function(null);
-        }
+        }*/
         //alert(impl_db.interaction_check());
-
-        //animate();
     }
     /**
      * Create s column of cupboard.

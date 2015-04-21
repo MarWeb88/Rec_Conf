@@ -193,7 +193,7 @@ function Output_Writer(){
     function get_Function_Name(type){
         switch (type){
 
-            case 0:return "CD/DVD 1"
+            /*case 0:return "CD/DVD 1"
 
             case 1:return "CD/DVD 2"
 
@@ -225,7 +225,21 @@ function Output_Writer(){
 
             case 15:return "Large Stuff 3"
 
-            case 16:return "Shoes"
+            case 16:return "Shoes"*/
+
+            case 0:return "Jackets"
+
+            case 1:return "Small(CD)"
+
+            case 2:return "Small/Med"
+
+            case 3:return "Medium"
+
+            case 4:return "Med/Large"
+
+            case 5:return "Large"
+
+            case 6:return "Shoes"
         }
     }
 
@@ -248,7 +262,7 @@ function Output_Writer(){
 
     function get_grasp_Name(val,type){
 
-        if(type < 5){
+        if(type == 1|| type == 2){
             return "(0)"
         }else{
 

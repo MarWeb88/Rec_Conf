@@ -6,6 +6,7 @@
     <title></title>
 
     <link rel="stylesheet" href="Main.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="dhtmlxslider.css">
 
     <script type="text/javascript" src="Main.js"></script>
     <script type="text/javascript" src="Model.js"></script>
@@ -23,6 +24,7 @@
     <script type="text/javascript" src="Weighting.js"></script>
     <script type="text/javascript" src="Build_List.js"></script>
     <script type="text/javascript" src="clickout.js"></script>
+    <script src="dhtmlxslider.js"></script>
 
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -68,11 +70,31 @@
         Depth:<input id="depth_input" name="depth_input" type="text" size="10" maxlength="10">
         <input class="reset_button_invis" type="button" id="reset_button" value="Reset"
         onclick="location.reload()"></p>
+        <b>Purpose:</b>
 
         <div class="option_purpose">
-        <b>Purpose:</b>
-        <p>
-            <select onchange="input_reader.translate_purp_func()" id="purpose_selection" name="purpose_selection" size="5">
+
+
+            <input type="checkbox" size="25" name="colors" id="function0"> Wardrobe <br>
+            <input type="checkbox" size="25" name="colors" id="function1"> CD/DVD Shelf<br>
+            <input type="checkbox" size="25" name="colors" id="function2"> Book Shelf <br>
+            <input type="checkbox" size="25" name="colors" id="function3"> Shoe cabinet <br>
+            <input type="checkbox" size="25" name="colors" id="function4"> Tool cabinet <br>
+            <input type="checkbox" size="25" name="colors" id="function5"> China cabinet <br>
+            <input type="checkbox" size="25" name="colors" id="function6"> Kitchen cabinet <br>
+
+            <!--<select id="purpose_selection" name="purpose_selection" size="5" multiple>
+                <option>Wardrobe</option>
+                <option>CD/DVD shelf</option>
+                <option>Book shelf</option>
+                <option>Shoe cabinet</option>
+                <option>Tool cabinet</option>
+                <option>China cabinet</option>
+                <option>kitchen cabinet</option>
+            </select>-->
+
+
+            <!--<select onchange="input_reader.translate_purp_func()" id="purpose_selection" name="purpose_selection" size="5">
 
                 <option>Wardrobe 1</option>
                 <option>Wardrobe 2</option>
@@ -106,17 +128,20 @@
                 <option>Broom cabinet 1</option>
                 <option>Broom cabinet 2</option>
 
-                <!--<option>File cabinet</option>
+                <option>File cabinet</option>
                 <option>Broom cabinet</option>
                 <option>Tool cabinet</option>
                 <option>Bedroom closet</option>
                 <option>Bathroom cabinet</option>
                 <option>Office cabinet</option>
-                <option>Flexible Selection</option>-->
+                <option>Flexible Selection</option>
 
-            </select>
-        </p>
+            </select>-->
+
         </div>
+        <div class="start_button">
+        <input type="button" name="start_button" value="Start" onclick="input_reader.translate_purp_func()">
+            </div>
         <!--
         <div id="option_functions" class="option_functions_invis">
 

@@ -260,6 +260,8 @@
     position: absolute;
     left: 5px;
     width: 230px;
+    height: 100px;
+    overflow: scroll;
 }
 
 .start_button {

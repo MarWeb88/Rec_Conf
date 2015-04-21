@@ -72,9 +72,12 @@ function Input_Reader(){
     }
 
     this.translate_purp_func = function(){
-        var purpose_el = document.getElementById("purpose_selection");
-        get_func_from_purp(purpose_el.value);
-        impl_db.reset();
+        /*var purpose_el = document.getElementById("purpose_selection");
+         */
+        get_func_from_purp();
+
+
+        //impl_db.reset();
     }
 
     this.vis_input = function(val){
@@ -91,12 +94,58 @@ function Input_Reader(){
         }
     }
 
+    function add_func_value(func_values,values){
+        for(var i=0; i<values.length; i++){
 
+            if(!is_in_Array(values[i],func_values)){
+                func_values[func_values.length]=values[i];
+            }
+        }
+    }
 
-    function get_func_from_purp(name){
+    function get_values(val){
+        switch (val){
+            //Wardrobe
+            case 0: return [0,2,3]
+            //CD/DVD
+            case 1: return [1]
+            //Books
+            case 2: return [2]
+            //Shoes
+            case 3: return [6]
+            //Tool cabinet
+            case 4: return [4,5]
+            //China cabinet
+            case 5: return [3]
+            //Kitchen cupboard
+            case 6: return [3,4]
+        }
+    }
 
-        switch(name){
-            case "Wardrobe 1": fill_options([5,7,10]); display_functions("option_functions_invis");
+    function get_func_from_purp(){
+
+        var func_list = new Array(expl_db.num_functions);
+        var func_values = new Array();
+
+        for(var i=0; i<func_list.length; i++){
+            var el = document.getElementById("function"+i);
+            if(el.checked){
+                func_list[i]= true;
+                add_func_value(func_values,get_values(i))
+            }else{
+                func_list[i]= false;
+            }
+        }
+
+        if(compatibility_check_model(func_list)){
+            fill_options(func_values);
+            impl_db.reset();
+        }else{
+            alert("Can not find valid combination");
+        }
+
+        /* switch(name){
+           case "Wardrobe 1": fill_options([5,7,10]); display_functions("option_functions_invis");
                 change_d_option_cons([true,true,true,true,true,true]); return
 
             case "Wardrobe 2": fill_options([5,8,10]); display_functions("option_functions_invis");
@@ -171,7 +220,7 @@ function Input_Reader(){
             case "Broom cabinet 2": fill_options([11,13]); display_functions("option_functions_invis");
                 change_d_option_cons([false,false,false,true,true,true]); return
 
-
+            */
 
             /*case "File cabinet": fill_options([1]); display_functions("option_functions_invis");
                 change_d_option_cons([true,true,true,true,true,true]); return
@@ -197,10 +246,31 @@ function Input_Reader(){
              change_d_option_cons([true,true,true,true,true,true]); return
 
             case "Flexible Selection": fill_options([]); display_functions("option_functions_vis");
-                change_d_option_cons([true,true,true,true,true,true]); return*/
+                change_d_option_cons([true,true,true,true,true,true]); return
         }
-        alert("Value could not be found!");
+        alert("Value could not be found!");*/
     }
+
+    function compatibility_check_model(func_list){
+
+        for(var i=0; i<expl_db.comp_list.length; i++){
+           if(is_in_comp_list(func_list,expl_db.comp_list[i])){
+               return true;
+           }
+        }
+        return false;
+    }
+
+    function is_in_comp_list(func_list,comp_list_el){
+
+        for(var i=0; i< func_list.length; i++){
+            if(func_list[i]==true && comp_list_el[i]==false){
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     function fill_options(values){
 

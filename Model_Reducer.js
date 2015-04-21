@@ -10,7 +10,7 @@ function Model_Reducer(){
 
     this.set_max_options = function(){
         if(variant_mode == 0){
-            max_options = 10000;
+            max_options = 10000000;
             document.getElementById("output_changer").value = "Small Mode";
             variant_mode = 1;
         }else{

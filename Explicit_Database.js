@@ -8,8 +8,9 @@ function Explicit_Database(){
     this.width;
     this.depth;
     //this.num_functions = 11;//9
-    this.num_functions = 17;
+    this.num_functions = 7;
     this.num_phys_cons = 5;
+    this.comp_func_num = 4;
 
     this.functions = new Array(this.num_functions);
     this.d_option_cons;
@@ -20,7 +21,18 @@ function Explicit_Database(){
     this.p_cons = initialize_p_cons(this.num_phys_cons);
     this.f_cons = initialize_f_cons(this.num_functions);
     this.d_option_cons = initialize_d_option_cons();
+    this.comp_list = initialize_comp_list();
 
+
+    function initialize_comp_list(num){
+
+        var comp_funcs = [[true,true,true,true,false,false,false],
+                         [false,false,false,false,false,true,true],
+                         [false,false,false,true,true,false,false],
+                         [false,false,false,false,true,false,true]];
+
+        return comp_funcs;
+    }
 
     function initialize_p_cons(num){
 
@@ -77,7 +89,7 @@ function Explicit_Database(){
 
         //G1,G2,G3,G4,G5                    (nothing,drawer behind door,drawer,door single,door double,door slide)
         //CD,DVD 1: high level
-        f_cons[0]= new Functional_Constraint(0,20,30,new Array(true,false,true,false,false,false),1);
+        /*f_cons[0]= new Functional_Constraint(0,20,30,new Array(true,false,true,false,false,false),1);
         //CD,DVD 2: low level
         f_cons[1]= new Functional_Constraint(1,20,30,new Array(true,false,true,false,false,false),2);
 
@@ -116,6 +128,22 @@ function Explicit_Database(){
 
         //Shoes
         f_cons[16]= new Functional_Constraint(16,35,50,new Array(false,false,false,true,true,true),17);
+        */
+
+        //Jackets
+        f_cons[0]= new Functional_Constraint(2,110,max_height,new Array(false,false,false,true,true,true),0);
+        //Small CD
+        f_cons[1]= new Functional_Constraint(0,20,30,new Array(true,false,true,false,false,false),1);
+        //Small-Medium
+        f_cons[2]= new Functional_Constraint(1,30,45,new Array(true,false,false,false,false,false),2);
+        //Medium
+        f_cons[3]= new Functional_Constraint(3,45,60,new Array(false,true,true,true,true,true),3);
+        //Medium-Large
+        f_cons[4]= new Functional_Constraint(3,60,80,new Array(false,true,true,true,true,true),4);
+        //Large
+        f_cons[5]= new Functional_Constraint(3,80,max_height,new Array(false,true,true,true,true,true),5);
+        //Shoes
+        f_cons[6]= new Functional_Constraint(3,60,80,new Array(false,true,true,true,true,true),6);
 
         return f_cons;
     }
