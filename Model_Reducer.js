@@ -32,9 +32,6 @@ function Model_Reducer(){
         if(impl_db.interaction_check()||impl_db.interaction_check2()) {
             //case with interaction
 
-            alert("1-2-3");
-            alert("in interaction 1: "+impl_db.interaction_check()+" 2: "+impl_db.interaction_check2());
-
             if(impl_db.interaction_check()) {
                 version = 1;
             }
