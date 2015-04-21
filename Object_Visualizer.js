@@ -224,12 +224,9 @@ function Object_Visualizer(){
         mouseVector = new THREE.Vector2();
         raycaster = new THREE.Raycaster();
 
-        //alert("dabei");
-
         //webGL_element.setAttribute('onclick','obj_visualizer.onMouseMove()');
         webGL_element.addEventListener('click',onMouseMove,false);
 
-        //alert("durch");
         // Add OrbitControls so that we can pan around with the mouse.
         controls = new THREE.OrbitControls(camera, renderer.domElement);
 
