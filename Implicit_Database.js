@@ -10,12 +10,12 @@ function Implicit_Database(){
     this.weights = null;
     //this.probabilities = null;
     this.rows = null;
-    this.grasp = null;
+    this.grasp = expl_db.grasps[0];
     this.selected_function = undefined;
     this.grasp_selector = false;
     this.material_selector = false;
     this.d_options = null;
-    this.material = null;
+    this.material = expl_db.materials[0];
 
     //save d_options for each functions
 
@@ -30,15 +30,34 @@ function Implicit_Database(){
 
     this.reset = function(){
 
-        this.set_information(null,null,null,null,null,null);
+        this.set_information(null,null,null,expl_db.grasps[0],null,expl_db.materials[0]);
         this.selected_function = undefined;
-        this.material_selector=null;
-        this.grasp_selector = null;
+        //this.material_selector=null;
+        //this.grasp_selector = null;
 
         document.getElementById("implicid_data_out").innerHTML="";
+        curr_model_ID = null;
+
+        document.getElementById("grasp_select").options[0].selected = true;
+        document.getElementById("material_select").options[0].selected = true;
+
         output_writer.delete_info_icon();
         output_writer.delete_interaction_functions();
         start(0);
+    }
+
+    this.set_grasp = function(){
+        this.grasp = document.getElementById("grasp_select").value;
+        if(curr_model_ID != null){
+            obj_visualizer.call_vis(curr_model_ID);
+        }
+    }
+
+    this.set_material = function(){
+        this.material = "images/"+document.getElementById("material_select").value+".jpg";
+        if(curr_model_ID != null){
+            obj_visualizer.call_vis(curr_model_ID);
+        }
     }
 
     this.delete_rows = function(){
@@ -48,7 +67,7 @@ function Implicit_Database(){
         start();
     }
 
-    this.delete_grasp = function(){
+    /*this.delete_grasp = function(){
         this.grasp = null;
         this.delete_interaction();
         this.show_information();
@@ -60,7 +79,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         start();
-    }
+    }*/
 
     this.delete_weights = function(){
         this.weights = null;
@@ -70,11 +89,13 @@ function Implicit_Database(){
     }
 
     this.set_interaction_function = function(val){
+
         this.selected_function = val;
         this.show_information();
     }
 
     this.detect_checked_interaction_button = function(){
+
         var element = document.getElementById("input_radio");
         var child = element.firstChild;
 
@@ -87,7 +108,7 @@ function Implicit_Database(){
         start();
     }
 
-    this.detect_checked_interaction_button2 = function(){
+    /*this.detect_checked_interaction_button2 = function(){
         var element = document.getElementById("input_radio2");
         var child = element.firstChild;
         this.grasp_selector = false;
@@ -103,15 +124,15 @@ function Implicit_Database(){
             child = child.nextSibling;
         }
         start();
-    }
+    }*/
 
     this.interaction_check = function(){
         return this.selected_function!= undefined&& this.selected_function!=null;
     }
 
-    this.interaction_check2 = function(){
+    /*this.interaction_check2 = function(){
         return this.grasp_selector == true || this.material_selector == true;
-    }
+    }*/
 
     this.is_filled = function(){
         return this.weights!=null && this.rows!=null;
@@ -131,7 +152,7 @@ function Implicit_Database(){
             "class='exit_button' type='button' value='X'> "+
             output_writer.get_Weighting_Description(this.weights)+" <br>";
         }
-        if(this.grasp != null){
+        /*if(this.grasp != null){
             implicit_out += "<input onclick='impl_db.delete_grasp()'" +
             "class='exit_button' type='button' value='X'> "+ this.grasp+" <br>";
         }
@@ -140,7 +161,7 @@ function Implicit_Database(){
             "class='exit_button' type='button' value='X'> "+ output_writer.get_Material_FullName(this.material);
         }
             //"<input class='exit_button' type='button' value='X'> "+output_writer.get_F_Name(this.selected_function)+" <br> "+
-
+        */
         element.innerHTML= implicit_out;
 
         /*element.innerHTML=this.rows+" rows <br> weighting "+this.weights+" <br>  "+
@@ -148,8 +169,8 @@ function Implicit_Database(){
     }
 
     this.delete_interaction = function(){
-        this.grasp_selector = null;
-        this.material_selector = null;
+        //this.grasp_selector = null;
+        //this.material_selector = null;
         this.selected_function = undefined;
         output_writer.delete_interaction_functions();
     }

@@ -29,6 +29,8 @@ function Object_Visualizer(){
 
         //alert("start with "+ID );
 
+        curr_model_ID = ID;
+
         // Initialize the scene
         var option = l_options[ID];
 
@@ -36,13 +38,15 @@ function Object_Visualizer(){
 
         var vis_model = get_model_coordinates(option);
 
-        initializeScene(vis_model[0],vis_model[1],option.material);
+        //initializeScene(vis_model[0],vis_model[1],option.material);
+        initializeScene(vis_model[0],vis_model[1],impl_db.material);
 
         // Animate the scene
         animate();
 
         //set_implicid information
-        impl_db.set_information(option.weightings,null,option.row_num,option.grasp,option.d_options,option.material);
+        //impl_db.set_information(option.weightings,null,option.row_num,option.grasp,option.d_options,option.material);
+        impl_db.set_information(option.weightings,null,option.row_num,impl_db.grasp,option.d_options,impl_db.material);
         impl_db.show_information();
 
         //set info icon
@@ -115,7 +119,7 @@ function Object_Visualizer(){
         renderer.setClearColor(0xffffff, 1);
 
         // Get the size of the inner window (content area) to create a full size renderer
-        canvasWidth = 580;
+        canvasWidth = 560;//580
         canvasHeight = 450;
 
         // Set the renderers size to the content areas size

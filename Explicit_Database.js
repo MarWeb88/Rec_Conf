@@ -15,8 +15,12 @@ function Explicit_Database(){
     this.functions = new Array(this.num_functions);
     this.d_option_cons;
     this.grasps = new Array("Grasp 1","Grasp 2","Grasp 3");
-    this.materials = new Array("images/erle.jpg","images/wood5.jpg","images/mahagoni.jpg","images/apfel.jpg",
-        "images/Buche.jpg","images/fichte.jpg","images/kirsche.jpg");
+    /*this.materials = new Array("images/erle.jpg","images/wood5.jpg","images/mahagoni.jpg","images/apfel.jpg",
+        "images/Buche.jpg","images/fichte.jpg","images/kirsche.jpg");*/
+    this.materials = new Array("images/Alder.jpg");
+
+    /*this.grasps = new Array("Grasp 1");
+    this.materials = new Array("images/erle.jpg");*/
 
     this.p_cons = initialize_p_cons(this.num_phys_cons);
     this.f_cons = initialize_f_cons(this.num_functions);

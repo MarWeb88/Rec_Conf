@@ -31,6 +31,12 @@ var prop_calc;
 var expl_db;
 var impl_db;
 
+var mySlider_h;
+var mySlider_w;
+var mySlider_d;
+
+var curr_model_ID;
+
 function main() {
 
      //initialize global dimension values
@@ -44,6 +50,10 @@ function main() {
      max_depth = 60;
 
      border_width_real = 2;
+     curr_model_ID = null
+
+    //initialize sliders
+    initialize_sliders();
 
     //initialize Explicit_Database
     expl_db = new Explicit_Database();
@@ -70,13 +80,6 @@ function main() {
 
     //initialize Object_Visualizer
     obj_visualizer = new Object_Visualizer();
-
-    /*var mySlider = new dhtmlXSlider("sliderObj",100);
-    mySlider.setMin(150);
-    mySlider.setStep(1);
-    mySlider.linkTo("height_input");*/
-
-
 }
 
 function start(variant){
@@ -147,6 +150,38 @@ function clone(obj) {
     throw new Error("Unable to copy obj! Its type isn't supported.");
 }
 
+function initialize_sliders(){
+
+    mySlider_h = new dhtmlXSlider({
+        parent: "sliderObj_h",
+        size: 100,
+        value: 150,
+        step: 1,
+        min: 100,
+        max: 200,
+        linkTo: "height_input"
+    });
+
+    mySlider_w = new dhtmlXSlider({
+        parent: "sliderObj_w",
+        size: 100,
+        value: 100,
+        step: 1,
+        min: 50,
+        max: 150,
+        linkTo: "width_input"
+    });
+
+    mySlider_d = new dhtmlXSlider({
+        parent: "sliderObj_d",
+        size: 100,
+        value: 50,
+        step: 1,
+        min: 30,
+        max: 70,
+        linkTo: "depth_input"
+    });
+}
 
     //initialize Data Object List
     /*number_data_obj = 8;

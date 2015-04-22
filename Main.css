@@ -33,7 +33,7 @@
     height: 230px;
     border-style: solid;
     border-width: 0.5px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .output_changer {
@@ -54,7 +54,7 @@
 }
 
 .option_output_full {
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 /*.option_row0 {
@@ -259,9 +259,10 @@
 .option_purpose {
     position: absolute;
     left: 5px;
-    width: 230px;
-    height: 100px;
-    overflow: scroll;
+    top: 100px;
+    width: 180px;
+    height: 80px;
+    overflow-y: scroll;
 }
 
 .start_button {
@@ -271,6 +272,7 @@
 
 .implicid_data_out {
     position: absolute;
+    top: 70px;
     left: 240px;
     width: 270px;
     font-size: 9px
@@ -278,6 +280,9 @@
 
 .reset_button_vis {
     display: inline;
+    position: absolute;
+    left: 390px;
+    width: auto;
 }
 
 .reset_button_invis {
@@ -290,4 +295,36 @@
 
 .implicid_headline {
     font-size: 14px;
+}
+
+.height_container {
+    position: absolute;
+    left: 0px;
+    width: 130px;
+}
+
+.width_container {
+    position: absolute;
+    left: 130px;
+    width: 130px;
+}
+
+.depth_container {
+    position: absolute;
+    left: 260px;
+    width: 130px;
+}
+
+.grasp_select {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+.material_select {
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    z-index: 5;
 }

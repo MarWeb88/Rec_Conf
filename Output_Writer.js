@@ -66,14 +66,14 @@ function Output_Writer(){
         }
         ret_val=ret_val+"<input type='radio' name='group1' value='Nothing'> Nothing</form>";
 
-        ret_val=ret_val+"<br>Select the option for which you want more recommendations: <form id='input_radio2' " +
+        /*ret_val=ret_val+"<br>Select the option for which you want more recommendations: <form id='input_radio2' " +
         "onchange='impl_db.detect_checked_interaction_button2()'>"
 
         ret_val=ret_val +
         "<input type='radio' name='group2' value='grasp'> Grasp " +
         "<input type='radio' name='group2' value='Material'> Material" +
         "<input type='radio' name='group2' value='Nothing'> Nothing " +
-        "</form>";
+        "</form>";*/
 
         element.innerHTML=ret_val;
 
@@ -91,12 +91,12 @@ function Output_Writer(){
         for(var i=0; i<elements.length; i++){
             elements[i].checked = false;
         }
-
+        /*
         elements = document.getElementsByName("group2");
 
         for(var i=0; i<elements.length; i++){
             elements[i].checked = false;
-        }
+        }*/
     }
 
     function clear_options(){
@@ -152,14 +152,15 @@ function Output_Writer(){
                 element.style.backgroundColor = "white";
                 element.style.fontSize="9px";
                 element.innerHTML = get_Function_Name(option.rows[i][j].type)+
-                get_Option_Name(option.rows[i][j].d_options)+get_grasp_Name(option.grasp,option.rows[i][j].type)+
-                get_Material_Name(option.material);
+                get_Option_Name(option.rows[i][j].d_options);/*+get_grasp_Name(option.grasp,option.rows[i][j].type)+
+                get_Material_Name(option.material);*/
+
+                if(variant == 2){
+                    element.innerHTML += get_grasp_Name(impl_db.grasp)+
+                    get_Material_Name(impl_db.material);
+                }
 
                 element.style.textAlign="center";
-
-                /*if(variant == 2){
-                    element.setAttribute('onclick','impl_db.set_interaction_function('+option.rows[i][j].type +')');
-                }*/
 
                 //append new Element
                 front.appendChild(element);
@@ -192,40 +193,6 @@ function Output_Writer(){
 
     function get_Function_Name(type){
         switch (type){
-
-            /*case 0:return "CD/DVD 1"
-
-            case 1:return "CD/DVD 2"
-
-            case 2:return "Books 1"
-
-            case 3:return "Books 2"
-
-            case 4:return "Books 3"
-
-            case 5:return "Jackets 1"
-
-            case 6:return "Jackets 2"
-
-            case 7:return "Small Stuff 1"
-
-            case 8:return "Small Stuff 2"
-
-            case 9:return "Small Stuff 3"
-
-            case 10:return "Medium Stuff 1"
-
-            case 11:return "Medium Stuff 2"
-
-            case 12:return "Medium Stuff 3"
-
-            case 13:return "Large Stuff 1"
-
-            case 14:return "Large Stuff 2"
-
-            case 15:return "Large Stuff 3"
-
-            case 16:return "Shoes"*/
 
             case 0:return "Jackets"
 
@@ -262,9 +229,9 @@ function Output_Writer(){
 
     function get_grasp_Name(val,type){
 
-        if(type == 1|| type == 2){
+        /*if(type == 1|| type == 2){
             return "(0)"
-        }else{
+        }else{*/
 
             switch(val){
                 case "no Grasp": return "(0)"
@@ -281,63 +248,58 @@ function Output_Writer(){
 
                 case "Grasp 6": return "(6)"
             }
-        }
+       // }
     }
 
     function get_Function_Number(name){
         switch(name){
-            case "CD/DVD 1": return 0
+            case "Jackets": return 0
 
-            case "CD/DVD 2": return 1
+            case "Small(CD)": return 1
 
-            case "Books 1": return 2
+            case "Small/Med": return 2
 
-            case "Books 2": return 3
+            case "Medium": return 3
 
-            case "Books 3": return 4
+            case "Med/Large": return 4
 
-            case "Jackets 1": return 5
+            case "Large": return 5
 
-            case "Jackets 2": return 6
-
-            case "Small Stuff 1": return 7
-
-            case "Small Stuff 2": return 8
-
-            case "Small Stuff 3": return 9
-
-            case "Medium Stuff 1": return 10
-
-            case "Medium Stuff 2": return 11
-
-            case "Medium Stuff 3": return 12
-
-            case "Large Stuff 1": return 13
-
-            case "Large Stuff 2": return 14
-
-            case "Large Stuff 3": return 15
-
-            case "Shoes": return 16
+            case "Shoes": return 6
         }
     }
 
     function get_Material_Name(name){
 
         switch(name){
-            case "images/erle.jpg": return "(E)"
+            
+            case "images/Alder.jpg": return "(Al)"
 
-            case "images/wood5.jpg": return "(W)"
+            case "images/Apple.jpg": return "(Ap)"
 
-            case "images/mahagoni.jpg": return "(M)"
+            case "images/Beech.jpg": return "(Be)"
 
-            case "images/apfel.jpg": return "(A)"
+            case "images/Birch.jpg": return "(Bi)"
 
-            case "images/Buche.jpg": return "(B)"
+            case "images/Cherry.jpg": return "(Ch)"
 
-            case "images/fichte.jpg": return "(F)"
+            case "images/Elm.jpg": return "(El)"
 
-            case "images/kirsche.jpg": return "(K)"
+            case "images/Graphite Gray.jpg": return "(GG)"
+
+            case "images/Mahogany.jpg": return "(Ma)"
+
+            case "images/Oak.jpg": return "(Oa)"
+
+            case "images/Plum.jpg": return "(Pl)"
+
+            case "images/Spruce.jpg": return "(Sp)"
+
+            case "images/Wenge.jpg": return "(We)"
+
+            case "images/Wild Pear.jpg": return "(WP)"
+
+            case "images/Zebrano.jpg": return "(Ze)"
         }
     }
 

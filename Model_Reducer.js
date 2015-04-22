@@ -29,15 +29,17 @@ function Model_Reducer(){
         var version;
 
         //Begin of Interaction Case
-        if(impl_db.interaction_check()||impl_db.interaction_check2()) {
+        //if(impl_db.interaction_check()||impl_db.interaction_check2()) {
+
+        if(impl_db.interaction_check()) {
             //case with interaction
 
             if(impl_db.interaction_check()) {
                 version = 1;
             }
-            if(impl_db.interaction_check2()){
+            /*if(impl_db.interaction_check2()){
                 version = 2;
-            }
+            }*/
 
             optionlist_reduced = new Array();
             optionlist_reduced_counter = 0;
@@ -53,14 +55,15 @@ function Model_Reducer(){
                         optionlist_reduced_counter++;
                     }
                 }
-                if(version == 2){
+                /*if(version == 2){
                     if(option_list_old[i].check_weighting(-1)){ //check with invalid number
 
                         optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
                         optionlist_reduced_counter++;
                     }
-                }
+                }*/
             }
+
             option_list_old=clone(optionlist_reduced);
 
         }
@@ -73,8 +76,8 @@ function Model_Reducer(){
 
             for (var i = 0; i < option_list_old.length; i++) {
 
-                if (option_list_old[i].check_grasp() &&
-                    option_list_old[i].check_material() &&
+                if (//option_list_old[i].check_grasp() &&
+                    //option_list_old[i].check_material() &&
                     option_list_old[i].check_row_num() &&
                     option_list_old[i].check_weighting_distance(1)
                 ) {

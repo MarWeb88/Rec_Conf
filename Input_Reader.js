@@ -88,9 +88,15 @@ function Input_Reader(){
 
         if(val == true){
             document.getElementById("reset_button").className="reset_button_vis";
+            mySlider_h.disable();
+            mySlider_w.disable();
+            mySlider_d.disable();
         }
         if(val == false){
             document.getElementById("reset_button").className="reset_button_invis";
+            mySlider_h.enable();
+            mySlider_w.enable();
+            mySlider_d.enable();
         }
     }
 
