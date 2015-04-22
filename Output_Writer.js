@@ -18,7 +18,7 @@ function Output_Writer(){
 
         var element2 = document.getElementById("information_box_out");
 
-        generate_interaction_functions(element2,option);
+        //generate_interaction_functions(element2,option);
     }
 
     this.delete_info_icon = function(){
@@ -229,26 +229,21 @@ function Output_Writer(){
 
     function get_grasp_Name(val,type){
 
-        /*if(type == 1|| type == 2){
-            return "(0)"
-        }else{*/
+        switch(val){
+            case "no Grasp": return "(0)"
 
-            switch(val){
-                case "no Grasp": return "(0)"
+            case "Grasp 1": return "(1)"
 
-                case "Grasp 1": return "(1)"
+            case "Grasp 2": return "(2)"
 
-                case "Grasp 2": return "(2)"
+            case "Grasp 3": return "(3)"
 
-                case "Grasp 3": return "(3)"
+            case "Grasp 4": return "(4)"
 
-                case "Grasp 4": return "(4)"
+            case "Grasp 5": return "(5)"
 
-                case "Grasp 5": return "(5)"
-
-                case "Grasp 6": return "(6)"
-            }
-       // }
+            case "Grasp 6": return "(6)"
+        }
     }
 
     function get_Function_Number(name){

@@ -13,6 +13,7 @@ function Implicit_Database(){
     this.selected_function = undefined;
     this.grasp_selector = false;
     this.material_selector = false;
+    this.d_options_selector = null;
     this.d_options = null;
     this.material = expl_db.materials[0];
     this.start_row = null;
@@ -64,6 +65,7 @@ function Implicit_Database(){
         this.rows = null;
         this.delete_interaction();
         this.show_information();
+        impl_db.d_options_selector = null;
         start();
     }
 
@@ -71,27 +73,69 @@ function Implicit_Database(){
         this.start_row = null;
         this.delete_interaction();
         this.show_information();
+        impl_db.d_options_selector = null;
         start();
     }
 
-    /*this.delete_grasp = function(){
-        this.grasp = null;
-        this.delete_interaction();
-        this.show_information();
-        start();
-    }
-
-    this.delete_material = function(){
-        this.material = null;
+    /*this.delete_d_options_selector = function(){
+        this.d_options_selector = null;
         this.delete_interaction();
         this.show_information();
         start();
     }*/
 
+    function get_latest_fill(list){
+
+        var last_point = 0;
+
+        for(var i=1; i<list.length; i++){
+            if(list[i]!=null){
+                last_point = i;
+            }
+        }
+        return last_point;
+    }
+
+    this.get_imp_op_list = function(){
+        return ["empty",this.rows,this.weights,this.start_row];
+    }
+
+    this.set_impl_information = function(values){
+
+        var stopper = false;
+        var counter = 0;
+        var list = impl_db.get_imp_op_list();
+
+
+        while(stopper==false && counter <= get_latest_fill(list)){
+
+            if(list[counter+1] == null){
+
+                stopper = true;
+                switch(counter){
+                    case 0: impl_db.rows = values[counter];
+                        break
+
+                    case 1: impl_db.weights = values[counter];
+                        break
+
+                    case 2: impl_db.start_row = values[counter];
+
+                        break
+                }
+            }
+            counter++;
+        }
+        if(impl_db.rows!= null && impl_db.weights != null && impl_db.start_row!= null){
+            impl_db.d_options_selector = true;
+        }
+    }
+
     this.delete_weights = function(){
         this.weights = null;
         this.delete_interaction();
         this.show_information();
+        impl_db.d_options_selector = null;
         start();
     }
 
@@ -163,6 +207,11 @@ function Implicit_Database(){
             "class='exit_button' type='button' value='X'> Build Variant: "+
             this.start_row+" <br>";
         }
+        /*if(this.d_options_selector != null){
+            implicit_out += "<input onclick='impl_db.delete_d_options_selector()'" +
+            "class='exit_button' type='button' value='X'> Show variations: "+
+            this.start_row+" <br>";
+        }*/
         /*if(this.grasp != null){
             implicit_out += "<input onclick='impl_db.delete_grasp()'" +
             "class='exit_button' type='button' value='X'> "+ this.grasp+" <br>";

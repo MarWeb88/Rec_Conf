@@ -71,11 +71,19 @@ function Model(row_num,ID,weightings){
     }
 
     this.check_start_row = function(){
-        //alert(impl_db.row_state +"  =   "+this.row_state);
-        /*if(this.start_row != null && this.row_state == impl_db.row_state){
-
-        }*/
         return impl_db.start_row==null || this.start_row == impl_db.start_row;
+    }
+
+    this.check_d_options = function(){
+
+        if(impl_db.d_options != undefined && impl_db.d_options_selector == null) {
+            for (var i = 0; i < impl_db.d_options.length; i++) {
+                if (impl_db.d_options[i] != this.d_options[i]) {
+                    return false
+                }
+            }
+        }
+        return true
     }
 
     this.check_weighting_distance = function(max_distance){

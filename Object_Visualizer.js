@@ -39,10 +39,13 @@ function Object_Visualizer(){
         // Animate the scene
         animate();
 
+
         //set_implicid information
-        //impl_db.set_information(option.weightings,null,option.row_num,option.grasp,option.d_options,option.material);
-        impl_db.set_information(option.weightings,null,option.row_num,impl_db.grasp,
-            option.d_options,impl_db.material,option.start_row);
+        /*impl_db.set_information(option.weightings,null,option.row_num,impl_db.grasp,
+            option.d_options,impl_db.material,option.start_row);*/
+        impl_db.set_impl_information([option.row_num,option.weightings,option.start_row]);
+        impl_db.d_options = option.d_options;
+
         impl_db.show_information();
 
         //set info icon
@@ -53,7 +56,6 @@ function Object_Visualizer(){
 
         impl_db.set_interaction_function(null);
 
-        //alert("ende");
     }
 
     function get_model_coordinates(option){

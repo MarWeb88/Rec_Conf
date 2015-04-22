@@ -4,8 +4,9 @@
 
 function Model_Reducer(){
 
-    var max_options = 50;
+    var max_options = 30;
     var variant_mode = 0;
+    var reference_list = new Array();
     //seperates the model in different lists
 
     this.set_max_options = function(){
@@ -57,7 +58,8 @@ function Model_Reducer(){
 
                 if (option_list_old[i].check_row_num() &&
                     option_list_old[i].check_start_row() &&
-                    option_list_old[i].check_weighting_distance(1)
+                    option_list_old[i].check_weighting_distance(0) &&
+                    option_list_old[i].check_d_options()
                 ) {
                     optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
                     optionlist_reduced_counter++;
@@ -91,6 +93,9 @@ function Model_Reducer(){
             for(var i=0; i<row_ar.length; i++){
                 buckets[i] = new Bucket(row_ar[i]);
             }
+            //redundance check before filling items in the buckets
+
+
             //distribute elements in buckets
             for(var i=0; i<optionlist_reduced.length; i++){
                 buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
@@ -123,5 +128,32 @@ function Model_Reducer(){
         }
 
         return optionlist_reduced;
+    }
+
+    function check_redundance(model){
+
+    }
+
+    function is_redundant(model_1,model_2){
+        //check row_num
+        if(model_1.row_num!=model_2.row_num){
+            return false;
+        }else{
+            //check elements each row
+            for(var i=0; i<model_1.row_num; i++){
+                if(model_1.rows[i].length != model_2.rows[i].length){
+                    return false;
+                }
+            }
+            //check element types in the row
+            for(var i=0; i<model_1.row_num; i++){
+                for(var j=0; j<model_1.rows[i].length; j++){
+                    if(model_1.rows[i][j].type==model_2[i][j].type){
+                        return false
+                    }
+                }
+            }
+        }
+        return true
     }
 }
