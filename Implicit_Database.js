@@ -8,7 +8,6 @@ function Implicit_Database(){
     //probabilities of the element options for each function
 
     this.weights = null;
-    //this.probabilities = null;
     this.rows = null;
     this.grasp = expl_db.grasps[0];
     this.selected_function = undefined;
@@ -16,21 +15,22 @@ function Implicit_Database(){
     this.material_selector = false;
     this.d_options = null;
     this.material = expl_db.materials[0];
+    this.start_row = null;
 
     //save d_options for each functions
 
-    this.set_information = function(weights,probabilities,rows,grasp,d_options,material){
+    this.set_information = function(weights,probabilities,rows,grasp,d_options,material,start_row){
         this.weights = weights;
-        //this.probabilities = probabilities;
         this.rows = rows;
         this.grasp = grasp;
         this.d_options = d_options;
         this.material = material;
+        this.start_row = start_row;
     }
 
     this.reset = function(){
 
-        this.set_information(null,null,null,expl_db.grasps[0],null,expl_db.materials[0]);
+        this.set_information(null,null,null,expl_db.grasps[0],null,expl_db.materials[0],null);
         this.selected_function = undefined;
         //this.material_selector=null;
         //this.grasp_selector = null;
@@ -67,6 +67,13 @@ function Implicit_Database(){
         start();
     }
 
+    this.delete_start_row = function(){
+        this.start_row = null;
+        this.delete_interaction();
+        this.show_information();
+        start();
+    }
+
     /*this.delete_grasp = function(){
         this.grasp = null;
         this.delete_interaction();
@@ -89,7 +96,6 @@ function Implicit_Database(){
     }
 
     this.set_interaction_function = function(val){
-
         this.selected_function = val;
         this.show_information();
     }
@@ -151,6 +157,11 @@ function Implicit_Database(){
             implicit_out += "<input onclick='impl_db.delete_weights()'" +
             "class='exit_button' type='button' value='X'> "+
             output_writer.get_Weighting_Description(this.weights)+" <br>";
+        }
+        if(this.start_row != null){
+            implicit_out += "<input onclick='impl_db.delete_start_row()'" +
+            "class='exit_button' type='button' value='X'> Build Variant: "+
+            this.start_row+" <br>";
         }
         /*if(this.grasp != null){
             implicit_out += "<input onclick='impl_db.delete_grasp()'" +
