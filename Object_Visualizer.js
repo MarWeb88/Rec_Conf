@@ -27,18 +27,13 @@ function Object_Visualizer(){
 
     this.call_vis = function(ID) {
 
-        //alert("start with "+ID );
-
         curr_model_ID = ID;
 
         // Initialize the scene
         var option = l_options[ID];
 
-        //alert("has "+option.row_num+" rows "+option.grasp);
-
         var vis_model = get_model_coordinates(option);
 
-        //initializeScene(vis_model[0],vis_model[1],option.material);
         initializeScene(vis_model[0],vis_model[1],impl_db.material);
 
         // Animate the scene
@@ -46,7 +41,8 @@ function Object_Visualizer(){
 
         //set_implicid information
         //impl_db.set_information(option.weightings,null,option.row_num,option.grasp,option.d_options,option.material);
-        impl_db.set_information(option.weightings,null,option.row_num,impl_db.grasp,option.d_options,impl_db.material);
+        impl_db.set_information(option.weightings,null,option.row_num,impl_db.grasp,
+            option.d_options,impl_db.material,option.start_row);
         impl_db.show_information();
 
         //set info icon
@@ -236,7 +232,7 @@ function Object_Visualizer(){
 
     function onMouseMove(e){
 
-        alert("is clicked");
+        //alert("is clicked");
 
         /*mouseVector.x = 2 * (e.clientX / canvasWidth) - 1;
         mouseVector.y = 1 - 2 * (e.clientY / canvasHeight);
