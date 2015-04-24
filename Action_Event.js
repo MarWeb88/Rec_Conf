@@ -7,5 +7,4 @@ function Action_Event(time_stamp,useraction){
     this.time_stamp = time_stamp;
     this.useraction = useraction;
     this.model_Object = new Model_Log_Object();
-
 }

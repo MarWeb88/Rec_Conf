@@ -19,9 +19,17 @@ function Log_Manager(){
         var output_string = "";
         for(var i=0; i<this.elements.length; i++){
             output_string+= this.elements[i].useraction+"("+this.elements[i].time_stamp+"): ";
-            for(var j=0; j<this.elements[i].model_Object.global_settings.length; j++){
-                output_string+=this.elements[i].model_Object.global_settings[j]+", ";
-            }
+
+            [expl_db.height,expl_db.width,expl_db.depth,expl_db.functions,
+                expl_db.d_option_cons,expl_db.purp_functions];
+            var el_part = this.elements[i].model_Object.global_settings;
+
+            //Dimensions
+            output_string+= "Height: "+ el_part[0]+" cm, ";
+            output_string+= "Width: "+ el_part[1]+" cm, ";
+            output_string+= "Depth: "+ el_part[2]+" cm, ";
+
+
         }
         alert(output_string);
     }

@@ -21,6 +21,10 @@ function Model_Log_Object(){
     }
 
     function get_Model(){
-        return l_options[curr_model_ID];
+        if(curr_model_ID!=null){
+            return l_options[curr_model_ID];
+        }else{
+            return null;
+        }
     }
 }

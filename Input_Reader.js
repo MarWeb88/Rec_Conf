@@ -120,6 +120,10 @@ function Input_Reader(){
         }
     }
 
+    this.get_Input_Field_Name = function(){
+
+    }
+
     function add_func_value(func_values,values){
         for(var i=0; i<values.length; i++){
 
