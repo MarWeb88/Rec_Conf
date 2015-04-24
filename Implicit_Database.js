@@ -53,7 +53,7 @@ function Implicit_Database(){
         log_manager.add_action_Event("set grasp");
 
         if(curr_model_ID != null){
-            obj_visualizer.call_vis(curr_model_ID);
+            obj_visualizer.call_vis(curr_model_ID,0);
         }
     }
 
@@ -61,7 +61,7 @@ function Implicit_Database(){
         this.material = "images/"+document.getElementById("material_select").value+".jpg";
         log_manager.add_action_Event("set material");
         if(curr_model_ID != null){
-            obj_visualizer.call_vis(curr_model_ID);
+            obj_visualizer.call_vis(curr_model_ID,0);
         }
     }
 
@@ -107,10 +107,10 @@ function Implicit_Database(){
                 el.options[i].selected = false;
             }
         }
-
         el = document.getElementById("material_select");
 
         for(var i=0; i<el.options.length; i++){
+
             if(el.options[i].value == output_writer.get_Material_FullName(impl_db.material)){
                 el.options[i].selected = true;
             }else{

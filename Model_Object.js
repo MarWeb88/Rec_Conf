@@ -9,19 +9,15 @@ function Model_Object(){
 
     function get_imp_data(){
 
-        var ar = [this.weights,this.rows = null,this.grasp,
-            this.material,this.start_row,this.d_options,this.grasp_selector,
-            this.material_selector,this.d_options_selector];
-
-        return ar;
+        return [impl_db.weights,impl_db.rows,impl_db.grasp,
+            impl_db.material,impl_db.start_row,impl_db.d_options,impl_db.grasp_selector,
+            impl_db.material_selector,impl_db.d_options_selector];
     }
 
     function get_global_settings(){
 
-        var ar = [expl_db.height,expl_db.width,expl_db.depth,expl_db.functions,
-            expl_db.d_option_cons,curr_model_ID,l_options_full,l_options];
-
-        return ar;
+        return [expl_db.height,expl_db.width,expl_db.depth,expl_db.functions,
+            expl_db.d_option_cons,curr_model_ID,l_options_full,l_options,expl_db.purp_functions];
     }
 
     this.set_imp_data = function(){
@@ -35,6 +31,7 @@ function Model_Object(){
         impl_db.grasp_selector = this.imp_data[6];
         impl_db.material_selector = this.imp_data[7];
         impl_db.d_options_selector = this.imp_data[8];
+
     }
 
     this.set_global_settings = function(){
@@ -47,7 +44,7 @@ function Model_Object(){
         curr_model_ID = this.global_settings[5];
         l_options_full = this.global_settings[6];
         l_options = this.global_settings[7];
+        expl_db.purp_functions = this.global_settings[8];
 
-        input_reader.set_Input_Fields();
     }
 }

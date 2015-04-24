@@ -31,7 +31,7 @@ var prop_calc;
 var expl_db;
 var impl_db;
 var log_manager;
-var history;
+var history_s;
 
 var mySlider_h;
 var mySlider_w;
@@ -88,7 +88,7 @@ function main() {
     log_manager = new Log_Manager();
 
     //initialize History
-    history = new History();
+    history_s = new History();
 }
 
 function start(variant){
@@ -97,6 +97,7 @@ function start(variant){
     if(variant == 0) {
         //input_reader.translate_purp_func();
         var input = input_reader.readInput();
+
 
         if (input == false) {
             return false;
