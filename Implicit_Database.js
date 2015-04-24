@@ -48,8 +48,10 @@ function Implicit_Database(){
     }
 
     this.set_grasp = function(){
+
         this.grasp = document.getElementById("grasp_select").value;
         log_manager.add_action_Event("set grasp");
+
         if(curr_model_ID != null){
             obj_visualizer.call_vis(curr_model_ID);
         }
