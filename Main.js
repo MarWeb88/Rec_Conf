@@ -31,6 +31,7 @@ var prop_calc;
 var expl_db;
 var impl_db;
 var log_manager;
+var history;
 
 var mySlider_h;
 var mySlider_w;
@@ -86,32 +87,8 @@ function main() {
     //initialize Log_Manager
     log_manager = new Log_Manager();
 
-    $(document).ready(function(){
-        $("#example").multiselect({
-            header: false,
-            minWidth: 150,
-            noneSelectedText: "Door Options",
-            SelectedText: "Door Options",
-            SelectedList: true,
-            click: function(event, ui){
-                // match with global constraints
-                var out = $("#example").multiselect("getChecked");
-                /*var output = "";
-                for(var i=0; i<out.length; i++){
-                    output+=out[i].value+", ";
-                }
-                alert(output);*/
-                expl_db.set_d_option_cons(out);
-
-                log_manager.add_action_Event("change global door options");
-
-                start();
-
-            }
-        });
-    });
-    $("#example").multiselect("checkAll");
-
+    //initialize History
+    history = new History();
 }
 
 function start(variant){
@@ -216,6 +193,27 @@ function initialize_sliders(){
         max: 70,
         linkTo: "depth_input"
     });
+
+    $(document).ready(function(){
+        $("#example").multiselect({
+            header: false,
+            minWidth: 150,
+            height: "auto",
+            noneSelectedText: "Door Options",
+            SelectedText: "Door Options",
+            SelectedList: true,
+            click: function(event, ui){
+                // match with global constraints
+                var out = $("#example").multiselect("getChecked");
+                expl_db.set_d_option_cons(out);
+
+                log_manager.add_action_Event("change global door options");
+
+                start();
+            }
+        });
+    });
+    $("#example").multiselect("checkAll");
 }
 
     //initialize Data Object List

@@ -9,13 +9,13 @@ function Implicit_Database(){
 
     this.weights = null;
     this.rows = null;
-    this.grasp = expl_db.grasps[0];
+    this.grasp = expl_db.start_handle;
     this.selected_function = undefined;
     this.grasp_selector = false;
     this.material_selector = false;
     this.d_options_selector = null;
     this.d_options = null;
-    this.material = expl_db.materials[0];
+    this.material = expl_db.start_material;
     this.start_row = null;
 
     //save d_options for each functions
@@ -31,7 +31,7 @@ function Implicit_Database(){
 
     this.reset = function(){
 
-        this.set_information(null,null,null,expl_db.grasps[0],null,expl_db.materials[0],null);
+        this.set_information(null,null,null,expl_db.start_handle,null,expl_db.start_material,null);
         this.selected_function = undefined;
         //this.material_selector=null;
         //this.grasp_selector = null;
@@ -87,6 +87,37 @@ function Implicit_Database(){
         this.show_information();
         start();
     }*/
+
+    this.set_slider_values = function() {
+
+        var el = document.getElementById("example");
+
+        for(var i=0; i<el.options.length; i++){
+            el.options[i].selected = expl_db.functions[i];
+        }
+
+        $("#example").multiselect("refresh");
+
+        el = document.getElementById("grasp_select");
+
+        for(var i=0; i<el.options.length; i++){
+            if(el.options[i].value == impl_db.grasp){
+                el.options[i].selected = true;
+            }else{
+                el.options[i].selected = false;
+            }
+        }
+
+        el = document.getElementById("material_select");
+
+        for(var i=0; i<el.options.length; i++){
+            if(el.options[i].value == output_writer.get_Material_FullName(impl_db.material)){
+                el.options[i].selected = true;
+            }else{
+                el.options[i].selected = false;
+            }
+        }
+    }
 
     function get_latest_fill(list){
 

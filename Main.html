@@ -30,6 +30,8 @@
     <script type="text/javascript" src="js/dhtmlx.js"></script>
     <script type="text/javascript" src="Log_Manager.js"></script>
     <script type="text/javascript" src="Action_Event.js"></script>
+    <script type="text/javascript" src="Model_Object.js"></script>
+    <script type="text/javascript" src="History.js"></script>
 
     <script src="js/jquery-2.0.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -57,11 +59,11 @@
 
         </div>
         <select onchange="impl_db.set_grasp()" id="grasp_select" class="grasp_select">
-            <option>Grasp 1</option>
-            <option>Grasp 2</option>
-            <option>Grasp 3</option>
-            <option>Grasp 4</option>
-            <option>Grasp 5</option>
+            <option>Handle 1</option>
+            <option>Handle 2</option>
+            <option>Handle 3</option>
+            <option>Handle 4</option>
+            <option>Handle 5</option>
         </select>
         <select onchange="impl_db.set_material()" id="material_select" class="material_select">
             <option>Alder</option>
@@ -197,8 +199,11 @@
         <div class="start_button">
         <input type="button" name="start_button" value="Start" onclick="input_reader.translate_purp_func()">
             </div>
-        <div>
+        <!--<div>
             <input type="button" class="log_button" name="log_button" value="Log Out" onclick="log_manager.get_output()">
+        </div>-->
+        <<div>
+            <input type="button" class="log_button" name="log_button" value="Log Out" onclick="impl_db.set_slider_values()">
         </div>
         <!--
         <div id="option_functions" class="option_functions_invis">
