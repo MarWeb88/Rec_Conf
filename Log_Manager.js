@@ -9,10 +9,8 @@ function Log_Manager(){
 
     this.add_action_Event = function(useraction){
 
-        var d = new Date().getTime()/1000;
-        var diff = Math.round((d - start_time) * 10) / 10;
+        var el = new Action_Event(get_elapsed_Time(),useraction);
 
-        var el = new Action_Event(diff,useraction);
         this.elements[this.elements.length]= el;
     }
 
@@ -20,8 +18,16 @@ function Log_Manager(){
 
         var output_string = "";
         for(var i=0; i<this.elements.length; i++){
-            output_string+= this.elements[i].useraction+"("+this.elements[i].time_stamp+");  ";
+            output_string+= this.elements[i].useraction+"("+this.elements[i].time_stamp+"): ";
+            for(var j=0; j<this.elements[i].model_Object.global_settings.length; j++){
+                output_string+=this.elements[i].model_Object.global_settings[j]+", ";
+            }
         }
         alert(output_string);
+    }
+
+    function get_elapsed_Time(){
+        var d = new Date().getTime()/1000;
+        return Math.round((d - start_time) * 10) / 10;
     }
 }

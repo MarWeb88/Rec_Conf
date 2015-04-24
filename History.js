@@ -20,15 +20,16 @@ function History(){
 
         //set all fields
         input_reader.set_Input_Fields();
-        alert("3");
+
         impl_db.set_slider_values();
-        alert("4");
+
         impl_db.show_information();
-        alert("5");
+
         output_writer.generate_info_icon(l_options[curr_model_ID]);
-        alert("6");
+        obj_visualizer.call_vis(curr_model_ID,0);
+
         start();
-        alert("7");
+
     }
 
     function write_savepoint(ID){
