@@ -91,12 +91,18 @@ function Input_Reader(){
             mySlider_h.disable();
             mySlider_w.disable();
             mySlider_d.disable();
+            document.getElementById("grasp_select").className = "grasp_select";
+            document.getElementById("material_select").className = "material_select";
+            document.getElementById("d_options_select").className = "d_options_select";
         }
         if(val == false){
             document.getElementById("reset_button").className="reset_button_invis";
             mySlider_h.enable();
             mySlider_w.enable();
             mySlider_d.enable();
+            document.getElementById("grasp_select").className = "grasp_select invis";
+            document.getElementById("material_select").className = "material_select invis";
+            document.getElementById("d_options_select").className = "d_options_select invis";
         }
     }
 

@@ -30,12 +30,14 @@ var model_reducer;
 var prop_calc;
 var expl_db;
 var impl_db;
+var log_manager;
 
 var mySlider_h;
 var mySlider_w;
 var mySlider_d;
 
 var curr_model_ID;
+
 
 function main() {
 
@@ -50,7 +52,7 @@ function main() {
      max_depth = 60;
 
      border_width_real = 2;
-     curr_model_ID = null
+     curr_model_ID = null;
 
     //initialize sliders
     initialize_sliders();
@@ -80,6 +82,36 @@ function main() {
 
     //initialize Object_Visualizer
     obj_visualizer = new Object_Visualizer();
+
+    //initialize Log_Manager
+    log_manager = new Log_Manager();
+
+    $(document).ready(function(){
+        $("#example").multiselect({
+            header: false,
+            minWidth: 150,
+            noneSelectedText: "Door Options",
+            SelectedText: "Door Options",
+            SelectedList: true,
+            click: function(event, ui){
+                // match with global constraints
+                var out = $("#example").multiselect("getChecked");
+                /*var output = "";
+                for(var i=0; i<out.length; i++){
+                    output+=out[i].value+", ";
+                }
+                alert(output);*/
+                expl_db.set_d_option_cons(out);
+
+                log_manager.add_action_Event("change global door options");
+
+                start();
+
+            }
+        });
+    });
+    $("#example").multiselect("checkAll");
+
 }
 
 function start(variant){
@@ -93,6 +125,7 @@ function start(variant){
             return false;
         } else {
             input_reader.vis_input(true);
+            log_manager.add_action_Event("start");
         }
 
         //Model Calculator
@@ -101,6 +134,7 @@ function start(variant){
         //start model calculator and create options
         l_options_full = model_calc.start_calc(input);
     }
+
 
     //reduce options
     l_options = model_reducer.reduce_options(l_options_full);
@@ -111,6 +145,7 @@ function start(variant){
     }*/
 
     //alert(ausgabe);
+    //log_manager.add_action_Event("event");
 
 
     //present options to the user

@@ -6,7 +6,8 @@ function Model_Reducer(){
 
     var max_options = 30;
     var variant_mode = 0;
-    var reference_list = new Array();
+    var reference_list;
+
     //seperates the model in different lists
 
     this.set_max_options = function(){
@@ -27,6 +28,7 @@ function Model_Reducer(){
         var optionlist_reduced;
         var optionlist_reduced_counter;
         var option_list_old = optionlist;
+        reference_list = new Array();
 
         //Begin of Interaction Case
 
@@ -98,7 +100,12 @@ function Model_Reducer(){
 
             //distribute elements in buckets
             for(var i=0; i<optionlist_reduced.length; i++){
-                buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
+
+                if(check_redundance(optionlist_reduced[i])){
+                    buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
+                    reference_list[reference_list.length] = clone(optionlist_reduced[i]);
+                }
+                //buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
             }
 
             //ensure that weightings are as different as possible
@@ -122,6 +129,21 @@ function Model_Reducer(){
             }
             optionlist_reduced = optionlist_reduced_final;
         }
+        /*option_list_old = clone(optionlist_reduced);
+        optionlist_reduced = new Array();
+        var counter = 0;
+
+        for(var i=0; i<option_list_old.length; i++){
+            //alert(check_redundance(optionlist_reduced[i]));
+            if(check_redundance(option_list_old[i])) {
+                //alert("true length: "+reference_list.length);
+                reference_list[reference_list.length] = clone(option_list_old[i]);
+                optionlist_reduced[counter]= clone(option_list_old[i]);
+                counter++;
+                //alert(reference_list.length);
+            }
+        }*/
+
         //sequence IDs
         for(var i=0; i<optionlist_reduced.length; i++){
             optionlist_reduced[i].ID = i;
@@ -132,23 +154,35 @@ function Model_Reducer(){
 
     function check_redundance(model){
 
+        for(var i=0; i<reference_list.length; i++){
+
+            if(is_redundant(model,reference_list[i])){
+                //alert("check false");
+                return false;
+            }
+        }
+        return true;
     }
 
     function is_redundant(model_1,model_2){
         //check row_num
+
         if(model_1.row_num!=model_2.row_num){
+
             return false;
         }else{
             //check elements each row
             for(var i=0; i<model_1.row_num; i++){
+
                 if(model_1.rows[i].length != model_2.rows[i].length){
                     return false;
                 }
             }
-            //check element types in the row
+
             for(var i=0; i<model_1.row_num; i++){
+
                 for(var j=0; j<model_1.rows[i].length; j++){
-                    if(model_1.rows[i][j].type==model_2[i][j].type){
+                    if(model_1.rows[i][j].type != model_2.rows[i][j].type){
                         return false
                     }
                 }

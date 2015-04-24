@@ -49,6 +49,7 @@ function Implicit_Database(){
 
     this.set_grasp = function(){
         this.grasp = document.getElementById("grasp_select").value;
+        log_manager.add_action_Event("set grasp");
         if(curr_model_ID != null){
             obj_visualizer.call_vis(curr_model_ID);
         }
@@ -56,6 +57,7 @@ function Implicit_Database(){
 
     this.set_material = function(){
         this.material = "images/"+document.getElementById("material_select").value+".jpg";
+        log_manager.add_action_Event("set material");
         if(curr_model_ID != null){
             obj_visualizer.call_vis(curr_model_ID);
         }

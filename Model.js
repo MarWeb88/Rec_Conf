@@ -76,9 +76,15 @@ function Model(row_num,ID,weightings){
 
     this.check_d_options = function(){
 
+        for (var i = 0; i < this.d_options.length; i++) {
+            if(this.d_options[i]!=-1 && expl_db.d_option_cons[this.d_options[i]]==false) {
+                return false
+            }
+        }
+
         if(impl_db.d_options != undefined && impl_db.d_options_selector == null) {
             for (var i = 0; i < impl_db.d_options.length; i++) {
-                if (impl_db.d_options[i] != this.d_options[i]) {
+                if(impl_db.d_options[i] != this.d_options[i]) {
                     return false
                 }
             }

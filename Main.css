@@ -270,6 +270,12 @@
     top: 200px;
 }
 
+.log_button {
+    position: absolute;
+    top: 200px;
+    left: 70px;
+}
+
 .implicid_data_out {
     position: absolute;
     top: 70px;
@@ -316,15 +322,30 @@
 }
 
 .grasp_select {
+    display: inline;
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 185px;
     z-index: 5;
 }
 
 .material_select {
+    display: inline;
     position: absolute;
     top: 0px;
-    left: 70px;
+    left: 255px;
     z-index: 5;
+}
+
+.d_options_select {
+    display: inline;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    z-index: 5;
+}
+
+.invis {
+    display: none;
 }

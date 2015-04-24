@@ -13,7 +13,7 @@ function Explicit_Database(){
     this.comp_func_num = 4;
 
     this.functions = new Array(this.num_functions);
-    this.d_option_cons;
+    this.d_option_cons = [true,true,true,true,true,true];
     this.grasps = new Array("Grasp 1","Grasp 2","Grasp 3");
     /*this.materials = new Array("images/erle.jpg","images/wood5.jpg","images/mahagoni.jpg","images/apfel.jpg",
         "images/Buche.jpg","images/fichte.jpg","images/kirsche.jpg");*/
@@ -27,6 +27,23 @@ function Explicit_Database(){
     this.d_option_cons = initialize_d_option_cons();
     this.comp_list = initialize_comp_list();
 
+    this.set_d_option_cons = function(values){
+
+        impl_db.d_options = null;
+
+        var v_counter = 0;
+
+        for(var i=0; i<this.d_option_cons.length; i++){
+
+            if(v_counter<values.length && i == values[v_counter].value-1){
+                this.d_option_cons[i]= true;
+                v_counter++;
+            }else{
+                this.d_option_cons[i]= false;
+            }
+        }
+
+    }
 
     function initialize_comp_list(num){
 
