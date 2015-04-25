@@ -49,7 +49,7 @@
             depth = 0.5;
             height = 0.2;
             num_shelves = 5;
-            slab_height = 0.01;
+            slab_height = 0.03;
             z_pos = 3;
             total_height = 2;
 
@@ -143,27 +143,36 @@
                     side:THREE.DoubleSide
                 });
 
+                var slabMaterial = new THREE.MeshBasicMaterial({
+                    map: neheTexture,
+                    side: THREE.DoubleSide,
+                    vertexColors: THREE.VertexColors,
+                    color: 0xA9A9A9
+                });
+
                 // Applying different materials to the faces is a more difficult than applying one
                 // material to the whole geometry. We start with creating an array of
                 // THREE.MeshBasicMaterial.
 
+                // right, left, top, bottom, front, back
                 // Define six colored materials
                 var boxMaterials = [
                     boxMaterial,
                     boxMaterial,
                     boxMaterial,
-                    boxMaterial,
+                    slabMaterial,
                     new THREE.MeshBasicMaterial({transparent:true, opacity:0, side: THREE.DoubleSide}),
                     boxMaterial
                 ];
 
+
                 var slabMaterials = [
-                    boxMaterial,
-                    boxMaterial,
-                    boxMaterial,
-                    boxMaterial,
-                    boxMaterial,
-                    boxMaterial
+                    slabMaterial,
+                    slabMaterial,
+                    slabMaterial,
+                    slabMaterial,
+                    slabMaterial,
+                    slabMaterial
                 ];
 
         /*        slabMaterials = [
@@ -194,12 +203,13 @@
              * Create cupboard.
              */
             function addCupboard(model, boxMaterial, slabGeometry, slabMaterial){
+                var cupboard = new THREE.Object3D()
                 var x_pos = -model.length*width/2;
                 for (var i = 0; i < model.length; i++) {
-                    addColumn(model[i], x_pos, boxMaterial, slabGeometry, slabMaterial);
+                    addColumn(model[i], x_pos, boxMaterial, slabGeometry, slabMaterial, cupboard);
                     x_pos = x_pos + width;
                 }
-
+                scene.add(cupboard);
             }
 
 
@@ -208,7 +218,7 @@
             /**
              * Create s column of cupboard.
              */
-            function addColumn(rowHeights, x_pos, boxMaterial, slabGeometry, slabMaterial){
+            function addColumn(rowHeights, x_pos, boxMaterial, slabGeometry, slabMaterial, cupboard){
                 // Create a mesh and insert the geometry and the material. Translate the whole mesh
                 // by 1.5 on the x axis and by 4 on the z axis and add the mesh to the scene.
                 var boxBasePosition = -total_height/2;
@@ -221,13 +231,15 @@
 
                     boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
                     boxMesh.position.set(x_pos, boxBasePosition + rowHeights[i]/2, z_pos);
-                    scene.add(boxMesh);
+                    //scene.add(boxMesh);
+                    cupboard.add(boxMesh);
 
                     slabPosition = boxBasePosition + (rowHeights[i]);
                     slabmesh = new THREE.Mesh(slabGeometry, slabMaterial);
                     slabmesh.position.set(x_pos, slabPosition, z_pos);
                     if (rowHeights.length -1 != i)
-                        scene.add(slabmesh);
+                        //scene.add(slabmesh);
+                        cupboard.add(slabmesh);
                  //   boxPosition = boxPosition + rowHeights[i] + slab_height;
                     boxBasePosition = boxBasePosition + rowHeights[i];
                 }

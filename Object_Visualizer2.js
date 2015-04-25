@@ -21,9 +21,13 @@ function Object_Visualizer(){
     depth = 0.5;
     height = 0.2;
     //num_shelves = 5;
-    slab_height = 0.01;
+    slab_height = 0.02;
     z_pos = 3;
     total_height = 2;
+
+
+    var slabMaterial, meshSelected, curSelMeshId, curSelectedMeshMat;
+    meshSelected = false;
 
     this.call_vis = function(ID,variant) {
 
@@ -62,6 +66,11 @@ function Object_Visualizer(){
 
     }
 
+    //Object Selection Component
+    projector = new THREE.Projector();
+    mouseVector = new THREE.Vector3();
+    raycaster = new THREE.Raycaster();
+
     function get_model_coordinates(option){
 
         var ret_ar = new Array(2);
@@ -87,17 +96,7 @@ function Object_Visualizer(){
         return parseFloat(parseFloat(val)/parseFloat(expl_db.height)*total_height);
     }
 
-    /**
-     * Create cupboard.
-     */
-    function addCupboard(model, boxMaterial, slabGeometry, slabMaterial,functions) {
-        var x_pos = -model.length * width / 2;
-        for (var i = 0; i < model.length; i++) {
-            addColumn(model[i], x_pos, boxMaterial, slabGeometry, slabMaterial,functions[i]);
-            x_pos = x_pos + width;
-        }
 
-    }
 
     //Initialize scene
     function initializeScene(vis_model,functions,text_src) {
@@ -117,10 +116,11 @@ function Object_Visualizer(){
             renderer = new THREE.CanvasRenderer();
         }
 
-        // Set the background color of the renderer to black, with full opacity
+        // Set the background color of the renderer to white, with full opacity
         renderer.setClearColor(0xffffff, 1);
 
         // Get the size of the inner window (content area) to create a full size renderer
+        // Canvas size is fixed currently, needs to fetch it from div
         canvasWidth = 580;
         canvasHeight = 450;
 
@@ -157,7 +157,7 @@ function Object_Visualizer(){
         // the scene.
         // After definition, the camera has to be added to the scene.
         camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 1, 100);
-        camera.position.set(0, 0, 10);
+        camera.position.set(0, 0, 7);
         camera.lookAt(scene.position);
         scene.add(camera);
 
@@ -182,27 +182,36 @@ function Object_Visualizer(){
             side: THREE.DoubleSide
         });
 
+        slabMaterial = new THREE.MeshBasicMaterial({
+            map: neheTexture,
+            side: THREE.DoubleSide,
+            vertexColors: THREE.VertexColors,
+            color: 0xA9A9A9
+        });
+
         // Applying different materials to the faces is a more difficult than applying one
         // material to the whole geometry. We start with creating an array of
         // THREE.MeshBasicMaterial.
 
+        // right, left, top, bottom, front, back
         // Define six colored materials
         var boxMaterials = [
             boxMaterial,
             boxMaterial,
-            boxMaterial,
-            boxMaterial,
-            new THREE.MeshBasicMaterial({transparent: true, opacity: 0, side: THREE.DoubleSide}),
+            slabMaterial,
+            slabMaterial,
+            new THREE.MeshBasicMaterial({transparent:true, opacity:0, side: THREE.DoubleSide}),
             boxMaterial
         ];
 
+
         var slabMaterials = [
-            boxMaterial,
-            boxMaterial,
-            boxMaterial,
-            boxMaterial,
-            boxMaterial,
-            boxMaterial
+            slabMaterial,
+            slabMaterial,
+            slabMaterial,
+            slabMaterial,
+            slabMaterial,
+            slabMaterial
         ];
 
         /*        slabMaterials = [
@@ -217,18 +226,15 @@ function Object_Visualizer(){
 
         // Create a MeshFaceMaterial, which allows the cube to have different materials on
         // each face
-        var boxMaterial = new THREE.MeshFaceMaterial(boxMaterials);
+        var boxFaceMaterial = new THREE.MeshFaceMaterial(boxMaterials);
 
         var slabGeometry = new THREE.BoxGeometry(width, slab_height, depth);
 
-        var slabMaterial = new THREE.MeshFaceMaterial(slabMaterials);
+        var slabFaceMaterial = new THREE.MeshFaceMaterial(slabMaterials);
 
-        addCupboard(vis_model, boxMaterial, slabGeometry, slabMaterial,functions);
+        addCupboard(vis_model, boxFaceMaterial, slabGeometry, slabFaceMaterial,functions);
 
-        //Object Selection Component
-        projector = new THREE.Projector();
-        mouseVector = new THREE.Vector3();
-        raycaster = new THREE.Raycaster();
+
 
         //alert("dabei");
 
@@ -242,6 +248,10 @@ function Object_Visualizer(){
 
     }
 
+    /**
+     * Logic to clic on 3D model and perform operations.
+     */
+
     function onMouseMove(e){
 
         mouseVector.x = 2 * ((e.clientX -50)/ canvasWidth) - 1;
@@ -249,24 +259,97 @@ function Object_Visualizer(){
 
         raycaster.setFromCamera( mouseVector.clone(), camera );
 
-        var intersects = raycaster.intersectObjects(scene.children);
+        var intersects = raycaster.intersectObjects(scene.children[1].children);
 
         if(intersects.length!=0){
             impl_db.set_interaction_function(intersects[0].object.ID);
         }else{
             impl_db.set_interaction_function(null);
         }
-        alert(impl_db.interaction_check());
+    //    alert(impl_db.interaction_check());
+        var clickedMeshId = intersects[0].object.id;
 
-        //animate();
+        if (meshSelected){
+            unSelectMeshObject();
+            if(clickedMeshId != curSelMeshId)
+                selectMeshObject(clickedMeshId);
+        }else{
+            selectMeshObject(clickedMeshId);
+        }
+
+        renderScene();
     }
     /**
-     * Create s column of cupboard.
+     * Store selected mesh material. Change it to a darker version
      */
-    function addColumn(rowHeights, x_pos, boxMaterial, slabGeometry, slabMaterial,functions){
+    function selectMeshObject(clickedMeshId){
+        var boxSelect = new THREE.MeshBasicMaterial({
+            color: 0xBEBEBE,
+            side: THREE.DoubleSide
+        });
+        meshObject = fetchMeshbyId(clickedMeshId);
 
-        // Create a mesh and insert the geometry and the material. Translate the whole mesh
-        // by 1.5 on the x axis and by 4 on the z axis and add the mesh to the scene.
+        if(meshObject.material.type == 'MeshFaceMaterial'){
+            // Set curSel.. variables
+            curSelMeshId = clickedMeshId;
+            curSelectedMeshMat = meshObject.material;
+            meshObject.material = slabMaterial;
+        }
+        meshSelected = true;
+    }
+
+    function unSelectMeshObject(){
+        // fetch info from curSel.. variables and unset them
+        var selectedMesh = fetchMeshbyId(curSelMeshId);
+        selectedMesh.material = curSelectedMeshMat;
+
+        meshSelected = false;
+    }
+    /**
+     * Delete selected Mesh
+     */
+    function deleteMeshbyId(selectedMeshId){
+        for(var i = 0; i < scene.children[1].children.length; i++){
+            if (scene.children[1].children[i].id == selectedMeshId){
+                temp = scene.children[1].children[i];
+                scene.children[1].remove(scene.children[1].children[i]);
+            }
+        }
+    }
+    /**
+     * Select Mesh object by ID
+     */
+    function fetchMeshbyId(selectedMeshId){
+        for(var i = 0; i < scene.children[1].children.length; i++){
+            if (scene.children[1].children[i].id == selectedMeshId){
+                return scene.children[1].children[i];
+            }
+        }
+    }
+
+
+
+    /**
+     * Create cupboard.
+     */
+    function addCupboard(model, boxMaterial, slabGeometry, slabMaterial,functions) {
+        var cupboard = new THREE.Object3D();
+        cupboard.name = 'Cupboard';
+        var x_pos = -model.length * width / 2;
+        for (var i = 0; i < model.length; i++) {
+            addColumn(model[i], x_pos, boxMaterial, slabGeometry, slabMaterial,functions[i], cupboard);
+            x_pos = x_pos + width;
+        }
+        scene.add(cupboard);
+    }
+
+    /**
+     * Create columns of cupboard.
+     */
+    function addColumn(rowHeights, x_pos, boxMaterial, slabGeometry, slabMaterial,functions, cupboard){
+        //total_height is constant for the 3D visualization as a global.
+        //while(i--) total_height += rowHeights[i];
+
         var boxBasePosition = -total_height/2;
         for(i = 0; i < rowHeights.length; i++){
             // Create the cube
@@ -279,22 +362,19 @@ function Object_Visualizer(){
 
             boxMesh.ID = functions[i];
             boxMesh.position.set(x_pos, boxBasePosition + rowHeights[i]/2, z_pos);
-            scene.add(boxMesh);
-            //cubes.add(boxMesh);
+            //scene.add(boxMesh);
+            cupboard.add(boxMesh);
+            // Create a mesh and insert the geometry and the material. Translate the whole mesh
+            // by 1.5 on the x axis and by 4 on the z axis and add the mesh to the scene.
 
-            //boxMesh._onClick(alert("drin"));
-
-            slabPosition = boxBasePosition + (rowHeights[i]);
+            slabPosition = boxBasePosition + (rowHeights[i]) + slab_height/2;
             slabmesh = new THREE.Mesh(slabGeometry, slabMaterial);
             slabmesh.position.set(x_pos, slabPosition, z_pos);
-            if (rowHeights.length -1 != i)
-                scene.add(slabmesh);
-            //   boxPosition = boxPosition + rowHeights[i] + slab_height;
-            boxBasePosition = boxBasePosition + rowHeights[i];
+            if (rowHeights.length != i)
+               // scene.add(slabmesh);
+                cupboard.add(slabmesh);
+            boxBasePosition = boxBasePosition + rowHeights[i] + slab_height;
         }
-
-
-
     }
 
     /**
