@@ -9,10 +9,8 @@ function Log_Manager(){
 
     this.add_action_Event = function(useraction){
 
-        var d = new Date().getTime()/1000;
-        var diff = Math.round((d - start_time) * 10) / 10;
+        var el = new Action_Event(get_elapsed_Time(),useraction);
 
-        var el = new Action_Event(diff,useraction);
         this.elements[this.elements.length]= el;
     }
 
@@ -20,8 +18,24 @@ function Log_Manager(){
 
         var output_string = "";
         for(var i=0; i<this.elements.length; i++){
-            output_string+= this.elements[i].useraction+"("+this.elements[i].time_stamp+");  ";
+            output_string+= this.elements[i].useraction+"("+this.elements[i].time_stamp+"): ";
+
+            [expl_db.height,expl_db.width,expl_db.depth,expl_db.functions,
+                expl_db.d_option_cons,expl_db.purp_functions];
+            var el_part = this.elements[i].model_Object.global_settings;
+
+            //Dimensions
+            output_string+= "Height: "+ el_part[0]+" cm, ";
+            output_string+= "Width: "+ el_part[1]+" cm, ";
+            output_string+= "Depth: "+ el_part[2]+" cm, ";
+
+
         }
         alert(output_string);
+    }
+
+    function get_elapsed_Time(){
+        var d = new Date().getTime()/1000;
+        return Math.round((d - start_time) * 10) / 10;
     }
 }

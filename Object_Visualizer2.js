@@ -28,7 +28,8 @@ function Object_Visualizer(){
     var slabMaterial, meshSelected, curSelMeshId, curSelectedMeshMat;
     meshSelected = false;
 
-    this.call_vis = function(ID) {
+
+    this.call_vis = function(ID,variant) {
 
         //alert("start with "+ID );
 
@@ -48,10 +49,12 @@ function Object_Visualizer(){
 
         //set_implicid information
 
-        impl_db.set_impl_information([option.row_num,option.weightings,option.start_row]);
-        impl_db.d_options = option.d_options;
+        if(variant!=0){
+            impl_db.set_impl_information([option.row_num,option.weightings,option.start_row]);
+            impl_db.d_options = option.d_options;
 
-        impl_db.show_information();
+            impl_db.show_information();
+        }
 
         //set info icon
         output_writer.generate_info_icon(option);

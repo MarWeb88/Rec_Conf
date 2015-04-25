@@ -32,6 +32,20 @@ function Input_Reader(){
         }
     }
 
+    this.set_Input_Fields = function(){
+        document.getElementById("height_input").value = expl_db.height;
+        document.getElementById("width_input").value = expl_db.width;
+        document.getElementById("depth_input").value = expl_db.depth;
+
+        for(var i=0; i<expl_db.purp_functions.length; i++){
+            if(expl_db.purp_functions[i]==true){
+                document.getElementById("function"+i).checked = true;
+            }else{
+                document.getElementById("function"+i).checked = false;
+            }
+        }
+    }
+
     this.readInput = function(){
 
         //read dimensions
@@ -106,6 +120,10 @@ function Input_Reader(){
         }
     }
 
+    this.get_Input_Field_Name = function(){
+
+    }
+
     function add_func_value(func_values,values){
         for(var i=0; i<values.length; i++){
 
@@ -143,9 +161,11 @@ function Input_Reader(){
             var el = document.getElementById("function"+i);
             if(el.checked){
                 func_list[i]= true;
+                expl_db.purp_functions[i]=true;
                 add_func_value(func_values,get_values(i))
             }else{
                 func_list[i]= false;
+                expl_db.purp_functions[i]=false;
             }
         }
 

@@ -273,15 +273,29 @@
 .log_button {
     position: absolute;
     top: 200px;
-    left: 70px;
+    left: 110px;
+}
+
+.save_button {
+    position: absolute;
+    top: 200px;
+    left: 50px;
 }
 
 .implicid_data_out {
     position: absolute;
     top: 70px;
-    left: 240px;
+    left: 210px;
     width: 270px;
     font-size: 9px
+}
+
+.history_s {
+    position: absolute;
+    top: 70px;
+    left: 480px;
+    width: 50px;
+    font-size: 13px
 }
 
 .reset_button_vis {
@@ -325,7 +339,7 @@
     display: inline;
     position: absolute;
     top: 0px;
-    left: 185px;
+    left: 165px;
     z-index: 5;
 }
 

@@ -30,6 +30,9 @@
     <script type="text/javascript" src="js/dhtmlx.js"></script>
     <script type="text/javascript" src="Log_Manager.js"></script>
     <script type="text/javascript" src="Action_Event.js"></script>
+    <script type="text/javascript" src="Model_Object.js"></script>
+    <script type="text/javascript" src="History.js"></script>
+    <script type="text/javascript" src="Model_Log_Object.js"></script>
 
     <script src="js/jquery-2.0.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -57,11 +60,11 @@
 
         </div>
         <select onchange="impl_db.set_grasp()" id="grasp_select" class="grasp_select">
-            <option>Grasp 1</option>
-            <option>Grasp 2</option>
-            <option>Grasp 3</option>
-            <option>Grasp 4</option>
-            <option>Grasp 5</option>
+            <option>Handle 1</option>
+            <option>Handle 2</option>
+            <option>Handle 3</option>
+            <option>Handle 4</option>
+            <option>Handle 5</option>
         </select>
         <select onchange="impl_db.set_material()" id="material_select" class="material_select">
             <option>Alder</option>
@@ -129,7 +132,6 @@
 
         <div class="option_purpose">
 
-
             <input type="checkbox" size="25" name="colors" id="function0"> Wardrobe <br>
             <input type="checkbox" size="25" name="colors" id="function1"> CD/DVD Shelf<br>
             <input type="checkbox" size="25" name="colors" id="function2"> Book Shelf <br>
@@ -138,67 +140,16 @@
             <input type="checkbox" size="25" name="colors" id="function5"> China cabinet <br>
             <input type="checkbox" size="25" name="colors" id="function6"> Kitchen cabinet <br>
 
-            <!--<select id="purpose_selection" name="purpose_selection" size="5" multiple>
-                <option>Wardrobe</option>
-                <option>CD/DVD shelf</option>
-                <option>Book shelf</option>
-                <option>Shoe cabinet</option>
-                <option>Tool cabinet</option>
-                <option>China cabinet</option>
-                <option>kitchen cabinet</option>
-            </select>-->
-
-
-            <!--<select onchange="input_reader.translate_purp_func()" id="purpose_selection" name="purpose_selection" size="5">
-
-                <option>Wardrobe 1</option>
-                <option>Wardrobe 2</option>
-                <option>Wardrobe 3</option>
-                <option>Wardrobe 4</option>
-
-                <option>CD/Book shelf 1</option>
-                <option>CD/Book shelf 2</option>
-                <option>CD/Book shelf 3</option>
-                <option>CD/Book shelf 4</option>
-                <option>CD/Book shelf 5</option>
-                <option>CD/Book shelf 6</option>
-
-                <option>Kitchen cupboard 1</option>
-                <option>Kitchen cupboard 2</option>
-                <option>Kitchen cupboard 3</option>
-                <option>Kitchen cupboard 4</option>
-                <option>Kitchen cupboard 5</option>
-                <option>Kitchen cupboard 6</option>
-
-                <option>China cabinet 1</option>
-                <option>China cabinet 2</option>
-                <option>China cabinet 3</option>
-
-                <option>Shoe cabinet 1</option>
-                <option>Shoe cabinet 2</option>
-
-                <option>Dresser 1</option>
-                <option>Dresser 2</option>
-
-                <option>Broom cabinet 1</option>
-                <option>Broom cabinet 2</option>
-
-                <option>File cabinet</option>
-                <option>Broom cabinet</option>
-                <option>Tool cabinet</option>
-                <option>Bedroom closet</option>
-                <option>Bathroom cabinet</option>
-                <option>Office cabinet</option>
-                <option>Flexible Selection</option>
-
-            </select>-->
-
         </div>
         <div class="start_button">
         <input type="button" name="start_button" value="Start" onclick="input_reader.translate_purp_func()">
             </div>
-        <div>
+        <<div>
             <input type="button" class="log_button" name="log_button" value="Log Out" onclick="log_manager.get_output()">
+        </div>
+        <div>
+            <input type="button" class="save_button" name="save_button" id="save_button"
+                   value="Save" onclick="history_s.save_model()">
         </div>
         <!--
         <div id="option_functions" class="option_functions_invis">
@@ -227,6 +178,7 @@
         </div>-->
 
     </div>
+    <div id="history_s" class="history_s"></div>
 
     <div id="option_output" class="option_output">
 

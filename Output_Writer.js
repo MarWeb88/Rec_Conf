@@ -230,19 +230,19 @@ function Output_Writer(){
     function get_grasp_Name(val,type){
 
         switch(val){
-            case "no Grasp": return "(0)"
+            case "no Handle": return "(0)"
 
-            case "Grasp 1": return "(1)"
+            case "Handle 1": return "(1)"
 
-            case "Grasp 2": return "(2)"
+            case "Handle 2": return "(2)"
 
-            case "Grasp 3": return "(3)"
+            case "Handle 3": return "(3)"
 
-            case "Grasp 4": return "(4)"
+            case "Handle 4": return "(4)"
 
-            case "Grasp 5": return "(5)"
+            case "Handle 5": return "(5)"
 
-            case "Grasp 6": return "(6)"
+            case "Handle 6": return "(6)"
         }
     }
 
