@@ -46,6 +46,16 @@ function Input_Reader(){
         }
     }
 
+    this.reset_input_fields = function(){
+        for(var i=0; i<expl_db.purp_functions.length; i++){
+            document.getElementById("function"+i).checked = false;
+
+            document.getElementById("height_input").value = "150";
+            document.getElementById("width_input").value = "100";
+            document.getElementById("depth_input").value = "50";
+        }
+    }
+
     this.readInput = function(){
 
         //read dimensions

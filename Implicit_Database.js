@@ -70,6 +70,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        log_manager.add_action_Event("delete_rows");
         start();
     }
 
@@ -78,6 +79,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        log_manager.add_action_Event("delete_build_variant");
         start();
     }
 
@@ -149,13 +151,15 @@ function Implicit_Database(){
                 stopper = true;
                 switch(counter){
                     case 0: impl_db.rows = values[counter];
+                        log_manager.add_action_Event("set_rows");
                         break
 
                     case 1: impl_db.weights = values[counter];
+                        log_manager.add_action_Event("set_weights");
                         break
 
                     case 2: impl_db.start_row = values[counter];
-
+                        log_manager.add_action_Event("set_build_variant");
                         break
                 }
             }
@@ -171,6 +175,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        log_manager.add_action_Event("delete_weights");
         start();
     }
 

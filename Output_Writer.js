@@ -25,12 +25,21 @@ function Output_Writer(){
         document.getElementById("information_box_icon_frame").style.display="none";
     }
 
+    this.delete_options = function(){
+        clear_options();
+    }
+
     this.writeOptionlist = function(option_list){
 
         clear_options();
+        var el = document.getElementById("option_row0");
 
         if(option_list.length == 0){
-            alert("No suitable solution was found!");
+            el.style.width = "100%";
+            el.innerHTML = "No suitable solution was found!";
+        }else{
+            el.style.width = "176.667px";
+            el.innerHTML = "";
         }
 
         for(var i=0;i<option_list.length;i++){

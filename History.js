@@ -8,6 +8,7 @@ function History(){
     this.save_model = function(){
 
         this.savepoints[this.savepoints.length]= new Model_Object();
+        log_manager.add_action_Event("create savepoint "+this.savepoints.length);
         write_savepoint(this.savepoints.length-1);
     }
 
@@ -27,7 +28,7 @@ function History(){
 
         output_writer.generate_info_icon(l_options[curr_model_ID]);
         obj_visualizer.call_vis(curr_model_ID,0);
-
+        log_manager.add_action_Event("load savepoint "+ID+1);
         start();
 
     }
