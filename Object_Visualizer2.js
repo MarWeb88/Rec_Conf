@@ -25,9 +25,9 @@ function Object_Visualizer(){
     z_pos = 3;
     total_height = 2;
 
+
     var slabMaterial, meshSelected, curSelMeshId, curSelectedMeshMat;
     meshSelected = false;
-
 
     this.call_vis = function(ID,variant) {
 
