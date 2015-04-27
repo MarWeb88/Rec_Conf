@@ -46,6 +46,16 @@ function Input_Reader(){
         }
     }
 
+    this.reset_input_fields = function(){
+        for(var i=0; i<expl_db.purp_functions.length; i++){
+            document.getElementById("function"+i).checked = false;
+
+            document.getElementById("height_input").value = "150";
+            document.getElementById("width_input").value = "100";
+            document.getElementById("depth_input").value = "50";
+        }
+    }
+
     this.readInput = function(){
 
         //read dimensions
@@ -120,8 +130,12 @@ function Input_Reader(){
         }
     }
 
-    this.get_Input_Field_Name = function(){
-
+    this.vis_save_button = function(val){
+        if(val == true){
+            document.getElementById("save_button").className ="save_button";
+        }else{
+            document.getElementById("save_button").className ="save_button invis";
+        }
     }
 
     function add_func_value(func_values,values){

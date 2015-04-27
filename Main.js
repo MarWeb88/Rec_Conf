@@ -40,7 +40,7 @@ var mySlider_d;
 var curr_model_ID;
 
 
-function main() {
+function main(variant) {
 
      //initialize global dimension values
      min_height = 80;
@@ -84,11 +84,13 @@ function main() {
     //initialize Object_Visualizer
     obj_visualizer = new Object_Visualizer();
 
-    //initialize Log_Manager
-    log_manager = new Log_Manager();
+    if(variant !=0){
+        //initialize Log_Manager
+        log_manager = new Log_Manager();
 
-    //initialize History
-    history_s = new History();
+        //initialize History
+        history_s = new History();
+    }
 }
 
 function start(variant){
@@ -103,7 +105,7 @@ function start(variant){
             return false;
         } else {
             input_reader.vis_input(true);
-            log_manager.add_action_Event("start");
+            log_manager.add_action_Event("start new");
         }
 
         //Model Calculator
@@ -129,6 +131,16 @@ function start(variant){
     //present options to the user
     output_writer.writeOptionlist(l_options);
 
+}
+
+function reset_all(){
+    impl_db.reset();
+
+    output_writer.delete_options();
+
+    input_reader.reset_input_fields();
+
+    main(0);
 }
 
 function clone(obj) {

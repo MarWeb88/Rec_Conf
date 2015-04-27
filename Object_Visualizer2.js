@@ -35,6 +35,8 @@ function Object_Visualizer(){
 
         curr_model_ID = ID;
 
+        input_reader.vis_save_button(true);
+
         // Initialize the scene
         var option = l_options[ID];
 
@@ -261,11 +263,11 @@ function Object_Visualizer(){
 
         var intersects = raycaster.intersectObjects(scene.children[1].children);
 
-        if(intersects.length!=0){
+        /*if(intersects.length!=0){
             impl_db.set_interaction_function(intersects[0].object.ID);
         }else{
             impl_db.set_interaction_function(null);
-        }
+        }*/
     //    alert(impl_db.interaction_check());
         var clickedMeshId = intersects[0].object.id;
 
