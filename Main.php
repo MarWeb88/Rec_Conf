@@ -37,6 +37,8 @@
     <script src="js/jquery-2.0.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.multiselect.js"></script>
+    <script src="jsnlog.min.js"></script>
+    <script src="js/json2.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
     <script src="js/three.js"></script>
     <script src="examples/js/Detector.js"></script>
@@ -51,6 +53,8 @@
 
 </head>
 <body onload="main()">
+
+<?php include "jsnlog.config.php";?>
 
 <div id="container_left" class="container_left">
 
@@ -144,9 +148,9 @@
         <div class="start_button">
         <input type="button" name="start_button" value="Start" onclick="input_reader.translate_purp_func()">
             </div>
-        <<div>
+        <!--<div>
             <input type="button" class="log_button" name="log_button" value="Log Out" onclick="log_manager.get_output()">
-        </div>
+        </div>-->
         <div>
             <input type="button" class="save_button invis" name="save_button" id="save_button"
                    value="Save" onclick="history_s.save_model()">

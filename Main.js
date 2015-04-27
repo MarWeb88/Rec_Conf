@@ -87,6 +87,7 @@ function main(variant) {
     if(variant !=0){
         //initialize Log_Manager
         log_manager = new Log_Manager();
+        JL().fatal("log message");
 
         //initialize History
         history_s = new History();
@@ -106,6 +107,7 @@ function start(variant){
         } else {
             input_reader.vis_input(true);
             log_manager.add_action_Event("start new");
+            JL().log(2500, "start new");
         }
 
         //Model Calculator
