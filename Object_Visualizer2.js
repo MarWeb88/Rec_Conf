@@ -282,7 +282,7 @@ function Object_Visualizer(){
         renderScene();
     }
     /**
-     * Store selected mesh material. Change it to a darker version
+     * Store selected mesh material. Change it to a darker version. We use slabMaterial right now
      */
     function selectMeshObject(clickedMeshId){
         var boxSelect = new THREE.MeshBasicMaterial({
@@ -329,6 +329,9 @@ function Object_Visualizer(){
         }
     }
 
+    function flipMeshSolid(selectedMeshId){
+
+    }
 
 
     /**
