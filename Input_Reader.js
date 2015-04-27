@@ -130,8 +130,12 @@ function Input_Reader(){
         }
     }
 
-    this.get_Input_Field_Name = function(){
-
+    this.vis_save_button = function(val){
+        if(val == true){
+            document.getElementById("save_button").className ="save_button";
+        }else{
+            document.getElementById("save_button").className ="save_button invis";
+        }
     }
 
     function add_func_value(func_values,values){

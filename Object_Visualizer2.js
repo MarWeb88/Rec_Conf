@@ -35,6 +35,8 @@ function Object_Visualizer(){
 
         curr_model_ID = ID;
 
+        input_reader.vis_save_button(true);
+
         // Initialize the scene
         var option = l_options[ID];
 

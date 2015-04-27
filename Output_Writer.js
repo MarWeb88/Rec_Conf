@@ -291,7 +291,9 @@ function Output_Writer(){
 
             case "images/Graphite Gray.jpg": return "(GG)"
 
-            case "images/Mahogany.jpg": return "(Ma)"
+            case "images/Mahogany.jpg": return "(Mh)"
+
+            case "images/Maple.jpg": return "(Ma)"
 
             case "images/Oak.jpg": return "(Oa)"
 

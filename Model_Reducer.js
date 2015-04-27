@@ -32,7 +32,7 @@ function Model_Reducer(){
 
         //Begin of Interaction Case
 
-        if(impl_db.interaction_check()) {
+        /*if(impl_db.interaction_check()) {
             //case with interaction
 
             optionlist_reduced = new Array();
@@ -49,7 +49,7 @@ function Model_Reducer(){
             }
             option_list_old=clone(optionlist_reduced);
         }
-        //End of Interaction part
+        //End of Interaction part*/
 
         if (option_list_old.length > max_options) {
             //reduce number of options on those with the same grasp

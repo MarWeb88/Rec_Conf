@@ -38,6 +38,7 @@ function Implicit_Database(){
 
         document.getElementById("implicid_data_out").innerHTML="";
         curr_model_ID = null;
+        input_reader.vis_save_button(false);
 
         document.getElementById("grasp_select").options[0].selected = true;
         document.getElementById("material_select").options[0].selected = true;
