@@ -56,15 +56,15 @@ function Explicit_Database(){
 
         var p_cons = new Array(num);
         //1 part
-        p_cons[0]= new Physical_Constraint(1,30,90);
+        p_cons[0]= new Physical_Constraint(1,40,90);
         //2 parts
-        p_cons[1]= new Physical_Constraint(2,60,180);
+        p_cons[1]= new Physical_Constraint(2,80,180);
         //3 parts
-        p_cons[2]= new Physical_Constraint(3,90,270);
+        p_cons[2]= new Physical_Constraint(3,120,270);
         //4 parts
-        p_cons[3]= new Physical_Constraint(4,120,320);
+        p_cons[3]= new Physical_Constraint(4,160,320);
         //5 parts
-        p_cons[4]= new Physical_Constraint(5,150,320);
+        p_cons[4]= new Physical_Constraint(5,200,320);
         //6 parts
         /*p_cons[5]= new Physical_Constraint(6,180,320);
         //7 parts
@@ -157,11 +157,11 @@ function Explicit_Database(){
         //Medium
         f_cons[3]= new Functional_Constraint(3,45,60,new Array(false,true,true,true,true,true),3);
         //Medium-Large
-        f_cons[4]= new Functional_Constraint(3,60,80,new Array(false,true,true,true,true,true),4);
+        f_cons[4]= new Functional_Constraint(4,60,80,new Array(false,true,true,true,true,true),4);
         //Large
-        f_cons[5]= new Functional_Constraint(3,80,max_height,new Array(false,true,true,true,true,true),5);
+        f_cons[5]= new Functional_Constraint(5,80,max_height,new Array(false,true,true,true,true,true),5);
         //Shoes
-        f_cons[6]= new Functional_Constraint(3,60,80,new Array(false,true,true,true,true,true),6);
+        f_cons[6]= new Functional_Constraint(6,60,80,new Array(false,true,true,true,true,true),6);
 
         return f_cons;
     }

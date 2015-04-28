@@ -55,6 +55,16 @@ function Object_Visualizer(){
             impl_db.set_impl_information([option.row_num,option.weightings,option.start_row]);
             impl_db.d_options = option.d_options;
 
+            //test
+            /*var out = "";
+            for(var i=0; i<option.row_num; i++){
+                for(var j=0; j<option.rows[i].length; j++){
+                    out += option.rows[i][j].type+"; ";
+                }
+                out+="</br> ";
+            }*/
+            alert(option.ID);
+            //test end
             impl_db.show_information();
         }
 

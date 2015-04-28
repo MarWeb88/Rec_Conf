@@ -37,6 +37,8 @@
     <script src="js/jquery-2.0.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.multiselect.js"></script>
+    <script>JSCLASS_PATH ='js/JSClass/min'</script>
+    <script src="/js/JSClass/min/loader-browser.js"></script>
     <script src="jsnlog.min.js"></script>
     <script src="js/json2.js"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>-->
