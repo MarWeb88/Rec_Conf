@@ -68,7 +68,7 @@ function Model_Reducer(){
             }
             option_list_old = clone(optionlist_reduced);
         }else{
-            optionlist_reduced = option_list_old;
+            optionlist_reduced = clone(option_list_old);
         }
 
         var element_number = optionlist_reduced.length;
@@ -105,7 +105,7 @@ function Model_Reducer(){
                 if(check_redundance(optionlist_reduced[i],reference_list)){
                     buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
                     //reference_list[reference_list.length] = clone(optionlist_reduced[i]);
-                    reference_list[reference_list.length] = clone(optionlist_reduced[i]);
+                    reference_list[reference_list.length] = optionlist_reduced[i];
                 }
                 //buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
             }
@@ -114,9 +114,10 @@ function Model_Reducer(){
             var cur_bucket = 0;
             var optionlist_reduced_final_counter = 0;
             var optionlist_reduced_final = new Array();
+            var element_counter = 0;
 
             //while(optionlist_reduced_final.length < max_options){
-            while(optionlist_reduced_final.length < max_options) {
+            while(optionlist_reduced_final.length < max_options && element_counter < element_number) {
 
                 var ret_el = buckets[cur_bucket].select_Element();
                 //alert("Element with ID "+ret_el.ID+" from Bucket");
@@ -130,6 +131,7 @@ function Model_Reducer(){
                 if (cur_bucket > buckets.length - 1) {
                     cur_bucket = 0;
                 }
+                element_counter++;
             }
             //}
             optionlist_reduced = optionlist_reduced_final;
