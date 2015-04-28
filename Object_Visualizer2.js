@@ -26,7 +26,7 @@ function Object_Visualizer(){
     total_height = 2;
 
 
-    var slabMaterial, meshSelected, curSelMeshId, curSelectedMeshMat;
+    var boxMaterial, slabMaterial, transMaterial, meshSelected, curSelMeshId, curSelectedMeshMat;
     meshSelected = false;
 
     this.call_vis = function(ID,variant) {
@@ -189,7 +189,7 @@ function Object_Visualizer(){
         // to wholes in the surface. When this happens in your surface, simply set
         // 'doubleSided' to 'true'.
 
-        var boxMaterial = new THREE.MeshBasicMaterial({
+        boxMaterial = new THREE.MeshBasicMaterial({
             map: neheTexture,
             side: THREE.DoubleSide
         });
@@ -200,6 +200,8 @@ function Object_Visualizer(){
             vertexColors: THREE.VertexColors,
             color: 0xA9A9A9
         });
+
+        transMaterial = new THREE.MeshBasicMaterial({transparent:true, opacity:0, side: THREE.DoubleSide});
 
         // Applying different materials to the faces is a more difficult than applying one
         // material to the whole geometry. We start with creating an array of
@@ -212,7 +214,7 @@ function Object_Visualizer(){
             boxMaterial,
             slabMaterial,
             slabMaterial,
-            new THREE.MeshBasicMaterial({transparent:true, opacity:0, side: THREE.DoubleSide}),
+            transMaterial,
             boxMaterial
         ];
 
@@ -273,21 +275,25 @@ function Object_Visualizer(){
 
         var intersects = raycaster.intersectObjects(scene.children[1].children);
 
-        /*if(intersects.length!=0){
-            impl_db.set_interaction_function(intersects[0].object.ID);
+        if(intersects.length!=0){
+            var clickedMeshId = intersects[0].object.id;
+
+            if (meshSelected){
+                unSelectMeshObject();
+                if(clickedMeshId != curSelMeshId)
+                    selectMeshObject(clickedMeshId);
+            }else{
+                selectMeshObject(clickedMeshId);
+            }
+
+            deleteAllMeshes();
         }else{
             impl_db.set_interaction_function(null);
-        }*/
-    //    alert(impl_db.interaction_check());
-        var clickedMeshId = intersects[0].object.id;
-
-        if (meshSelected){
-            unSelectMeshObject();
-            if(clickedMeshId != curSelMeshId)
-                selectMeshObject(clickedMeshId);
-        }else{
-            selectMeshObject(clickedMeshId);
         }
+    //    alert(impl_db.interaction_check());
+
+
+        solidifyMesh(clickedMeshId);
 
         renderScene();
     }
@@ -339,8 +345,30 @@ function Object_Visualizer(){
         }
     }
 
-    function flipMeshSolid(selectedMeshId){
+    /**
+     * Select Mesh object by ID and fill the transparent door of it
+     */
+    function solidifyMesh(selectedMeshId){
+        var selectedMesh = fetchMeshbyId(selectedMeshId);
+        selectedMesh.materials[4] = boxMaterial;
+    }
 
+    /**
+     * Select Mesh object by ID and make the front face (door) transparent again
+     */
+    function unSolidifyMesh(selectedMeshId){
+        var selectedMesh = fetchMeshbyId(selectedMeshId);
+        selectedMesh.materials[4] = transMaterial;
+    }
+
+    /**
+     * Remove all 3D visualization
+     */
+    function deleteAllMeshes(){
+        for(var i = 0; i < scene.children[1].children.length; i++){
+            scene.children[1].remove(scene.children[1].children[i]);
+        }
+        renderScene();
     }
 
 
