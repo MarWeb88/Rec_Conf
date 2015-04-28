@@ -4,7 +4,7 @@
 
 function Model_Log_Object(){
 
-    this.model = get_Model();
+    //this.model = get_Model();
     this.global_settings = get_global_settings();
     this.imp_data  = get_imp_data();
 

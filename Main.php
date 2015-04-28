@@ -54,7 +54,19 @@
 </head>
 <body onload="main()">
 
+
+
 <?php include "jsnlog.config.php";?>
+<?php
+
+    $id = uniqid();
+
+    echo "
+      <script type=\"text/javascript\"><!--
+        var user_ID = \"".$id."\";
+      </script>
+    ";
+?>
 
 <div id="container_left" class="container_left">
 
