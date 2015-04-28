@@ -116,7 +116,8 @@ function Input_Reader(){
             mySlider_w.disable();
             mySlider_d.disable();
             document.getElementById("grasp_select").className = "grasp_select";
-            document.getElementById("material_select").className = "material_select";
+            document.getElementById("material_select").className = "material_select "+
+            output_writer.get_Material_FullName(impl_db.material);
             document.getElementById("d_options_select").className = "d_options_select";
         }
         if(val == false){
@@ -136,6 +137,11 @@ function Input_Reader(){
         }else{
             document.getElementById("save_button").className ="save_button invis";
         }
+    }
+
+    this.change_material_select = function(){
+        document.getElementById("material_select").className = "material_select "+
+        output_writer.get_Material_FullName(impl_db.material);
     }
 
     function add_func_value(func_values,values){

@@ -340,6 +340,7 @@
     position: absolute;
     top: 0px;
     left: 165px;
+    height: 28px;
     z-index: 5;
 }
 
@@ -348,6 +349,7 @@
     position: absolute;
     top: 0px;
     left: 255px;
+    height: 28px;
     z-index: 5;
 }
 
@@ -362,4 +364,44 @@
 
 .invis {
     display: none;
+}
+
+.Alder {
+    background-image: url(images/Alder.jpg);
+}
+.Apple {
+    background-image: url(images/Apple.jpg);
+}
+.Beech {
+    background-image: url(images/Beech.jpg);
+}
+.Birch {
+    background-image: url(images/Birch.jpg);
+}
+.Cherry {
+    background-image: url(images/Cherry.jpg);
+}
+.Elm {
+    background-image: url(images/Elm.jpg);
+}
+.Mahogany {
+    background-image: url(images/Mahogany.jpg);
+}
+.Maple {
+     background-image: url(images/Maple.jpg);
+ }
+.Oak {
+    background-image: url(images/Oak.jpg);
+}
+.Plum {
+    background-image: url(images/Plum.jpg);
+}
+.Spruce {
+    background-image: url(images/Spruce.jpg);
+}
+.Wenge {
+    background-image: url(images/Wenge.jpg);
+}
+.Zebrano {
+    background-image: url(images/Zebrano.jpg);
 }

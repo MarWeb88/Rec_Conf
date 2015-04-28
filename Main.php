@@ -82,22 +82,21 @@
             <option>Handle 4</option>
             <option>Handle 5</option>
         </select>
-        <select onchange="impl_db.set_material()" id="material_select" class="material_select">
-            <option>Alder</option>
-            <option>Apple</option>
-            <option>Beech</option>
-            <option>Birch</option>
-            <option>Cherry</option>
-            <option>Elm</option>
-            <option>Graphite Gray</option>
-            <option>Mahogany</option>
-            <option>Maple</option>
-            <option>Oak</option>
-            <option>Plum</option>
-            <option>Spruce</option>
-            <option>Wenge</option>
-            <option>Wild Pear</option>
-            <option>Zebrano</option>
+        <select onchange="impl_db.set_material();input_reader.change_material_select()"
+        id="material_select" class="material_select apple">
+            <option class="Alder">Alder</option>
+            <option class="Apple">Apple</option>
+            <option class="Beech">Beech</option>
+            <option class="Birch">Birch</option>
+            <option class="Cherry">Cherry</option>
+            <option class="Elm">Elm</option>
+            <option class="Mahogany">Mahogany</option>
+            <option class="Maple">Maple</option>
+            <option class="Oak">Oak</option>
+            <option class="Plum">Plum</option>
+            <option class="Spruce">Spruce</option>
+            <option class="Wenge">Wenge</option>
+            <option class="Zebrano">Zebrano</option>
         </select>
         <div id="d_options_select" class="d_options_select">
             <select id="example" name="example" multiple="multiple">
