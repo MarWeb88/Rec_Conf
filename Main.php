@@ -70,12 +70,14 @@
       </script>
     ";
 ?>
-
+<div id="history_s" class="history_s"></div>
 <div id="container_left" class="container_left">
 
     <div id="container_left_in" class="container_left_in">
 
-        <div id="WebGLCanvas">
+        <div id="2d_canvas" style="display:none"></div>
+
+        <div id="WebGLCanvas" class="webGl_canvas">
 
         </div>
         <select onchange="impl_db.set_grasp()" id="grasp_select" class="grasp_select">
@@ -110,6 +112,8 @@
             <option value="5">Double Door</option>
             <option value="6">Slide Door</option>
         </select></div>
+        <input type="button" name="change_button" value="Show 2D Model" id="change_button"
+            class="change_button" onclick="input_reader.change_2d_3d_vis()">
 
     </div>
     <div class="information_box">
@@ -196,7 +200,7 @@
         </div>-->
 
     </div>
-    <div id="history_s" class="history_s"></div>
+
 
     <div id="option_output" class="option_output">
 
@@ -214,8 +218,8 @@
         </div>
     </div>
 
-    <input id="output_changer" class="output_changer" type="button" name="more" value="Full Mode"
-           onclick="model_reducer.set_max_options()">
+    <!--<input id="output_changer" class="output_changer" type="button" name="more" value="Full Mode"
+           onclick="model_reducer.set_max_options()">-->
 </div>
 
 </body>

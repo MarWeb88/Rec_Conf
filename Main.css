@@ -1,6 +1,17 @@
+.history_s {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 70px;
+    height: 600px;
+    overflow-y: auto;
+    border-style: solid;
+    border-width: 1px;
+}
+
 .container_left {
     position:absolute;
-    left: 50px;
+    left: 130px;
     top:50px;
     width: 580px;
     height: 600px;
@@ -11,13 +22,13 @@
     position:absolute;
     left: 0px;
     top:0px;
-    width: 580px;
+    width: 100%;
     height: 460px;
 }
 
 .container_right {
     position:absolute;
-    right: 50px;
+    right: 30px;
     top:50px;
     width: 560px;
     height: 600px;
@@ -290,13 +301,7 @@
     font-size: 9px
 }
 
-.history_s {
-    position: absolute;
-    top: 70px;
-    left: 480px;
-    width: 50px;
-    font-size: 13px
-}
+
 
 .reset_button_vis {
     display: inline;
@@ -349,6 +354,15 @@
     position: absolute;
     top: 0px;
     left: 255px;
+    height: 28px;
+    z-index: 5;
+}
+
+.change_button {
+    display: inline;
+    position: absolute;
+    top: 0px;
+    left: 355px;
     height: 28px;
     z-index: 5;
 }

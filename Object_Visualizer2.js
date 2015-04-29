@@ -23,6 +23,11 @@ function Object_Visualizer(){
     var boxMaterial, slabMaterial, transMaterial, meshSelected, curSelMeshId, curSelectedMeshMat;
     meshSelected = false;
 
+    this.clear_model_views = function(){
+        document.getElementById("2d_canvas").innerHTML="";
+        stopAnimation();
+    }
+
     this.call_vis = function(ID,variant) {
 
         //alert("start with "+ID );
@@ -38,6 +43,11 @@ function Object_Visualizer(){
 
         var vis_model = get_model_coordinates(option);
 
+        //generate 2D Output
+        output_writer.generate_2D_icon(340,400);
+
+        //alert(vis_model[1]);
+        //generate 3D Output
         initializeScene(vis_model[0],vis_model[1],impl_db.material);
 
         // Animate the scene
@@ -53,7 +63,7 @@ function Object_Visualizer(){
         }
 
         //set info icon
-        output_writer.generate_info_icon(option);
+        //output_writer.generate_info_icon(option);
 
         //start calculation with updated information
         start();
@@ -67,7 +77,7 @@ function Object_Visualizer(){
     mouseVector = new THREE.Vector3();
     raycaster = new THREE.Raycaster();
 
-    function get_model_coordinates(option){
+    /*function get_model_coordinates(option){
 
         var ret_ar = new Array(2);
 
@@ -86,14 +96,32 @@ function Object_Visualizer(){
             }
         }
         return ret_ar;
+    }*/
+
+    function get_model_coordinates(option){
+
+        var ret_ar = new Array(2);
+
+        ret_ar[0] = new Array(option.row_num);
+        ret_ar[1] = new Array(option.row_num);
+
+        //iterate over the different rows
+        for(var i=0; i<option.row_num; i++) {
+            //iterate over the different elements in a row
+            ret_ar[0][i]= new Array(option.rows[i].length);
+            ret_ar[1][i]= new Array(option.rows[i].length);
+
+            for (var j = 0; j < option.rows[i].length; j++) {
+                ret_ar[0][i][j]= get_Model_Value(option.rows[i][option.rows[i].length-(j+1)].height);
+                ret_ar[1][i][j]= option.rows[i][option.rows[i].length-(j+1)].d_options;
+            }
+        }
+        return ret_ar;
     }
 
     function get_Model_Value(val){
         return parseFloat(parseFloat(val)/parseFloat(expl_db.height)*total_height);
     }
-
-
-
     //Initialize scene
     function initializeScene(vis_model,functions,text_src) {
         // Check whether the browser supports WebGL. If so, instantiate the hardware accelerated

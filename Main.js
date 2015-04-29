@@ -150,6 +150,8 @@ function reset_all(){
 
     input_reader.reset_input_fields();
 
+    obj_visualizer.clear_model_views();
+
     main(0);
 }
 

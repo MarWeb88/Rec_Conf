@@ -26,7 +26,7 @@ function History(){
 
         impl_db.show_information();
 
-        output_writer.generate_info_icon(l_options[curr_model_ID]);
+        //output_writer.generate_info_icon(l_options[curr_model_ID]);
         obj_visualizer.call_vis(curr_model_ID,0);
         log_manager.add_action_Event("load savepoint "+ID+1);
         start();
@@ -35,13 +35,22 @@ function History(){
 
     function write_savepoint(ID){
         var el = document.getElementById("history_s");
-        html2canvas(document.getElementById("information_box_icon"),{onrendered: function(canvas) {
+        var box = document.createElement("div");
+
+        input_reader.change_2d_3d_vis();
+
+        html2canvas(document.getElementById("2d_canvas"),{onrendered: function(canvas) {
             el.appendChild(canvas);
+            canvas.style.height = "60px";
+            canvas.style.width = "60px";
+            canvas.setAttribute("onclick","history_s.load_model("+ID+")");
         },
-            width: 70,
-            height: 70
+            width: 400,
+            height: 340
         });
-        //el.innerHTML +="<div onclick='history_s.load_model("+ID+")'> Model "+ID+"</div>";
+
+        input_reader.change_2d_3d_vis();
+
     }
 
 }

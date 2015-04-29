@@ -93,6 +93,79 @@ function Output_Writer(){
         document.getElementById("information_box_out").innerHTML="";
     }
 
+    this.generate_savepoint_icon = function(height,width){
+
+        var element = document.createElement("div");
+        element.className = "option_list_element";
+        element.style.height = height+"px";
+        element.style.width = width+"px";
+
+        generate_icon(element,l_options[curr_model_ID],2);
+
+        document.getElementById("history_s").appendChild(element);
+
+        return element;
+    }
+
+    this.generate_2D_icon = function(height,width){
+
+        var element = document.createElement("div");
+        element.className = "option_list_element";
+        element.style.left = "80px";
+        element.style.top = "70px";
+        element.style.height = height+"px";
+        element.style.width = width+"px";
+        element.id="2D_icon";
+
+        generate_icon(element,l_options[curr_model_ID],2);
+
+        var container = document.getElementById("2d_canvas");
+        container.innerHTML="";
+        container.appendChild(element);
+
+        return element;
+    }
+
+    /*this.resize_div = function(ID,height,width){
+        var el = document.createElement("div");
+        var old_el = document.getElementById(ID);
+
+        var h_factor = parseFloat(height/parseFloat(old_el.style.height));
+        var w_factor = parseFloat(width/parseFloat(old_el.style.width));
+
+        alert(h_factor);
+
+        resize_element(el.id,old_el.id,h_factor,w_factor);
+
+        return el;
+    }
+
+    function resize_element(element_id,element_old_id,h_factor,w_factor){
+
+        var element_old = document.getElementById(element_old_id);
+
+        element.className = element_old.className;
+        element.style.height = parseFloat(element_old.style.height)*parseFloat(h_factor)+"px";
+        element.style.width = parseFloat(element_old.style.width)*parseFloat(w_factor)+"px";
+
+        //alert(parseFloat(element_old.style.height)*h_factor+"  + "+parseFloat(element_old.style.width)*w_factor);
+        alert(element.style.height+"  + "+element.style.width);
+        alert()
+
+        if(element_old.firstChild!=null && element_old.firstChild.tagName == "div"){
+            alert("2");
+            var child = element_old.firstChild;
+            alert("3");
+            while(child!=null){
+                alert(h_factor+"  "+w_factor);
+                var el = document.createElement("div");
+                resize_element(el,child,h_factor,w_factor);
+                child = child.nextSibling;
+            }
+            //alert("4");
+        }
+    }*/
+
     this.delete_interaction_funtions_values = function(){
 
         var elements = document.getElementsByName("group1");

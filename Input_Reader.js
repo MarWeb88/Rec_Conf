@@ -56,6 +56,22 @@ function Input_Reader(){
         }
     }
 
+    this.change_2d_3d_vis = function(){
+        var model_3d = document.getElementById("WebGLCanvas");
+        var model_2d = document.getElementById("2d_canvas");
+        var button = document.getElementById("change_button");
+
+        if(model_2d.style.display == "none"){
+            model_3d.style.display = "none";
+            model_2d.style.display = "inline";
+            button.value ="Show 3D Model";
+        }else{
+            model_3d.style.display = "inline";
+            model_2d.style.display = "none";
+            button.value ="Show 2D Model";
+        }
+    }
+
     this.readInput = function(){
 
         //read dimensions
@@ -119,6 +135,7 @@ function Input_Reader(){
             document.getElementById("material_select").className = "material_select "+
             output_writer.get_Material_FullName(impl_db.material);
             document.getElementById("d_options_select").className = "d_options_select";
+            document.getElementById("change_button").className = "change_button";
         }
         if(val == false){
             document.getElementById("reset_button").className="reset_button_invis";
@@ -128,6 +145,7 @@ function Input_Reader(){
             document.getElementById("grasp_select").className = "grasp_select invis";
             document.getElementById("material_select").className = "material_select invis";
             document.getElementById("d_options_select").className = "d_options_select invis";
+            document.getElementById("change_button").className = "change_button invis";
         }
     }
 
