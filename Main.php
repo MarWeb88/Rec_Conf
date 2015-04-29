@@ -35,6 +35,7 @@
     <script type="text/javascript" src="Model_Log_Object.js"></script>
 
     <script src="js/jquery-2.0.0.min.js"></script>
+    <script src="js/html2canvas.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.multiselect.js"></script>
     <script>JSCLASS_PATH ='js/JSClass/min'</script>

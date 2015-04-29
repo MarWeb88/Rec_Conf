@@ -77,15 +77,15 @@ function Explicit_Database(){
 
         var p_cons = new Array(num);
         //1 part
-        p_cons[0]= new Physical_Constraint(1,40,90);
+        p_cons[0]= new Physical_Constraint(1,30,80);
         //2 parts
-        p_cons[1]= new Physical_Constraint(2,80,180);
+        p_cons[1]= new Physical_Constraint(2,60,180);
         //3 parts
-        p_cons[2]= new Physical_Constraint(3,120,270);
+        p_cons[2]= new Physical_Constraint(3,90,270);
         //4 parts
-        p_cons[3]= new Physical_Constraint(4,160,320);
+        p_cons[3]= new Physical_Constraint(4,140,320);
         //5 parts
-        p_cons[4]= new Physical_Constraint(5,200,320);
+        p_cons[4]= new Physical_Constraint(5,180,320);
         //6 parts
         /*p_cons[5]= new Physical_Constraint(6,180,320);
         //7 parts

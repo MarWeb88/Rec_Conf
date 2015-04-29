@@ -15,6 +15,7 @@ function Model(row_num,ID,weightings){
     this.d_options = null;
     this.material = null;
     this.start_row = null;
+    this.h_version = null;
 
     for(var i=0; i<row_num; i++){
         this.free_row_height[i] = this.row_height;
@@ -103,6 +104,29 @@ function Model(row_num,ID,weightings){
             }
         }
         return true;
+    }
+
+    this.sort_hierarchical = function(){
+
+        for(var i=0; i<this.rows.length; i++){
+
+            /*var sum = 0;
+             for(var ii=0; ii<model.rows[i].length; ii++){
+             sum = sum +model.rows[i][ii].height;
+             }*/
+
+            if(this.h_version == 0){
+                this.rows[i].sort(function(a,b){
+                    var out = expl_db.f_cons[a.type].level-expl_db.f_cons[b.type].level;
+                    return out;
+                });
+            }else{
+                this.rows[i].sort(function(a,b){
+                    var out = expl_db.f_cons[b.type].level-expl_db.f_cons[a.type].level;
+                    return out;
+                });
+            }
+        }
     }
 
 }

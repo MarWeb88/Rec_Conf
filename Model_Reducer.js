@@ -59,7 +59,7 @@ function Model_Reducer(){
 
                 if (option_list_old[i].check_row_num() &&
                     option_list_old[i].check_start_row() &&
-                    option_list_old[i].check_weighting_distance(1) &&
+                    option_list_old[i].check_weighting_distance(0) &&
                     option_list_old[i].check_d_options()
                 ) {
                     optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
@@ -98,7 +98,7 @@ function Model_Reducer(){
             }
             //redundance check before filling items in the buckets
 
-
+            var reference_counter = 0;
             //distribute elements in buckets
             for(var i=0; i<optionlist_reduced.length; i++){
 
@@ -109,6 +109,7 @@ function Model_Reducer(){
                     buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
                     //reference_list[reference_list.length] = clone(optionlist_reduced[i]);
                     reference_list[reference_list.length] = optionlist_reduced[i];
+                    reference_counter++
 
                 }
                 //buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
@@ -121,12 +122,15 @@ function Model_Reducer(){
             var element_counter = 0;
 
             //while(optionlist_reduced_final.length < max_options){
-            while(optionlist_reduced_final.length < max_options && element_counter < reference_list.length) {
+            while(optionlist_reduced_final.length < max_options && element_counter < reference_counter) {
 
-                var ret_el = buckets[cur_bucket].select_Element();
+                //check if h_version is in IM_DB then give the h_version, otherwise rotate
+
+                var ret_el = buckets[cur_bucket].select_Element(impl_db.h_version);
                 //alert("Element with ID "+ret_el.ID+" from Bucket");
 
                 if (ret_el != null) {
+                    ret_el.sort_hierarchical();
                     optionlist_reduced_final[optionlist_reduced_final_counter] = ret_el;
                     //change ID
                     optionlist_reduced_final_counter++;
@@ -181,7 +185,8 @@ function Model_Reducer(){
             for(var i=0; i<model_1.row_num; i++){
 
                 for(var j=0; j<model_1.rows[i].length; j++){
-                    if(model_1.rows[i][j].type != model_2.rows[i][j].type){
+                    if((model_1.rows[i][j].type != model_2.rows[i][j].type)||
+                        impl_db.d_options_selector==true){
 
                         return false
                     }
@@ -190,5 +195,4 @@ function Model_Reducer(){
         }
         return true
     }
-
 }

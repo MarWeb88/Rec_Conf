@@ -9,6 +9,8 @@ function Bucket(num){
     this.average_weighting;
     this.list = new Array();
 
+    var local_h_version = 0;
+
     this.add_Element = function(option){
 
         if(this.head == null){
@@ -103,7 +105,7 @@ function Bucket(num){
         }
     }*/
 
-    this.select_Element = function(){
+    this.select_Element = function(h_version){
 
         //use weighting calculation to select the best element
         var cur_el = this.head;
@@ -116,7 +118,6 @@ function Bucket(num){
             var distance = distance_check(cur_el.element.weightings,this.average_weighting);
 
             if(distance >= cur_maxdistance){
-
                 cur_selection = cur_el;
                 cur_maxdistance = distance;
             }
@@ -126,6 +127,14 @@ function Bucket(num){
             //adapt average weighting
             this.average_weighting = get_new_average(this.average_weighting,cur_selection.element.weightings);
             this.head = delete_Element(this.head,cur_selection);
+
+            if(h_version!=null){
+                cur_selection.element.h_version = h_version;
+            }else{
+                cur_selection.element.h_version = get_h_version();
+            }
+
+
             //get_combi(cur_selection.element);
             //get_num_Elements(this.head);
             return cur_selection.element;
@@ -174,5 +183,15 @@ function Bucket(num){
             counter++;
         }
         alert("number: "+counter);
+    }
+
+    function get_h_version(){
+        if(local_h_version == 0){
+            local_h_version = 1;
+            return 0;
+        }else{
+            local_h_version = 0;
+            return 1;
+        }
     }
 }

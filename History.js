@@ -35,7 +35,13 @@ function History(){
 
     function write_savepoint(ID){
         var el = document.getElementById("history_s");
-        el.innerHTML +="<div onclick='history_s.load_model("+ID+")'> Model "+ID+"</div>";
+        html2canvas(document.getElementById("information_box_icon"),{onrendered: function(canvas) {
+            el.appendChild(canvas);
+        },
+            width: 70,
+            height: 70
+        });
+        //el.innerHTML +="<div onclick='history_s.load_model("+ID+")'> Model "+ID+"</div>";
     }
 
 }

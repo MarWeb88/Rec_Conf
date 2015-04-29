@@ -17,21 +17,23 @@ function Implicit_Database(){
     this.d_options = null;
     this.material = expl_db.start_material;
     this.start_row = null;
+    this.h_version = null;
 
     //save d_options for each functions
 
-    this.set_information = function(weights,probabilities,rows,grasp,d_options,material,start_row){
+    this.set_information = function(weights,probabilities,rows,grasp,d_options,material,start_row,h_version){
         this.weights = weights;
         this.rows = rows;
         this.grasp = grasp;
         this.d_options = d_options;
         this.material = material;
         this.start_row = start_row;
+        this.h_version = h_version;
     }
 
     this.reset = function(){
 
-        this.set_information(null,null,null,expl_db.start_handle,null,expl_db.start_material,null);
+        this.set_information(null,null,null,expl_db.start_handle,null,expl_db.start_material,null,null);
         this.selected_function = undefined;
         //this.material_selector=null;
         //this.grasp_selector = null;
@@ -77,6 +79,7 @@ function Implicit_Database(){
 
     this.delete_start_row = function(){
         this.start_row = null;
+        this.h_version = null;
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
@@ -135,7 +138,7 @@ function Implicit_Database(){
     }
 
     this.get_imp_op_list = function(){
-        return ["empty",this.rows,this.weights,this.start_row];
+        return ["empty",this.rows,this.weights,this.start_row,this.h_version];
     }
 
     this.set_impl_information = function(values){
@@ -143,7 +146,6 @@ function Implicit_Database(){
         var stopper = false;
         var counter = 0;
         var list = impl_db.get_imp_op_list();
-
 
         while(stopper==false && counter <= get_latest_fill(list)){
 
@@ -160,6 +162,7 @@ function Implicit_Database(){
                         break
 
                     case 2: impl_db.start_row = values[counter];
+                        impl_db.h_version = values[counter+1];
                         log_manager.add_action_Event("set_build_variant");
                         break
                 }
@@ -243,10 +246,10 @@ function Implicit_Database(){
             "class='exit_button' type='button' value='X'> "+
             output_writer.get_Weighting_Description(this.weights)+" <br>";
         }
-        if(this.start_row != null){
+        if(this.start_row != null && this.h_version!=null){
             implicit_out += "<input onclick='impl_db.delete_start_row()'" +
             "class='exit_button' type='button' value='X'> Build Variant: "+
-            this.start_row+" <br>";
+            this.start_row+" with H-Level: "+this.h_version+"<br>";
         }
         /*if(this.d_options_selector != null){
             implicit_out += "<input onclick='impl_db.delete_d_options_selector()'" +

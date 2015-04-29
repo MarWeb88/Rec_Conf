@@ -52,7 +52,7 @@ function Object_Visualizer(){
         //set_implicid information
 
         if(variant!=0){
-            impl_db.set_impl_information([option.row_num,option.weightings,option.start_row]);
+            impl_db.set_impl_information([option.row_num,option.weightings,option.start_row,option.h_version]);
             impl_db.d_options = option.d_options;
 
             impl_db.show_information();
