@@ -91,13 +91,13 @@ function main(variant) {
         //initialize History
         history_s = new History();
 
-        var JSCLASS_PATH = 'js/JSClass';
+        /*var JSCLASS_PATH = 'js/JSClass';
 
         var JS = require('js/JSClass/loader.js');
 
 
         //load(JSCLASS_PATH + '/loader.js');
-        alert(JS);
+        alert(JS);*/
     }
 
 

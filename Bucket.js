@@ -116,6 +116,7 @@ function Bucket(num){
             var distance = distance_check(cur_el.element.weightings,this.average_weighting);
 
             if(distance >= cur_maxdistance){
+
                 cur_selection = cur_el;
                 cur_maxdistance = distance;
             }
@@ -138,7 +139,7 @@ function Bucket(num){
         var distance_sum = 0;
 
         for(var i=0; i<average_weighting.length; i++){
-            distance_sum = distance_sum + Math.sqrt(average_weighting[i]-weighting[i]);
+            distance_sum = distance_sum + Math.pow(average_weighting[i]-weighting[i],2);
         }
         return distance_sum;
     }
@@ -164,9 +165,9 @@ function Bucket(num){
         alert(out);
     }
 
-    function get_num_Elements(start){
+    this.get_num_Elements = function(){
         var counter = 0;
-        var z = start;
+        var z = this.head;
 
         while(z != null){
             z = z.next;

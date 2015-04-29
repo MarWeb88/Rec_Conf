@@ -59,7 +59,7 @@ function Model_Reducer(){
 
                 if (option_list_old[i].check_row_num() &&
                     option_list_old[i].check_start_row() &&
-                    option_list_old[i].check_weighting_distance(0) &&
+                    option_list_old[i].check_weighting_distance(1) &&
                     option_list_old[i].check_d_options()
                 ) {
                     optionlist_reduced[optionlist_reduced_counter] = clone(option_list_old[i]);
@@ -103,9 +103,13 @@ function Model_Reducer(){
             for(var i=0; i<optionlist_reduced.length; i++){
 
                 if(check_redundance(optionlist_reduced[i],reference_list)){
+
+                    //if(!hierarchy is set){then set this}else{rotate values}
+
                     buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
                     //reference_list[reference_list.length] = clone(optionlist_reduced[i]);
                     reference_list[reference_list.length] = optionlist_reduced[i];
+
                 }
                 //buckets[optionlist_reduced[i].row_num-row_ar[0]].add_Element(optionlist_reduced[i]);
             }
@@ -117,7 +121,7 @@ function Model_Reducer(){
             var element_counter = 0;
 
             //while(optionlist_reduced_final.length < max_options){
-            while(optionlist_reduced_final.length < max_options && element_counter < element_number) {
+            while(optionlist_reduced_final.length < max_options && element_counter < reference_list.length) {
 
                 var ret_el = buckets[cur_bucket].select_Element();
                 //alert("Element with ID "+ret_el.ID+" from Bucket");
@@ -136,20 +140,6 @@ function Model_Reducer(){
             //}
             optionlist_reduced = optionlist_reduced_final;
         //}
-        /*option_list_old = clone(optionlist_reduced);
-        optionlist_reduced = new Array();
-        var counter = 0;
-
-        for(var i=0; i<option_list_old.length; i++){
-            //alert(check_redundance(optionlist_reduced[i]));
-            if(check_redundance(option_list_old[i])) {
-                //alert("true length: "+reference_list.length);
-                reference_list[reference_list.length] = clone(option_list_old[i]);
-                optionlist_reduced[counter]= clone(option_list_old[i]);
-                counter++;
-                //alert(reference_list.length);
-            }
-        }*/
 
         //sequence IDs
         for(var i=0; i<optionlist_reduced.length; i++){

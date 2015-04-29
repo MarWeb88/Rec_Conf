@@ -8,6 +8,7 @@ function Explicit_Database(){
     this.width;
     this.depth;
     this.num_functions = 7;
+    this.num_true_functions = 2;
     this.num_phys_cons = 5;
     //this.comp_func_num = 4;
 
@@ -41,6 +42,26 @@ function Explicit_Database(){
         }
 
     }
+
+    this.calculate_hierarchical_options = function(){
+        /*
+        * PermZRob(int N, int *P[])
+         {
+         int I, h, r;
+
+         for (I = N; I >= 2; I--)
+         {
+         r    = 1 + random(I);
+         h    = P[I];
+         P[I] = P[r];
+         P[r] = h;
+         }
+         }
+        *
+        * */
+    }
+
+
 
     function initialize_comp_list(num){
 
