@@ -5,15 +5,9 @@
 function Object_Visualizer(){
 
     var scene;
-
+    var id;
     // Global camera object
     var camera;
-
-    // Global mesh object of the pyramid
-    var pyramidMesh;
-
-    // Global mesh object of the cube
-    var cubeMesh;
 
     // cupboard shelf length, breadth, height
     var width, height, depth, num_shelves, slab_height, z_pos, total_height;
@@ -131,7 +125,7 @@ function Object_Visualizer(){
 
         // Get the DIV element from the HTML document by its ID and append the renderers DOM
         // object to it
-        var webGL_element = document.getElementById("WebGLCanvas");
+        webGL_element = document.getElementById("WebGLCanvas");
         webGL_element.innerHTML = "";
         webGL_element.appendChild(renderer.domElement);
 
@@ -199,7 +193,7 @@ function Object_Visualizer(){
 
         // right, left, top, bottom, front, back
         // Define six colored materials
-        var boxMaterials = [
+        var openBoxMaterials = [
             boxMaterial,
             boxMaterial,
             slabMaterial,
@@ -230,13 +224,13 @@ function Object_Visualizer(){
 
         // Create a MeshFaceMaterial, which allows the cube to have different materials on
         // each face
-        var boxFaceMaterial = new THREE.MeshFaceMaterial(boxMaterials);
+        var openBoxFaceMaterial = new THREE.MeshFaceMaterial(openBoxMaterials);
 
         var slabGeometry = new THREE.BoxGeometry(width, slab_height, depth);
 
         var slabFaceMaterial = new THREE.MeshFaceMaterial(slabMaterials);
 
-        addCupboard(vis_model, boxFaceMaterial, slabGeometry, slabFaceMaterial,functions);
+        addCupboard(vis_model, openBoxFaceMaterial, slabGeometry, slabFaceMaterial,functions);
 
 
 
@@ -265,9 +259,11 @@ function Object_Visualizer(){
 
         var intersects = raycaster.intersectObjects(scene.children[1].children);
 
+
         if(intersects.length!=0){
             var clickedMeshId = intersects[0].object.id;
-
+            solidifyMesh(clickedMeshId);
+            return;
             if (meshSelected){
                 unSelectMeshObject();
                 if(clickedMeshId != curSelMeshId)
@@ -276,25 +272,22 @@ function Object_Visualizer(){
                 selectMeshObject(clickedMeshId);
             }
 
-            deleteAllMeshes();
+            return;
         }else{
             impl_db.set_interaction_function(null);
         }
     //    alert(impl_db.interaction_check());
 
 
-        solidifyMesh(clickedMeshId);
 
-        renderScene();
+
+    //    renderScene();
     }
     /**
      * Store selected mesh material. Change it to a darker version. We use slabMaterial right now
      */
     function selectMeshObject(clickedMeshId){
-        var boxSelect = new THREE.MeshBasicMaterial({
-            color: 0xBEBEBE,
-            side: THREE.DoubleSide
-        });
+
         meshObject = fetchMeshbyId(clickedMeshId);
 
         if(meshObject.material.type == 'MeshFaceMaterial'){
@@ -304,14 +297,16 @@ function Object_Visualizer(){
             meshObject.material = slabMaterial;
         }
         meshSelected = true;
+        return true;
     }
 
     function unSelectMeshObject(){
         // fetch info from curSel.. variables and unset them
         var selectedMesh = fetchMeshbyId(curSelMeshId);
+        if(selectedMesh == null) return;
         selectedMesh.material = curSelectedMeshMat;
-
         meshSelected = false;
+        return true;
     }
     /**
      * Delete selected Mesh
@@ -321,8 +316,10 @@ function Object_Visualizer(){
             if (scene.children[1].children[i].id == selectedMeshId){
                 temp = scene.children[1].children[i];
                 scene.children[1].remove(scene.children[1].children[i]);
+                return true;
             }
         }
+        return false;
     }
     /**
      * Select Mesh object by ID
@@ -333,6 +330,7 @@ function Object_Visualizer(){
                 return scene.children[1].children[i];
             }
         }
+        return null;
     }
 
     /**
@@ -340,25 +338,45 @@ function Object_Visualizer(){
      */
     function solidifyMesh(selectedMeshId){
         var selectedMesh = fetchMeshbyId(selectedMeshId);
-        selectedMesh.materials[4] = boxMaterial;
+        if(selectedMesh != null){
+            var solidMeshMaterial = selectedMesh.material.clone();
+            solidMeshMaterial.materials[4] = boxMaterial;
+            selectedMesh.material = solidMeshMaterial;
+            return true;
+        }else
+            return false;
     }
 
     /**
-     * Select Mesh object by ID and make the front face (door) transparent again
+     * Select Mesh object by ID and make front transparent
      */
     function unSolidifyMesh(selectedMeshId){
         var selectedMesh = fetchMeshbyId(selectedMeshId);
-        selectedMesh.materials[4] = transMaterial;
+        if(selectedMesh != null){
+            var openMeshMaterial = selectedMesh.material.clone();
+            openMeshMaterial.materials[4] = transMaterial;
+            selectedMesh.material = openMeshMaterial;
+            return true;
+        }else
+            return false;
     }
 
     /**
      * Remove all 3D visualization
      */
-    function deleteAllMeshes(){
-        for(var i = 0; i < scene.children[1].children.length; i++){
-            scene.children[1].remove(scene.children[1].children[i]);
-        }
-        renderScene();
+    function stopAnimation(){
+        cancelAnimationFrame(id);// Stop the animation
+        scene = null;
+        projector = null;
+        camera = null;
+        controls = null;
+        empty(webGL_element);
+        return true;
+    }
+
+    function empty(elem) {
+        while (elem.lastChild) elem.removeChild(elem.lastChild);
+        return true;
     }
 
 
@@ -370,7 +388,7 @@ function Object_Visualizer(){
         cupboard.name = 'Cupboard';
         var x_pos = -model.length * width / 2;
         for (var i = 0; i < model.length; i++) {
-            addColumn(model[i], x_pos, boxMaterial, slabGeometry, slabMaterial,functions[i], cupboard);
+            addColumn(i, model[i], x_pos, boxMaterial, slabGeometry, slabMaterial,functions[i], cupboard);
             x_pos = x_pos + width;
         }
         scene.add(cupboard);
@@ -379,7 +397,7 @@ function Object_Visualizer(){
     /**
      * Create columns of cupboard.
      */
-    function addColumn(rowHeights, x_pos, boxMaterial, slabGeometry, slabMaterial,functions, cupboard){
+    function addColumn(colId, rowHeights, x_pos, boxMaterial, slabGeometry, slabMaterial,functions, cupboard){
         //total_height is constant for the 3D visualization as a global.
         //while(i--) total_height += rowHeights[i];
 
@@ -395,6 +413,7 @@ function Object_Visualizer(){
 
             boxMesh.ID = functions[i];
             boxMesh.position.set(x_pos, boxBasePosition + rowHeights[i]/2, z_pos);
+            boxMesh.name = "col"+ colId + "row" + i;
             //scene.add(boxMesh);
             cupboard.add(boxMesh);
             // Create a mesh and insert the geometry and the material. Translate the whole mesh
@@ -415,7 +434,7 @@ function Object_Visualizer(){
      */
     function animate(){
         // Read more about requestAnimationFrame at http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
-        requestAnimationFrame(animate);
+        id = requestAnimationFrame(animate);
 
         // Render the scene.
         renderer.render(scene, camera);
