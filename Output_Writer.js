@@ -6,6 +6,10 @@ function Output_Writer(){
 
     var number_elementrows = 3;
 
+    this.clear_output = function(){
+        clear_options();
+    }
+
     this.generate_info_icon = function(option){
 
         var element = document.getElementById("information_box_icon");
@@ -36,7 +40,7 @@ function Output_Writer(){
 
         if(option_list.length == 0){
             el.style.width = "100%";
-            el.innerHTML = "No suitable solution was found!";
+            el.innerHTML = "No suitable solution was found! Check if global Door Options are activated!";
         }else{
             el.style.width = "176.667px";
             el.innerHTML = "";
@@ -107,7 +111,7 @@ function Output_Writer(){
         return element;
     }
 
-    this.generate_2D_icon = function(height,width){
+    this.generate_2D_icon = function(height,width,option){
 
         var element = document.createElement("div");
         element.className = "option_list_element";
@@ -117,7 +121,7 @@ function Output_Writer(){
         element.style.width = width+"px";
         element.id="2D_icon";
 
-        generate_icon(element,l_options[curr_model_ID],2);
+        generate_icon(element,option,2);
 
         var container = document.getElementById("2d_canvas");
         container.innerHTML="";

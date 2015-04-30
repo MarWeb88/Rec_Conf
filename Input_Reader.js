@@ -48,6 +48,7 @@ function Input_Reader(){
 
     this.reset_input_fields = function(){
         for(var i=0; i<expl_db.purp_functions.length; i++){
+            document.getElementById("function"+i).disabled = false;
             document.getElementById("function"+i).checked = false;
 
             document.getElementById("height_input").value = "150";
@@ -70,6 +71,12 @@ function Input_Reader(){
             model_2d.style.display = "none";
             button.value ="Show 2D Model";
         }
+    }
+
+    this.set_progress_bar = function(val){
+
+        var prog_bar = document.getElementById("progress_bar");
+        prog_bar.style.width = val+"%";
     }
 
     this.readInput = function(){
@@ -127,7 +134,7 @@ function Input_Reader(){
         document.getElementById("depth_input").disabled=val;
 
         if(val == true){
-            document.getElementById("reset_button").className="reset_button_vis";
+            //document.getElementById("reset_button").className="reset_button_vis";
             mySlider_h.disable();
             mySlider_w.disable();
             mySlider_d.disable();
@@ -138,7 +145,7 @@ function Input_Reader(){
             document.getElementById("change_button").className = "change_button";
         }
         if(val == false){
-            document.getElementById("reset_button").className="reset_button_invis";
+            //document.getElementById("reset_button").className="reset_button_invis";
             mySlider_h.enable();
             mySlider_w.enable();
             mySlider_d.enable();
@@ -146,6 +153,21 @@ function Input_Reader(){
             document.getElementById("material_select").className = "material_select invis";
             document.getElementById("d_options_select").className = "d_options_select invis";
             document.getElementById("change_button").className = "change_button invis";
+        }
+    }
+
+    this.vis_purpose = function(val){
+        if(val == true){
+            document.getElementById("start_button").className="start_button";
+            document.getElementById("open_button_purpose").className="start_button invis";
+            change_vis_purposes(false);
+            //output_writer.clear_output();
+            impl_db.reset();
+        }
+        if(val == false){
+            document.getElementById("start_button").className="start_button invis";
+            document.getElementById("open_button_purpose").className="start_button";
+            change_vis_purposes(true);
         }
     }
 
@@ -160,6 +182,13 @@ function Input_Reader(){
     this.change_material_select = function(){
         document.getElementById("material_select").className = "material_select "+
         output_writer.get_Material_FullName(impl_db.material);
+    }
+
+    function change_vis_purposes(val){
+
+        for(var i=0; i<expl_db.purp_functions.length; i++){
+            document.getElementById("function"+i).disabled=val;
+        }
     }
 
     function add_func_value(func_values,values){
@@ -209,7 +238,8 @@ function Input_Reader(){
 
         if(compatibility_check_model(func_list)){
             fill_options(func_values);
-            impl_db.reset();
+            //impl_db.reset();
+            start(0);
         }else{
             alert("Can not find valid combination");
         }

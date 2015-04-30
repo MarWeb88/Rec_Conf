@@ -8,6 +8,7 @@ function Object_Visualizer(){
     var id;
     // Global camera object
     var camera;
+    var old_model;
 
     // cupboard shelf length, breadth, height
     var width, height, depth, num_shelves, slab_height, z_pos, total_height;
@@ -24,27 +25,33 @@ function Object_Visualizer(){
     meshSelected = false;
 
     this.clear_model_views = function(){
-        document.getElementById("2d_canvas").innerHTML="";
-        stopAnimation();
+        if(document.getElementById("2d_canvas").innerHTML!=""){
+            document.getElementById("2d_canvas").innerHTML="";
+            stopAnimation();
+        }
     }
 
     this.call_vis = function(ID,variant) {
 
         //alert("start with "+ID );
 
-        curr_model_ID = ID;
+
 
         input_reader.vis_save_button(true);
 
         // Initialize the scene
-        var option = l_options[ID];
+
+        if(variant != 0){
+            curr_model_ID = ID;
+            old_model = l_options[ID];
+        }
 
         //alert("has "+option.row_num+" rows "+option.grasp);
 
-        var vis_model = get_model_coordinates(option);
+        var vis_model = get_model_coordinates(old_model);
 
         //generate 2D Output
-        output_writer.generate_2D_icon(340,400);
+        output_writer.generate_2D_icon(340,400,old_model);
 
         //alert(vis_model[1]);
         //generate 3D Output
@@ -56,17 +63,18 @@ function Object_Visualizer(){
         //set_implicid information
 
         if(variant!=0){
-            impl_db.set_impl_information([option.row_num,option.weightings,option.start_row,option.h_version]);
-            impl_db.d_options = option.d_options;
+            impl_db.set_impl_information([old_model.row_num,old_model.weightings,
+                old_model.start_row,old_model.h_version]);
+            impl_db.d_options = old_model.d_options;
 
             impl_db.show_information();
+            start();
         }
 
         //set info icon
         //output_writer.generate_info_icon(option);
 
         //start calculation with updated information
-        start();
 
         impl_db.set_interaction_function(null);
 
