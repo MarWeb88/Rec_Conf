@@ -16,7 +16,6 @@ function Model_Object(){
 
     function get_global_settings(){
 
-        alert("mufasa");
         return [expl_db.height,expl_db.width,expl_db.depth,expl_db.functions,
             expl_db.d_option_cons,curr_model_ID,l_options_full,l_options,expl_db.purp_functions];
     }

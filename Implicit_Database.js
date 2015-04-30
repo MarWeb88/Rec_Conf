@@ -110,7 +110,6 @@ function Implicit_Database(){
         var el = document.getElementById("example");
 
         for(var i=0; i<el.options.length; i++){
-            alert(expl_db.d_option_cons[i]);
             el.options[i].selected = expl_db.d_option_cons[i];
         }
 
