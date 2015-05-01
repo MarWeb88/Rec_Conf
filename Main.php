@@ -70,6 +70,9 @@
       </script>
     ";
 ?>
+<div id="progress_bar_frame" class="progress_bar_frame">
+<div id="progress_bar" class="progress_bar"> </div>
+</div>
 <div id="history_s" class="history_s"></div>
 <div id="container_left" class="container_left">
 
@@ -114,6 +117,9 @@
         </select></div>
         <input type="button" name="change_button" value="Show 2D Model" id="change_button"
             class="change_button" onclick="input_reader.change_2d_3d_vis()">
+
+        <input type="button" class="save_button invis" name="save_button" id="save_button"
+                            value="Save Model" onclick="history_s.save_model()">
 
     </div>
     <div class="information_box">
@@ -163,16 +169,20 @@
             <input type="checkbox" size="25" name="colors" id="function6"> Kitchen cabinet <br>
 
         </div>
-        <div class="start_button">
-        <input type="button" name="start_button" value="Start" onclick="input_reader.translate_purp_func()">
-            </div>
+        <!--<div class="start_button">-->
+        <input type="button" name="start_button" value="Start" id="start_button" class="start_button"
+        onclick="input_reader.translate_purp_func()">
+
+        <input type="button" name="start_button" value="Start New" id="open_button_purpose"
+        class="start_button invis" onclick="reset_all()">
+
         <!--<div>
             <input type="button" class="log_button" name="log_button" value="Log Out" onclick="log_manager.get_output()">
-        </div>-->
+        </div>
         <div>
             <input type="button" class="save_button invis" name="save_button" id="save_button"
                    value="Save" onclick="history_s.save_model()">
-        </div>
+        </div>-->
         <!--
         <div id="option_functions" class="option_functions_invis">
 

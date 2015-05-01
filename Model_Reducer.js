@@ -90,6 +90,7 @@ function Model_Reducer(){
                 row_ar = new Array(1);
                 row_ar[0]= impl_db.rows;
             }
+
             buckets = new Array(row_ar.length);
 
             //create buckets
@@ -134,12 +135,12 @@ function Model_Reducer(){
                     optionlist_reduced_final[optionlist_reduced_final_counter] = ret_el;
                     //change ID
                     optionlist_reduced_final_counter++;
+                    element_counter++;
                 }
                 cur_bucket++;
                 if (cur_bucket > buckets.length - 1) {
                     cur_bucket = 0;
                 }
-                element_counter++;
             }
             //}
             optionlist_reduced = optionlist_reduced_final;
@@ -150,20 +151,16 @@ function Model_Reducer(){
             optionlist_reduced[i].ID = i;
             //alert(optionlist_reduced[i].ID);
         }
-
-
         return optionlist_reduced;
     }
 
     function check_redundance(model,reference_list){
 
         for(var i=0; i<reference_list.length; i++){
-
             if(is_redundant(model,reference_list[i])){
                 return false;
             }
         }
-
         return true;
     }
 

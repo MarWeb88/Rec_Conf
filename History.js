@@ -21,13 +21,16 @@ function History(){
 
         //set all fields
         input_reader.set_Input_Fields();
+        input_reader.vis_input(true);
 
         impl_db.set_slider_values();
 
         impl_db.show_information();
 
+        input_reader.set_progress_bar(impl_db.get_last_connected_fill());
+
         //output_writer.generate_info_icon(l_options[curr_model_ID]);
-        obj_visualizer.call_vis(curr_model_ID,0);
+        obj_visualizer.call_vis(curr_model_ID);
         log_manager.add_action_Event("load savepoint "+ID+1);
         start();
 
@@ -36,9 +39,12 @@ function History(){
     function write_savepoint(ID){
         var el = document.getElementById("history_s");
         var box = document.createElement("div");
+        var changeback = false;
 
-        input_reader.change_2d_3d_vis();
-
+        if(document.getElementById("2d_canvas").style.display == "none"){
+            input_reader.change_2d_3d_vis();
+            changeback = true;
+        }
         html2canvas(document.getElementById("2d_canvas"),{onrendered: function(canvas) {
             el.appendChild(canvas);
             canvas.style.height = "60px";
@@ -49,8 +55,9 @@ function History(){
             height: 340
         });
 
-        input_reader.change_2d_3d_vis();
-
+        if(changeback == true) {
+            input_reader.change_2d_3d_vis();
+        }
     }
 
 }

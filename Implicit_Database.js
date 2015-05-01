@@ -34,20 +34,29 @@ function Implicit_Database(){
     this.reset = function(){
 
         this.set_information(null,null,null,expl_db.start_handle,null,expl_db.start_material,null,null);
+
         this.selected_function = undefined;
         //this.material_selector=null;
         //this.grasp_selector = null;
 
         document.getElementById("implicid_data_out").innerHTML="";
         curr_model_ID = null;
+
         input_reader.vis_save_button(false);
+        input_reader.vis_input(true);
 
         document.getElementById("grasp_select").options[0].selected = true;
         document.getElementById("material_select").options[0].selected = true;
+        input_reader.change_material_select();
 
         output_writer.delete_info_icon();
         output_writer.delete_interaction_functions();
-        start(0);
+        output_writer.clear_output();
+
+        obj_visualizer.clear_model_views();
+
+
+        //start(0);
     }
 
     this.set_grasp = function(){
@@ -73,6 +82,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        input_reader.set_progress_bar(20);
         log_manager.add_action_Event("delete_rows");
         start();
     }
@@ -83,6 +93,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        input_reader.set_progress_bar(65);
         log_manager.add_action_Event("delete_build_variant");
         start();
     }
@@ -99,7 +110,7 @@ function Implicit_Database(){
         var el = document.getElementById("example");
 
         for(var i=0; i<el.options.length; i++){
-            el.options[i].selected = expl_db.functions[i];
+            el.options[i].selected = expl_db.d_option_cons[i];
         }
 
         $("#example").multiselect("refresh");
@@ -137,6 +148,34 @@ function Implicit_Database(){
         return last_point;
     }
 
+    this.get_last_connected_fill = function(){
+        return get_latest_connected_fill(impl_db.get_imp_op_list());
+    }
+
+    function get_latest_connected_fill(list){
+
+        var last_point = 0;
+
+        for(var i=1; i<list.length; i++){
+            if(list[i]==null || i == list.length-1){
+                last_point = i-1;
+                break
+            }
+        }
+
+        switch(last_point){
+            case 0: return 20
+
+            case 1: return 40
+
+            case 2: return 65
+
+            case 3: return 90
+
+            case 4: return 90
+        }
+    }
+
     this.get_imp_op_list = function(){
         return ["empty",this.rows,this.weights,this.start_row,this.h_version];
     }
@@ -154,21 +193,28 @@ function Implicit_Database(){
                 stopper = true;
                 switch(counter){
                     case 0: impl_db.rows = values[counter];
+                        //input_reader.set_progress_bar(40);
                         log_manager.add_action_Event("set_rows");
                         break
 
                     case 1: impl_db.weights = values[counter];
+                        //input_reader.set_progress_bar(65);
                         log_manager.add_action_Event("set_weights");
                         break
 
                     case 2: impl_db.start_row = values[counter];
                         impl_db.h_version = values[counter+1];
+                        //input_reader.set_progress_bar(90);
                         log_manager.add_action_Event("set_build_variant");
                         break
                 }
             }
             counter++;
         }
+        list = impl_db.get_imp_op_list();
+
+        input_reader.set_progress_bar(get_latest_connected_fill(list));
+
         if(impl_db.rows!= null && impl_db.weights != null && impl_db.start_row!= null){
             impl_db.d_options_selector = true;
         }
@@ -179,6 +225,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        input_reader.set_progress_bar(40);
         log_manager.add_action_Event("delete_weights");
         start();
     }

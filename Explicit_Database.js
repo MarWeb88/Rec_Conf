@@ -14,7 +14,7 @@ function Explicit_Database(){
 
     this.functions = new Array(this.num_functions);
     this.purp_functions = new Array(7);
-    this.d_option_cons = [true,true,true,true,true,true];
+    //this.d_option_cons = [true,true,true,true,true,true];
     //this.grasps = new Array("Grasp 1","Grasp 2","Grasp 3");
     this.start_handle = "Handle 1";
     this.start_material = "images/Alder.jpg";

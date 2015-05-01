@@ -55,6 +55,9 @@ function main(variant) {
      border_width_real = 2;
      curr_model_ID = null;
 
+    //input_reader.vis_purpose(true);
+    //
+
     //initialize sliders
     initialize_sliders();
 
@@ -83,6 +86,8 @@ function main(variant) {
 
     //initialize Object_Visualizer
     obj_visualizer = new Object_Visualizer();
+
+    input_reader.reset_input_fields();
 
     if(variant !=0){
         //initialize Log_Manager
@@ -115,6 +120,8 @@ function start(variant){
             return false;
         } else {
             input_reader.vis_input(true);
+            input_reader.vis_purpose(false);
+            input_reader.set_progress_bar(20);
             log_manager.add_action_Event("start new");
         }
 
@@ -144,6 +151,7 @@ function start(variant){
 }
 
 function reset_all(){
+
     impl_db.reset();
 
     output_writer.delete_options();
@@ -151,6 +159,10 @@ function reset_all(){
     input_reader.reset_input_fields();
 
     obj_visualizer.clear_model_views();
+
+    input_reader.set_progress_bar(0);
+
+    input_reader.vis_purpose(true);
 
     main(0);
 }
