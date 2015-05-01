@@ -230,8 +230,8 @@ function Object_Visualizer(){
         // right, left, top, bottom, front, back
         // Define six colored materials
         var openBoxMaterials = [
-            boxMaterial,
-            boxMaterial,
+            slabMaterial,
+            slabMaterial,
             slabMaterial,
             slabMaterial,
             transMaterial,
@@ -239,8 +239,8 @@ function Object_Visualizer(){
         ];
 
         var closeBoxMaterials = [
-            boxMaterial,
-            boxMaterial,
+            slabMaterial,
+            slabMaterial,
             slabMaterial,
             slabMaterial,
             boxMaterial,
@@ -269,7 +269,7 @@ function Object_Visualizer(){
         // Create a MeshFaceMaterial, which allows the cube to have different materials on
         // each face
         openBoxFaceMaterial = new THREE.MeshFaceMaterial(openBoxMaterials);
-        closeBoxFaceMaterial = new THREE.MeshFaceMaterial(openBoxMaterials);
+        closeBoxFaceMaterial = new THREE.MeshFaceMaterial(closeBoxMaterials);
 
         var slabGeometry = new THREE.BoxGeometry(width, slab_height, depth);
 
@@ -310,8 +310,7 @@ function Object_Visualizer(){
 
         if(intersects.length!=0){
             var clickedMeshId = intersects[0].object.id;
-            solidifyMesh(clickedMeshId);
-            return;
+
             if (meshSelected){
                 unSelectMeshObject();
                 if(clickedMeshId != curSelMeshId)
