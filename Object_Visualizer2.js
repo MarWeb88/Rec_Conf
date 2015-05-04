@@ -131,7 +131,7 @@ function Object_Visualizer(){
         return parseFloat(parseFloat(val)/parseFloat(expl_db.height)*total_height);
     }
     //Initialize scene
-    function initializeScene(vis_model,functions,text_src) {
+    function initializeScene(vis_model,doorOptions,text_src) {
         // Check whether the browser supports WebGL. If so, instantiate the hardware accelerated
         // WebGL renderer. For antialiasing, we have to enable it. The canvas renderer uses
         // antialiasing by default.
@@ -230,14 +230,22 @@ function Object_Visualizer(){
         // right, left, top, bottom, front, back
         // Define six colored materials
         var openBoxMaterials = [
-            boxMaterial,
-            boxMaterial,
+            slabMaterial,
+            slabMaterial,
             slabMaterial,
             slabMaterial,
             transMaterial,
             boxMaterial
         ];
 
+        var closeBoxMaterials = [
+            slabMaterial,
+            slabMaterial,
+            slabMaterial,
+            slabMaterial,
+            boxMaterial,
+            boxMaterial
+        ];
 
         var slabMaterials = [
             slabMaterial,
@@ -260,13 +268,14 @@ function Object_Visualizer(){
 
         // Create a MeshFaceMaterial, which allows the cube to have different materials on
         // each face
-        var openBoxFaceMaterial = new THREE.MeshFaceMaterial(openBoxMaterials);
+        openBoxFaceMaterial = new THREE.MeshFaceMaterial(openBoxMaterials);
+        closeBoxFaceMaterial = new THREE.MeshFaceMaterial(closeBoxMaterials);
 
         var slabGeometry = new THREE.BoxGeometry(width, slab_height, depth);
 
-        var slabFaceMaterial = new THREE.MeshFaceMaterial(slabMaterials);
+        slabFaceMaterial = new THREE.MeshFaceMaterial(slabMaterials);
 
-        addCupboard(vis_model, openBoxFaceMaterial, slabGeometry, slabFaceMaterial,functions);
+        addCupboard(vis_model, doorOptions, slabGeometry);
 
 
 
@@ -288,18 +297,20 @@ function Object_Visualizer(){
 
     function onMouseMove(e){
 
-        mouseVector.x = 2 * ((e.clientX -50)/ canvasWidth) - 1;
-        mouseVector.y = 1 - 2 * ((e.clientY -50)/ canvasHeight);
+        var position = webGL_element.getBoundingClientRect();
+
+        mouseVector.x = 2 * ((e.clientX - position.left)/ canvasWidth) - 1;
+        mouseVector.y = 1 - 2 * ((e.clientY - position.top)/ canvasHeight);
 
         raycaster.setFromCamera( mouseVector.clone(), camera );
 
         var intersects = raycaster.intersectObjects(scene.children[1].children);
 
 
+
         if(intersects.length!=0){
             var clickedMeshId = intersects[0].object.id;
-            solidifyMesh(clickedMeshId);
-            return;
+
             if (meshSelected){
                 unSelectMeshObject();
                 if(clickedMeshId != curSelMeshId)
@@ -419,12 +430,12 @@ function Object_Visualizer(){
     /**
      * Create cupboard.
      */
-    function addCupboard(model, boxMaterial, slabGeometry, slabMaterial,functions) {
+    function addCupboard(model,  doorOptions, slabGeometry) {
         var cupboard = new THREE.Object3D();
         cupboard.name = 'Cupboard';
         var x_pos = -model.length * width / 2;
         for (var i = 0; i < model.length; i++) {
-            addColumn(i, model[i], x_pos, boxMaterial, slabGeometry, slabMaterial,functions[i], cupboard);
+            addColumn(i, model[i], doorOptions[i], x_pos, slabGeometry, cupboard);
             x_pos = x_pos + width;
         }
         scene.add(cupboard);
@@ -433,7 +444,7 @@ function Object_Visualizer(){
     /**
      * Create columns of cupboard.
      */
-    function addColumn(colId, rowHeights, x_pos, boxMaterial, slabGeometry, slabMaterial,functions, cupboard){
+    function addColumn(colId, rowHeights, doorOptions, x_pos, slabGeometry, cupboard){
         //total_height is constant for the 3D visualization as a global.
         //while(i--) total_height += rowHeights[i];
 
@@ -444,10 +455,13 @@ function Object_Visualizer(){
             // Parameter 2: Height
             // Parameter 3: Depth
             var boxGeometry = new THREE.BoxGeometry(width, rowHeights[i], depth, 10, 10, 10);
+            if(doorOptions[i] == 0)
+                boxMesh = new THREE.Mesh(boxGeometry, openBoxFaceMaterial.clone());
+            else
+                boxMesh = new THREE.Mesh(boxGeometry, closeBoxFaceMaterial.clone());
 
-            boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
 
-            boxMesh.ID = functions[i];
+
             boxMesh.position.set(x_pos, boxBasePosition + rowHeights[i]/2, z_pos);
             boxMesh.name = "col"+ colId + "row" + i;
             //scene.add(boxMesh);
