@@ -5,6 +5,9 @@
 function History(){
     this.savepoints = new Array();
 
+    this.history_list = new Array();
+    this.current_model = 0;
+
     this.save_model = function(){
 
         this.savepoints[this.savepoints.length]= new Model_Object();
@@ -22,6 +25,7 @@ function History(){
         //set all fields
         input_reader.set_Input_Fields();
         input_reader.vis_input(true);
+        input_reader.vis_purpose(false);
 
         impl_db.set_slider_values();
 

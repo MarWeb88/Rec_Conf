@@ -164,6 +164,9 @@ function reset_all(){
 
     input_reader.vis_purpose(true);
 
+    /*document.getElementById("implicid_data_out").innerHTML='Select one or more purposes on <br>' +
+    'the left side and click Start';*/
+
     main(0);
 }
 
