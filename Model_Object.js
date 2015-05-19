@@ -17,7 +17,8 @@ function Model_Object(){
     function get_global_settings(){
 
         return [expl_db.height,expl_db.width,expl_db.depth,expl_db.functions,
-            expl_db.d_option_cons,curr_model_ID,l_options_full,l_options,expl_db.purp_functions];
+            expl_db.d_option_cons,curr_model_ID,l_options_full,l_options,
+            expl_db.purp_functions,expl_db.purp_func_match];
     }
 
     this.set_imp_data = function(){
@@ -45,6 +46,7 @@ function Model_Object(){
         l_options_full = clone(this.global_settings[6]);
         l_options = clone(this.global_settings[7]);
         expl_db.purp_functions = clone(this.global_settings[8]);
+        expl_db.purp_func_match = clone(this.global_settings[9]);
 
     }
 }

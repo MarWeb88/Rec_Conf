@@ -42,7 +42,7 @@ function Output_Writer(){
             el.style.width = "100%";
             el.innerHTML = "No suitable solution was found! Check if global Door Options are activated!";
         }else{
-            el.style.width = "176.667px";
+            el.style.width = "230px";
             el.innerHTML = "";
         }
 
@@ -55,8 +55,8 @@ function Output_Writer(){
             //create a new option and define attributes
             var list_element = document.createElement("div");
             list_element.className = "option_list_element";
-            list_element.style.height = "155px";
-            list_element.style.width = "176.6667px";
+            list_element.style.height = "230px";
+            list_element.style.width = "230px";
 
             generate_icon(list_element,option_list[i],1);
 
@@ -195,8 +195,22 @@ function Output_Writer(){
         document.getElementById("option_output").className="option_output";
     }
 
+    function manage_icon_number(position,array){
+
+        //alert(array[position]+"   "+expl_db.filled_purp_func_match[position]);
+        if(array[position]<expl_db.filled_purp_func_match[position].length-1){
+            return array[position]+1;
+        }else{
+            return 0;
+        }
+    }
+
     function generate_icon(parent,option,variant){
 
+        var pos_array = new Array(expl_db.num_purp_func_match_functions);
+        for(var i=0; i<pos_array.length; i++){
+            pos_array[i]=0;
+        }
         //create inner div as carcass
         var front = document.createElement("div");
         front.className="icon";
@@ -235,16 +249,32 @@ function Output_Writer(){
                 element.style.top = height_start+"px";
                 element.style.width = el_width+"px";
                 element.style.height = el_height+"px";
-                element.style.backgroundColor = "white";
-                element.style.fontSize="9px";
-                element.innerHTML = get_Function_Name(option.rows[i][j].type)+
-                get_Option_Name(option.rows[i][j].d_options);/*+get_grasp_Name(option.grasp,option.rows[i][j].type)+
-                get_Material_Name(option.material);*/
 
-                if(variant == 2){
+                if(impl_db.d_options_selector==null){
+                    element.style.backgroundColor = "white";
+                }else{
+                    element.style.backgroundColor = get_Door_Color(option.rows[i][j].d_options);
+                }
+                element.style.backgroundImage = "url("+get_function_icon(expl_db.filled_purp_func_match
+                    [option.rows[i][j].type][pos_array[option.rows[i][j].type]])+")";
+
+                pos_array[option.rows[i][j].type]=manage_icon_number(option.rows[i][j].type,pos_array);
+
+                element.style.backgroundSize = "contain";
+                element.style.backgroundRepeat= "no-repeat";
+                element.style.backgroundPosition = "center";
+
+                element.style.fontSize="9px";
+                /*element.innerHTML= expl_db.filled_purp_func_match[option.rows[i][j].type][pos_array[option.rows[i][j].type]];
+                pos_array[option.rows[i][j].type]=manage_icon_number(option.rows[i][j].type,pos_array);*/
+
+                /*element.innerHTML = get_Function_Name(option.rows[i][j].type)+
+                get_Option_Name(option.rows[i][j].d_options);*/
+
+                /*if(variant == 2){
                     element.innerHTML += get_grasp_Name(impl_db.grasp)+
                     get_Material_Name(impl_db.material);
-                }
+                }*/
 
                 element.style.textAlign="center";
 
@@ -275,6 +305,26 @@ function Output_Writer(){
 
     this.get_F_Number = function(name){
         return get_Function_Number(name);
+    }
+
+    function get_function_icon(type){
+        switch (type) {
+            case "Jackets":return "images/icons/Jackets.png"
+
+            case "CD/DVD":return "images/icons/CDs.png"
+
+            case "Books":return "images/icons/Books.png"
+
+            case "Underwear":return "images/icons/Underwear.png"
+
+            case "Cloths":return "images/icons/Shirts.png"
+
+            case "Shoes":return "images/icons/Shoes.png"
+
+            case "Dishes":return "images/icons/Dishes.png"
+
+            case "Tools":return "images/icons/Tools.png"
+        }
     }
 
     function get_Function_Name(type){
@@ -310,6 +360,22 @@ function Output_Writer(){
             case "4": return "(d.d)"
 
             case "5": return "(d.sl)"
+        }
+    }
+
+    function get_Door_Color(val){
+        switch(val){
+            case "0": return "white"
+
+            case "1": return "#666633"
+
+            case "2": return "#C0C0C0"
+
+            case "3": return "#3399CC"
+
+            case "4": return "#999966"
+
+            case "5": return "#FF6600"
         }
     }
 

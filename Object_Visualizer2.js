@@ -153,7 +153,7 @@ function Object_Visualizer(){
 
         // Get the size of the inner window (content area) to create a full size renderer
         // Canvas size is fixed currently, needs to fetch it from div
-        canvasWidth = 580;
+        canvasWidth = 540;
         canvasHeight = 450;
 
         // Set the renderers size to the content areas size

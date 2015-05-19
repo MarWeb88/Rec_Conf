@@ -1,7 +1,7 @@
 .history_s {
     position: absolute;
     top: 50px;
-    left: 30px;
+    left: 5px;
     width: 70px;
     height: 600px;
     overflow-y: auto;
@@ -11,9 +11,9 @@
 
 .progress_bar_frame {
     position: absolute;
-    right: 30px;
+    right: 5px;
     top:25px;
-    width: 560px;
+    width: 690px;
     height: 20px;
     border-style: solid;
     border-width: 0.5px
@@ -30,9 +30,9 @@
 
 .container_left {
     position:absolute;
-    left: 130px;
+    left: 85px;
     top:50px;
-    width: 580px;
+    width: 540px;
     height: 600px;
     border-style: solid;
     border-width: 1px;
@@ -47,9 +47,9 @@
 
 .container_right {
     position:absolute;
-    right: 30px;
+    right: 5px;
     top:50px;
-    width: 560px;
+    width: 690px;
     height: 600px;
     border-style: solid;
     border-width: 1px;
@@ -123,30 +123,30 @@
 .option_row0 {
     position:absolute;
     left: 0px;
-    width: 176.6667px;
+    width: 230px;
     height:100%;
     border-style: none;
     border-width: 0.8px;
 }
 .option_row1 {
     position:absolute;
-    left: 176.6667px;
-    width: 176.6667px;
+    left: 230px;
+    width: 230px;
     height:100%;
     border-style: none;
     border-width: 0.8px;
 }
 .option_row2 {
     position:absolute;
-    left: 353.34px;
-    width: 176.6667px;
+    left: 460px;
+    width: 230px;
     height:100%;
     border-style: none;
     border-width: 0.8px;
 }
 .option_list_element {
     position:relative;
-    width: 176.6667px;
+    width: 230px;
     height:165px;
     border-style: solid;
     border-width: 0.8px;

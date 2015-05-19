@@ -123,7 +123,6 @@ function Input_Reader(){
          */
         get_func_from_purp();
 
-
         //impl_db.reset();
     }
 
@@ -238,117 +237,55 @@ function Input_Reader(){
 
         if(compatibility_check_model(func_list)){
             fill_options(func_values);
-            //impl_db.reset();
+
+            expl_db.filled_purp_func_match = fill_function_option_list();
+
             start(0);
         }else{
             alert("Can not find valid combination");
         }
+    }
 
-        /* switch(name){
-           case "Wardrobe 1": fill_options([5,7,10]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
+    function fill_function_option_list(){
 
-            case "Wardrobe 2": fill_options([5,8,10]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
+        var ret_ar = new Array(expl_db.num_purp_func_match_functions);
 
-            case "Wardrobe 3": fill_options([6,7,10]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Wardrobe 4": fill_options([6,8,10]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "CD/Book shelf 1": fill_options([0,2]); display_functions("option_functions_invis");
-                change_d_option_cons([true,false,false,false,false,false]); return
-
-            case "CD/Book shelf 2": fill_options([0,3]); display_functions("option_functions_invis");
-                change_d_option_cons([true,false,false,false,false,false]); return
-
-            case "CD/Book shelf 3": fill_options([1,2]); display_functions("option_functions_invis");
-                change_d_option_cons([true,false,false,false,false,false]); return
-
-            case "CD/Book shelf 4": fill_options([1,3]); display_functions("option_functions_invis");
-                change_d_option_cons([true,false,false,false,false,false]); return
-
-            case "CD/Book shelf 5": fill_options([0,2,3]); display_functions("option_functions_invis");
-                change_d_option_cons([true,false,false,false,false,false]); return
-
-            case "CD/Book shelf 6": fill_options([1,2,3]); display_functions("option_functions_invis");
-                change_d_option_cons([true,false,false,false,false,false]); return
-
-            case "Kitchen cupboard 1": fill_options([7,10]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,true,true,true,true]); return
-
-            case "Kitchen cupboard 2": fill_options([8,9]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,true,true,true,true]); return
-
-            case "Kitchen cupboard 3": fill_options([7,9,10]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,true,true,true,true]); return
-
-            case "Kitchen cupboard 4": fill_options([9,11,16]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,true,true,true,true]); return
-
-            case "Kitchen cupboard 5": fill_options([10,13]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,true,true,true,true]); return
-
-            case "Kitchen cupboard 6": fill_options([10,12]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,true,true,true,true]); return
-
-            case "China cabinet 1": fill_options([10]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "China cabinet 2": fill_options([7,10]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "China cabinet 3": fill_options([8,10]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Shoe cabinet 1": fill_options([16]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Shoe cabinet 2": fill_options([10,16]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Dresser 1": fill_options([7,10]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,true,false,false,false]); return
-
-            case "Dresser 2": fill_options([8,10]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,true,false,false,false]); return
-
-            case "Broom cabinet 1": fill_options([10,13]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,false,true,true,true]); return
-
-            case "Broom cabinet 2": fill_options([11,13]); display_functions("option_functions_invis");
-                change_d_option_cons([false,false,false,true,true,true]); return
-
-            */
-
-            /*case "File cabinet": fill_options([1]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Tool cabinet": fill_options([6,9,10]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Bedroom closet": fill_options([2,4,8]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Bathroom cabinet": fill_options([6,9]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Office cabinet": fill_options([6]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Bedside cabinet": fill_options([6]); display_functions("option_functions_invis");
-                change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Apothecary cabinet": fill_options([6,9]); display_functions("option_functions_invis");
-             change_d_option_cons([true,true,true,true,true,true]); return
-
-            case "Flexible Selection": fill_options([]); display_functions("option_functions_vis");
-                change_d_option_cons([true,true,true,true,true,true]); return
+        for(var i=0; i<ret_ar.length; i++){
+            ret_ar[i] = [];
         }
-        alert("Value could not be found!");*/
+
+        for(var i= 0; i<expl_db.purp_functions.length; i++){
+
+            if(expl_db.purp_functions[i]==true){
+                ret_ar = sum_arrays(ret_ar,expl_db.purp_func_match[i]);
+            }
+        }
+        /*var out = "";
+        for(var i=0; i<ret_ar.length;i++){
+            out += "[";
+            for(var j=0; j<ret_ar[i].length; j++){
+                out+=ret_ar[i][j]+",";
+            }
+            out += "]";
+        }
+        alert("Ausgabe: "+out);*/
+        return ret_ar;
+    }
+
+    function sum_arrays(ar_core,ar_new){
+        //alert("core: "+ ar_core+ "   new: "+ar_new);
+        var ar_copy = clone(ar_core);
+
+        for(var i=0; i<ar_copy.length; i++){
+
+            for(var j=0; j<ar_new[i].length; j++){
+                if(!is_in_Array(ar_new[i][j],ar_copy[i])){
+                    ar_copy[i][ar_copy[i].length]= clone(ar_new[i][j]);
+                }
+
+            }
+        }
+        return ar_copy;
     }
 
     function compatibility_check_model(func_list){
@@ -371,7 +308,6 @@ function Input_Reader(){
         return true;
     }
 
-
     function fill_options(values){
 
         for(var i=0; i<expl_db.num_functions; i++){
@@ -393,6 +329,7 @@ function Input_Reader(){
     }
 
     function is_in_Array(val,array){
+
         for(var i=0; i<array.length; i++){
             if(val == array[i]){
                 return true

@@ -10,12 +10,11 @@ function Explicit_Database(){
     this.num_functions = 7;
     this.num_true_functions = 2;
     this.num_phys_cons = 5;
-    //this.comp_func_num = 4;
+    this.num_purp_func_match_functions = 7;
 
     this.functions = new Array(this.num_functions);
-    this.purp_functions = new Array(7);
-    //this.d_option_cons = [true,true,true,true,true,true];
-    //this.grasps = new Array("Grasp 1","Grasp 2","Grasp 3");
+    this.purp_functions = new Array(this.num_purp_func_match_functions);
+
     this.start_handle = "Handle 1";
     this.start_material = "images/Alder.jpg";
     this.materials = new Array("images/Alder.jpg");
@@ -23,7 +22,10 @@ function Explicit_Database(){
     this.p_cons = initialize_p_cons(this.num_phys_cons);
     this.f_cons = initialize_f_cons(this.num_functions);
     this.d_option_cons = initialize_d_option_cons();
-    this.comp_list = initialize_comp_list();
+    this.comp_list = initialize_comp_list(7);
+    this.purp_func_match = initialize_purp_func_match(this.num_purp_func_match_functions);
+
+    this.filled_purp_func_match;
 
     this.set_d_option_cons = function(values){
 
@@ -44,24 +46,29 @@ function Explicit_Database(){
     }
 
     this.calculate_hierarchical_options = function(){
-        /*
-        * PermZRob(int N, int *P[])
-         {
-         int I, h, r;
-
-         for (I = N; I >= 2; I--)
-         {
-         r    = 1 + random(I);
-         h    = P[I];
-         P[I] = P[r];
-         P[r] = h;
-         }
-         }
-        *
-        * */
     }
 
 
+    function initialize_purp_func_match(num){
+        var ret_ar = new Array(num);
+
+        //Wardrobe
+        ret_ar[0]= [["Jackets"],[],["Underwear"],["Cloths"],[],[],[]];
+        //CD,DVD shelf
+        ret_ar[1]= [[],["CD/DVD"],[],[],[],[],[]];
+        //Book shelf
+        ret_ar[2]= [[],[],["Books"],[],[],[],[]];
+        //Shoe cabinet
+        ret_ar[3]= [[],[],[],[],[],[],["Shoes"]];
+        //Tool cupboard
+        ret_ar[4]= [[],[],[],[],["Tools"],["Tools"],[]];
+        //China cabinet
+        ret_ar[5]= [[],[],[],["Dishes"],[],[],[]];
+        //Kitchen cupboard
+        ret_ar[6]= [[],[],[],["Dishes"],["Food"],[],[]];
+
+        return ret_ar;
+    }
 
     function initialize_comp_list(num){
 
