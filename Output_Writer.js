@@ -94,7 +94,7 @@ function Output_Writer(){
     }
 
     this.delete_interaction_functions =function(){
-        document.getElementById("information_box_out").innerHTML="";
+        //document.getElementById("information_box_out").innerHTML="";
     }
 
     this.generate_savepoint_icon = function(height,width){
@@ -126,6 +126,8 @@ function Output_Writer(){
         var container = document.getElementById("2d_canvas");
         container.innerHTML="";
         container.appendChild(element);
+
+        document.getElementById("information_box_out").style.display ="inline";
 
         return element;
     }

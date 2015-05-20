@@ -124,10 +124,38 @@
     </div>
     <div class="information_box">
         <!--<p><b>Dimensions:</b></p>-->
-        <div class="information_box_out" id="information_box_out"></div>
+        <div class="information_box_out" id="information_box_out">
+             <img id="handle_picture" src="images/handles/Handle 3.jpg" height="100" width="100">
+        </div>
         <div class="information_box_icon_frame" id="information_box_icon_frame">
-            <div class="information_box_icon" id="information_box_icon">
+            <!--<div class="information_box_icon" id="information_box_icon">
 
+            </div>-->
+            <div class="material_door_picture_frame frame_1">
+                <div class="material_door_picture door_pic_1"> </div>
+                <div class="material_door_name"> No door </div>
+             </div>
+
+             <div class="material_door_picture_frame frame_2">
+                 <div class="material_door_picture door_pic_2"> </div>
+                 <div class="material_door_name"> Drawer behind Door </div>
+              </div>
+
+             <div class="material_door_picture_frame frame_3">
+                  <div class="material_door_picture door_pic_3"> </div>
+                  <div class="material_door_name"> Drawer </div>
+             </div>
+             <div class="material_door_picture_frame frame_4">
+                 <div class="material_door_picture door_pic_4"> </div>
+                 <div class="material_door_name"> Single Door </div>
+              </div>
+              <div class="material_door_picture_frame frame_5">
+                   <div class="material_door_picture door_pic_5"> </div>
+                   <div class="material_door_name"> Double Door </div>
+            </div>
+              <div class="material_door_picture_frame frame_6">
+                   <div class="material_door_picture door_pic_6"> </div>
+                   <div class="material_door_name"> Slide Door </div>
             </div>
         </div>
     </div>

@@ -28,14 +28,15 @@ function Object_Visualizer(){
         if(document.getElementById("2d_canvas").innerHTML!=""){
             document.getElementById("2d_canvas").innerHTML="";
             stopAnimation();
+            document.getElementById("information_box_out").style.display ="none";
+            //document.getElementById("information_box_icon_frame").style.display ="none";
         }
+
     }
 
     this.call_vis = function(ID,variant) {
 
         //alert("start with "+ID );
-
-
 
         input_reader.vis_save_button(true);
 
@@ -46,14 +47,11 @@ function Object_Visualizer(){
             old_model = l_options[ID];
         }
 
-        //alert("has "+option.row_num+" rows "+option.grasp);
-
         var vis_model = get_model_coordinates(old_model);
 
         //generate 2D Output
         output_writer.generate_2D_icon(340,400,old_model);
 
-        //alert(vis_model[1]);
         //generate 3D Output
         initializeScene(vis_model[0],vis_model[1],impl_db.material);
 
@@ -70,7 +68,6 @@ function Object_Visualizer(){
             impl_db.show_information();
             start();
         }
-
         //set info icon
         //output_writer.generate_info_icon(option);
 
@@ -79,6 +76,8 @@ function Object_Visualizer(){
         impl_db.set_interaction_function(null);
 
     }
+
+
 
     //Object Selection Component
     projector = new THREE.Projector();

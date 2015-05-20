@@ -63,10 +63,16 @@ function Implicit_Database(){
 
         this.grasp = document.getElementById("grasp_select").value;
         log_manager.add_action_Event("set grasp");
+        adapt_handles();
 
         if(curr_model_ID != null){
             obj_visualizer.call_vis(curr_model_ID,0);
         }
+    }
+
+    function adapt_handles(){
+        var el = document.getElementById("handle_picture");
+        el.src = "images/handles/"+impl_db.grasp+".jpg";
     }
 
     this.set_material = function(){
@@ -82,6 +88,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        document.getElementById("information_box_icon_frame").style.display ="none";
         input_reader.set_progress_bar(20);
         log_manager.add_action_Event("delete_rows");
         start();
@@ -93,6 +100,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        document.getElementById("information_box_icon_frame").style.display ="none";
         input_reader.set_progress_bar(65);
         log_manager.add_action_Event("delete_build_variant");
         start();
@@ -217,6 +225,7 @@ function Implicit_Database(){
 
         if(impl_db.rows!= null && impl_db.weights != null && impl_db.start_row!= null){
             impl_db.d_options_selector = true;
+            document.getElementById("information_box_icon_frame").style.display ="inline";
         }
     }
 
@@ -225,6 +234,7 @@ function Implicit_Database(){
         this.delete_interaction();
         this.show_information();
         impl_db.d_options_selector = null;
+        document.getElementById("information_box_icon_frame").style.display ="none";
         input_reader.set_progress_bar(40);
         log_manager.add_action_Event("delete_weights");
         start();

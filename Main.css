@@ -241,15 +241,85 @@
     left: 0px;
     top: 0px;
     height: 100%;
-    width: 70%;
+    width: 30%;
+    display: none;
 }
 
 .information_box_icon_frame {
     position: absolute;
-    left: 70%;
+    left: 40%;
     top: 0px;
     height: 100%;
-    width: 30%;
+    width: 60%;
+    display: none;
+}
+
+.material_door_picture_frame {
+    position: absolute;
+    height: 16.667%;
+    width: 90%;
+    left: 30%;
+    display: inherit;
+}
+
+.material_door_picture {
+    position: absolute;
+    height: 90%;
+    width: 60%;
+}
+
+.material_door_name {
+    position: absolute;
+    height: 90%;
+    width: 60%;
+}
+
+.door_pic_1 {
+    background-color: white;
+}
+
+.door_pic_2 {
+    background-color: #666633;
+}
+
+.door_pic_3 {
+    background-color: #C0C0C0;
+}
+
+.door_pic_4 {
+    background-color: #3399CC;
+}
+
+.door_pic_5 {
+    background-color: #999966;
+}
+
+.door_pic_6 {
+    background-color: #FF6600;
+}
+
+.frame_1 {
+    top: 0%;
+}
+
+.frame_2 {
+    top: 16.667%;
+}
+
+.frame_3 {
+    top: 33.334%;
+}
+
+.frame_4 {
+    top: 50%;
+}
+
+.frame_5 {
+    top: 66.667%;
+}
+
+.frame_6 {
+    top: 83.334%;
 }
 
 .level2 {
