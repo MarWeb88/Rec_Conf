@@ -55,11 +55,11 @@ function Explicit_Database(){
         //Wardrobe
         ret_ar[0]= [["Jackets"],[],["Underwear"],["Cloths"],[],[],[]];
         //CD,DVD shelf
-        ret_ar[1]= [[],["CD/DVD"],[],[],[],[],[]];
+        ret_ar[1]= [[],["CD"],["DVD"],[],[],[],[]];
         //Book shelf
-        ret_ar[2]= [[],[],["Books"],[],[],[],[]];
+        ret_ar[2]= [[],[],["Books"],["Books"],[],[],[]];
         //Shoe cabinet
-        ret_ar[3]= [[],[],[],[],[],[],["Shoes"]];
+        ret_ar[3]= [[],[],["Shoes"],[],[],[],["Shoes"]];
         //Tool cupboard
         ret_ar[4]= [[],[],[],[],["Tools"],["Tools"],[]];
         //China cabinet
@@ -182,7 +182,7 @@ function Explicit_Database(){
         //Small CD
         f_cons[1]= new Functional_Constraint(0,20,30,new Array(true,false,true,false,false,false),1);
         //Small-Medium
-        f_cons[2]= new Functional_Constraint(1,30,45,new Array(true,false,false,false,false,false),2);
+        f_cons[2]= new Functional_Constraint(1,30,45,new Array(true,true,false,false,false,false),2);
         //Medium
         f_cons[3]= new Functional_Constraint(3,45,60,new Array(false,true,true,true,true,true),3);
         //Medium-Large

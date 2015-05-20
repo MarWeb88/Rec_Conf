@@ -313,19 +313,23 @@ function Output_Writer(){
         switch (type) {
             case "Jackets":return "images/icons/Jackets.png"
 
-            case "CD/DVD":return "images/icons/CDs.png"
+            case "CD":return "images/icons/CDs.png"
+
+            case "DVD":return "images/icons/DVDs.png"
 
             case "Books":return "images/icons/Books.png"
 
             case "Underwear":return "images/icons/Underwear.png"
 
-            case "Cloths":return "images/icons/Shirts.png"
+            case "Cloths":return "images/icons/T-Shirt.png"
 
             case "Shoes":return "images/icons/Shoes.png"
 
             case "Dishes":return "images/icons/Dishes.png"
 
             case "Tools":return "images/icons/Tools.png"
+
+            case "Food":return "images/icons/Food.png"
         }
     }
 

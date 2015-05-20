@@ -204,11 +204,11 @@ function Input_Reader(){
             //Wardrobe
             case 0: return [0,2,3]
             //CD/DVD
-            case 1: return [1]
+            case 1: return [1,2]
             //Books
-            case 2: return [2]
+            case 2: return [2,3]
             //Shoes
-            case 3: return [6]
+            case 3: return [2,6]
             //Tool cabinet
             case 4: return [4,5]
             //China cabinet
