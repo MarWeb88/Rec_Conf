@@ -292,7 +292,20 @@ function Implicit_Database(){
     this.show_information = function(){
         var element = document.getElementById("implicid_data_out");
 
-        var implicit_out = "<p class='implicid_headline'><b>Current characteristics: </b></p>";
+        var implicit_out = "<p class='implicid_headline'><b>Currently stored preferences</b> (Click on X to " +
+            "remove them from calculation)</p>";
+
+        if(log_manager.get_pool()=="0"){
+            implicit_out = '  <div id="innerText" class="innerText"> Specify dimension and select one or ' +
+            'more purposes on the left side and click "Start". Some combinations are not possible. In this' +
+            ' case, just try another one </div>';
+        }
+
+        if(log_manager.get_pool()=="1"){
+            implicit_out = ' <div id="innerText" class="innerText"> Click on one recommendation below that is close ' +
+            'to your personal preference. On the left side you can specify global options and change the view. By a ' +
+            'a click on "Start New", you will come back to the first step</div>';
+        }
 
         if(this.rows != null){
             implicit_out += "<input onclick='impl_db.delete_rows()'" +
@@ -303,10 +316,20 @@ function Implicit_Database(){
             "class='exit_button' type='button' value='X'> "+
             output_writer.get_Weighting_Description(this.weights)+" <br>";
         }
-        if(this.start_row != null && this.h_version!=null){
+        /*if(this.start_row != null && this.h_version!=null){
             implicit_out += "<input onclick='impl_db.delete_start_row()'" +
             "class='exit_button' type='button' value='X'> Build Variant: "+
             this.start_row+" with H-Level: "+this.h_version+"<br>";
+        }*/
+        if(this.start_row != null && this.h_version!=null){
+            implicit_out += "<input onclick='impl_db.delete_start_row()'" +
+            "class='exit_button' type='button' value='X'> Collection Version Nr."+
+            this.start_row+""+this.h_version+"<br>";
+        }
+
+        if(log_manager.get_pool()=="5"){
+            implicit_out += "<p class='implicid_headline'>Choose the between different door options" +
+            " for the selected model</p>";
         }
         /*if(this.d_options_selector != null){
             implicit_out += "<input onclick='impl_db.delete_d_options_selector()'" +

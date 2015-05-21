@@ -241,7 +241,7 @@
     left: 0px;
     top: 0px;
     height: 100%;
-    width: 30%;
+    width: 40%;
     display: none;
 }
 
@@ -378,6 +378,18 @@
     background-color: darkred;
 }
 
+.innerText {
+    font-size: 15px;
+    position: absolute;
+    top: 20px;
+}
+
+.handle_text {
+    position: absolute;
+    top: 20px;
+    left: 120px;
+}
+
 .log_button {
     position: absolute;
     top: 200px;
@@ -394,7 +406,7 @@
     position: absolute;
     top: 70px;
     left: 210px;
-    width: 270px;
+    width: 450px;
     font-size: 9px
 }
 

@@ -126,8 +126,7 @@
         <!--<p><b>Dimensions:</b></p>-->
         <div class="information_box_out" id="information_box_out">
              <img id="handle_picture" src="images/handles/Handle 3.jpg" height="100" width="100">
-             <br>
-
+            <div class="handle_text"> Selected <br> Handle</div>
         </div>
     <form method="get" class="finish_button" name="form1" id="submitter"
          action="https://docs.google.com/forms/d/1Zr2YHkaJoJsLD_HgsU6mQgLbXcFEK2BAHN2e04SoYj0/viewform?entry.1314299856=121"
@@ -237,9 +236,9 @@
         </div>
         -->
         <div id="implicid_data_out" class="implicid_data_out">
+            <!--<div id="innerText" class="innerText"> Select one or more purposes on <br>
+                             the left side and click "Start"</div>-->
 
-            <p><br><br><br><b>Select one or more purposes on <br>
-            the left side and click "Start"</b></p>
             </div>
 
         <!--<div class="start_button">

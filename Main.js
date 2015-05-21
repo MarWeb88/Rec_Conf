@@ -105,7 +105,7 @@ function main(variant) {
         alert(JS);*/
     }
 
-
+    impl_db.show_information();
 }
 
 function start(variant){
@@ -147,6 +147,8 @@ function start(variant){
 
     //present options to the user
     output_writer.writeOptionlist(l_options);
+
+    impl_db.show_information();
 
 }
 

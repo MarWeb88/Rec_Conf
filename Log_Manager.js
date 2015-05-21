@@ -8,12 +8,16 @@ function Log_Manager(){
     JL().fatal("log message");
     var counter = 0;
 
+    this.get_pool = function(){
+        return get_Pool();
+    }
+
     this.add_action_Event = function(useraction){
 
         /*this.elements[this.elements.length]=
             new Action_Event(this.elements.length,get_elapsed_Time(),useraction);*/
         //var obj = new Action_Event(user_ID,counter,get_elapsed_Time(),useraction);
-        var ob_string = "{"+user_ID+","+counter+","+get_elapsed_Time()+","+useraction+"}";
+        var ob_string = "{"+user_ID+","+counter+","+get_elapsed_Time()+","+useraction+","+get_Pool()+"}";
         counter++;
         JL().log(2545,ob_string);
     }
@@ -37,5 +41,25 @@ function Log_Manager(){
     function get_elapsed_Time(){
         var d = new Date().getTime()/1000;
         return Math.round((d - start_time) * 10) / 10;
+    }
+
+    function get_Pool(){
+        var ar = impl_db.get_imp_op_list();
+        var pool_nr = 0;
+
+        if(expl_db.purp_functions[0]==undefined){
+            return pool_nr;
+        }else{
+            pool_nr++;
+        }
+
+        for(var i=1; i<ar.length; i++){
+            if(ar[i]!= null){
+                pool_nr++;
+            }else{
+                break;
+            }
+        }
+        return pool_nr;
     }
 }

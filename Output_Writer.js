@@ -468,7 +468,7 @@ function Output_Writer(){
 
     this.get_Weighting_Description = function(values){
 
-        var weighting_out = "Weighting: ";
+        var weighting_out = "Ratio between elements: ";
 
         for(var i=0; i<values.length; i++){
 
