@@ -126,7 +126,17 @@
         <!--<p><b>Dimensions:</b></p>-->
         <div class="information_box_out" id="information_box_out">
              <img id="handle_picture" src="images/handles/Handle 3.jpg" height="100" width="100">
+             <br>
+
         </div>
+    <form method="get" class="finish_button" name="form1" id="submitter"
+         action="https://docs.google.com/forms/d/1Zr2YHkaJoJsLD_HgsU6mQgLbXcFEK2BAHN2e04SoYj0/viewform?entry.1314299856=121"
+         onsubmit="" >
+
+         <input name="entry.1314299856" id="hiddenfeld" type="hidden" value="<?php echo $id?>" />
+
+         <input name="Finish_Button" type="submit" value="Finish Configuration" />
+     </form>
         <div class="information_box_icon_frame" id="information_box_icon_frame">
             <!--<div class="information_box_icon" id="information_box_icon">
 
@@ -203,6 +213,8 @@
 
         <input type="button" name="start_button" value="Start New" id="open_button_purpose"
         class="start_button invis" onclick="reset_all()">
+
+
 
         <!--<div>
             <input type="button" class="log_button" name="log_button" value="Log Out" onclick="log_manager.get_output()">

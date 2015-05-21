@@ -212,9 +212,9 @@ function Input_Reader(){
             //Tool cabinet
             case 4: return [4,5]
             //China cabinet
-            case 5: return [3]
+            case 5: return [2]
             //Kitchen cupboard
-            case 6: return [3,4]
+            case 6: return [2,4]
         }
     }
 

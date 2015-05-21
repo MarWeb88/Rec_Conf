@@ -63,9 +63,9 @@ function Explicit_Database(){
         //Tool cupboard
         ret_ar[4]= [[],[],[],[],["Tools"],["Tools"],[]];
         //China cabinet
-        ret_ar[5]= [[],[],[],["Dishes"],[],[],[]];
+        ret_ar[5]= [[],[],["Dishes"],[],[],[],[]];
         //Kitchen cupboard
-        ret_ar[6]= [[],[],[],["Dishes"],["Food"],[],[]];
+        ret_ar[6]= [[],[],["Dishes"],[],["Food"],[],[]];
 
         return ret_ar;
     }
@@ -94,14 +94,6 @@ function Explicit_Database(){
         p_cons[3]= new Physical_Constraint(4,140,320);
         //5 parts
         p_cons[4]= new Physical_Constraint(5,180,320);
-        //6 parts
-        /*p_cons[5]= new Physical_Constraint(6,180,320);
-        //7 parts
-        p_cons[6]= new Physical_Constraint(7,210,320);
-        //8 parts
-        p_cons[7]= new Physical_Constraint(8,240,320);
-        //9 parts
-        p_cons[8]= new Physical_Constraint(9,270,320);*/
 
         return p_cons;
     }
@@ -109,73 +101,6 @@ function Explicit_Database(){
     function initialize_f_cons(num){
 
         var f_cons = new Array(num);
-        /*
-        //CD,DVD
-        f_cons[0]= new Functional_Constraint(0,20,30,new Array(true,true,true,false,false,false),1);
-        //books,documents
-        f_cons[1]= new Functional_Constraint(1,30,40,new Array(true,false,false,false,false,false),2);
-        //Jackets,Shirts
-        f_cons[2]= new Functional_Constraint(2,130,max_height,new Array(false,false,false,true,true,true),3);
-        //Food
-        f_cons[3]= new Functional_Constraint(3,40,60,new Array(false,false,true,true,true,true),5);
-        //T-Shirts,pants
-        f_cons[4]= new Functional_Constraint(4,25,45,new Array(false,true,true,true,true,true),4);
-        //dishes
-        f_cons[5]= new Functional_Constraint(5,30,50,new Array(false,false,false,true,true,true),6);
-        //small stuff
-        f_cons[6]= new Functional_Constraint(6,25,50,new Array(false,true,true,true,true,true),8);
-        //shoes
-        f_cons[7]= new Functional_Constraint(7,20,30,new Array(false,false,false,true,true,true),11);
-        //underwear,socks
-        f_cons[8]= new Functional_Constraint(8,25,30,new Array(false,true,true,true,true,true),7);
-        //medium stuff
-        f_cons[9]= new Functional_Constraint(9,50,80,new Array(false,true,true,true,true,true),9);
-        //large stuff
-        f_cons[10]= new Functional_Constraint(10,90,140,new Array(false,true,true,true,true,true),10);
-        */
-
-        //G1,G2,G3,G4,G5                    (nothing,drawer behind door,drawer,door single,door double,door slide)
-        //CD,DVD 1: high level
-        /*f_cons[0]= new Functional_Constraint(0,20,30,new Array(true,false,true,false,false,false),1);
-        //CD,DVD 2: low level
-        f_cons[1]= new Functional_Constraint(1,20,30,new Array(true,false,true,false,false,false),2);
-
-        //Books 1: high level
-        f_cons[2]= new Functional_Constraint(2,30,40,new Array(true,false,false,false,false,false),3);
-        //Books 2: medium level
-        f_cons[3]= new Functional_Constraint(3,30,40,new Array(true,false,false,false,false,false),4);
-        //Books 3: low level
-        f_cons[4]= new Functional_Constraint(4,30,40,new Array(true,false,false,false,false,false),5);
-
-        //Jackets 1: high level
-        f_cons[5]= new Functional_Constraint(5,110,max_height,new Array(false,false,false,true,true,true),6);
-        //Jackets 2: medium level
-        f_cons[6]= new Functional_Constraint(6,150,max_height,new Array(false,false,false,true,true,true),7);
-
-        //Small Stuff 1: high level
-        f_cons[7]= new Functional_Constraint(7,25,40,new Array(false,true,true,true,true,true),8);
-        //Small Stuff 2: medium level
-        f_cons[8]= new Functional_Constraint(8,25,40,new Array(false,true,true,true,true,true),11);
-        //Small Stuff 3: low level
-        f_cons[9]= new Functional_Constraint(9,25,40,new Array(false,true,true,true,true,true),14);
-
-        //Medium Stuff 1: high level
-        f_cons[10]= new Functional_Constraint(10,40,60,new Array(false,true,true,true,true,true),9);
-        //Medium Stuff 2: medium level
-        f_cons[11]= new Functional_Constraint(11,40,60,new Array(false,true,true,true,true,true),12);
-        //Medium Stuff 3: low level
-        f_cons[12]= new Functional_Constraint(12,40,60,new Array(false,true,true,true,true,true),15);
-
-        //Large Stuff 1: high level
-        f_cons[13]= new Functional_Constraint(13,80,120,new Array(false,true,true,true,true,true),10);
-        //Large Stuff 2: medium level
-        f_cons[14]= new Functional_Constraint(14,80,120,new Array(false,true,true,true,true,true),13);
-        //Large Stuff 3: low level
-        f_cons[15]= new Functional_Constraint(15,80,120,new Array(false,true,true,true,true,true),16);
-
-        //Shoes
-        f_cons[16]= new Functional_Constraint(16,35,50,new Array(false,false,false,true,true,true),17);
-        */
 
         //Jackets
         f_cons[0]= new Functional_Constraint(2,110,max_height,new Array(false,false,false,true,true,true),0);
