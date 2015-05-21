@@ -12,9 +12,10 @@ function Log_Manager(){
 
         /*this.elements[this.elements.length]=
             new Action_Event(this.elements.length,get_elapsed_Time(),useraction);*/
-        var obj = new Action_Event(user_ID,counter,get_elapsed_Time(),useraction);
+        //var obj = new Action_Event(user_ID,counter,get_elapsed_Time(),useraction);
+        var ob_string = "{"+user_ID+","+counter+","+get_elapsed_Time()+","+useraction+"}";
         counter++;
-        JL().log(2545,JSON.stringify(obj));
+        JL().log(2545,ob_string);
     }
 
     /*this.get_output = function(){
