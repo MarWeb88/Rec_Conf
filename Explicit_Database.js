@@ -72,11 +72,11 @@ function Explicit_Database(){
 
     function initialize_comp_list(num){
 
-        var comp_funcs = [[true,true,true,true,false,false,false],
+        var comp_funcs = [[true,true,true,false,false,false,false],
+                         [true,false,true,true,false,false,false],
+                         [false,true,false,true,false,false,false],
                          [false,false,false,false,false,true,true],
-                         [false,false,false,true,true,false,false],
-                         [false,false,false,false,true,false,true],
-                         [false,true,true,false,true,true,true]];
+                         [false,false,false,false,true,true,false]];
 
         return comp_funcs;
     }
