@@ -55,6 +55,7 @@ function Output_Writer(){
             //create a new option and define attributes
             var list_element = document.createElement("div");
             list_element.className = "option_list_element";
+            list_element.id = "option_"+i;
             list_element.style.height = "230px";
             list_element.style.width = "230px";
 

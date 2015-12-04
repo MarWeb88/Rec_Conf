@@ -35,6 +35,20 @@ function Object_Visualizer(){
     }
 
     this.call_vis = function(ID,variant) {
+        var isSelected = false; // already selected
+        if(selected_sol_id == ID){
+            isSelected = true;
+            selected_sol_id = 10;
+        }else{
+            selected_sol_id = ID;
+        }
+
+
+        if(!isSelected){
+            //Solution not selected. This solution has to be animated and made to appear as selected
+            unselect_icons();
+            document.getElementById("option_"+ID).getElementsByClassName("icon")[0].style.backgroundColor  = "green";
+        }
 
         //alert("start with "+ID );
 
@@ -60,7 +74,7 @@ function Object_Visualizer(){
 
         //set_implicid information
 
-        if(variant!=0){
+        if(variant!=0 && isSelected){
             impl_db.set_impl_information([old_model.row_num,old_model.weightings,
                 old_model.start_row,old_model.h_version]);
             impl_db.d_options = old_model.d_options;
@@ -72,8 +86,10 @@ function Object_Visualizer(){
         //output_writer.generate_info_icon(option);
 
         //start calculation with updated information
+        if(isSelected)
+            impl_db.set_interaction_function(null);
 
-        impl_db.set_interaction_function(null);
+
 
     }
 
@@ -504,3 +520,9 @@ function Object_Visualizer(){
         info_box.innerHTML = "Height: "+ height +" cm  &nbsp;&nbsp;&nbsp;  Width: "+width+" cm  &nbsp;&nbsp;&nbsp;  Depth: "+ depth +" cm";
     }
 }
+    function unselect_icons(){
+        var icon_elements = document.getElementById("option_output").getElementsByClassName("icon");
+        for(i = 0; i < icon_elements.length; i++) {
+            icon_elements[i].style.backgroundColor = "brown";
+        }
+    }

@@ -39,6 +39,8 @@ var mySlider_d;
 
 var curr_model_ID;
 
+var selected_sol_id;
+
 
 function main(variant) {
 
