@@ -302,7 +302,7 @@ function Implicit_Database(){
         }
 
         if(log_manager.get_pool()=="1"){
-            implicit_out = ' <div id="innerText" class="innerText"> Click on one recommendedation below to preview solution that is close ' +
+            implicit_out = ' <div id="innerText" class="innerText"> Click on one recommendation below to preview solution that is close ' +
             'to your personal preference. Click again ro see similar designs. On the left side you can specify global options and change the view. By a ' +
             'a click on "Start New", you will come back to the first step</div>';
         }
