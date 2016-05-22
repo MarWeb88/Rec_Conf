@@ -1,0 +1,1978 @@
+[21-May-2015 18:39:47] [JSPHPLog]: log message
+
+[21-May-2015 18:39:50] [JSPHPLog]: {"User_ID":"555e0a52bac18","ID":0,"time_stamp":2.7,"useraction":"start new","pool":1}
+
+[21-May-2015 18:39:51] [JSPHPLog]: {"User_ID":"555e0a52bac18","ID":1,"time_stamp":4,"useraction":"set_rows","pool":2}
+
+[21-May-2015 18:39:52] [JSPHPLog]: log message
+
+[21-May-2015 18:39:52] [JSPHPLog]: {"User_ID":"555e0a52bac18","ID":2,"time_stamp":4.7,"useraction":"set_weights","pool":3}
+
+[21-May-2015 18:39:52] [JSPHPLog]: {"User_ID":"555e0a52bac18","ID":3,"time_stamp":5.5,"useraction":"set_build_variant","pool":5}
+
+[21-May-2015 18:39:53] [JSPHPLog]: {"User_ID":"555e0a566d3fe","ID":0,"time_stamp":1.5,"useraction":"start new","pool":1}
+
+[21-May-2015 18:39:56] [JSPHPLog]: {"User_ID":"555e0a52bac18","ID":4,"time_stamp":9.5,"useraction":"set grasp","pool":5}
+
+[21-May-2015 18:39:58] [JSPHPLog]: {"User_ID":"555e0a52bac18","ID":5,"time_stamp":10.6,"useraction":"set material","pool":5}
+
+[21-May-2015 18:39:58] [JSPHPLog]: {"User_ID":"555e0a566d3fe","ID":1,"time_stamp":6.7,"useraction":"start new","pool":1}
+
+[21-May-2015 18:40:00] [JSPHPLog]: {"User_ID":"555e0a566d3fe","ID":2,"time_stamp":8.5,"useraction":"set_rows","pool":2}
+
+[21-May-2015 18:40:02] [JSPHPLog]: {"User_ID":"555e0a566d3fe","ID":3,"time_stamp":10.1,"useraction":"set_weights","pool":3}
+
+[21-May-2015 18:44:25] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":3,"time_stamp":3762.7,"useraction":"set grasp","pool":2}
+
+[21-May-2015 18:44:29] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":4,"time_stamp":3765.9,"useraction":"set grasp","pool":2}
+
+[21-May-2015 18:44:32] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":5,"time_stamp":3769.2,"useraction":"set grasp","pool":2}
+
+[21-May-2015 18:44:35] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":6,"time_stamp":3772.6,"useraction":"set grasp","pool":2}
+
+[21-May-2015 18:44:40] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":7,"time_stamp":3777.7,"useraction":"change global door options","pool":2}
+
+[21-May-2015 18:44:59] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":8,"time_stamp":3796.1,"useraction":"change global door options","pool":2}
+
+[21-May-2015 18:45:27] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":9,"time_stamp":3824.6,"useraction":"change global door options","pool":2}
+
+[21-May-2015 18:45:28] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":10,"time_stamp":3825.3,"useraction":"change global door options","pool":2}
+
+[21-May-2015 18:46:11] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":11,"time_stamp":3868.4,"useraction":"start new","pool":1}
+
+[21-May-2015 18:46:24] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":12,"time_stamp":3881.2,"useraction":"start new","pool":1}
+
+[21-May-2015 18:46:51] [JSPHPLog]: log message
+
+[21-May-2015 18:47:01] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":13,"time_stamp":3918.7,"useraction":"start new","pool":1}
+
+[21-May-2015 18:47:51] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":14,"time_stamp":3968.4,"useraction":"start new","pool":1}
+
+[21-May-2015 20:54:09] [JSPHPLog]: {"User_ID":"555dfcb51c149","ID":15,"time_stamp":11545.9,"useraction":"start new","pool":1}
+
+[21-May-2015 23:15:02] [JSPHPLog]: log message
+
+[21-May-2015 23:45:52] [JSPHPLog]: log message
+
+[22-May-2015 01:06:43] [JSPHPLog]: log message
+
+[22-May-2015 08:05:29] [JSPHPLog]: log message
+
+[22-May-2015 08:06:14] [JSPHPLog]: {555ec7291dd76,0,44.5,start new,1}
+
+[22-May-2015 08:06:21] [JSPHPLog]: {555ec7291dd76,1,52.3,start new,1}
+
+[22-May-2015 08:06:25] [JSPHPLog]: {555ec7291dd76,2,55.8,set_rows,2}
+
+[22-May-2015 08:09:13] [JSPHPLog]: log message
+
+[22-May-2015 08:12:17] [JSPHPLog]: log message
+
+[22-May-2015 08:24:09] [JSPHPLog]: log message
+
+[22-May-2015 08:25:15] [JSPHPLog]: log message
+
+[22-May-2015 08:25:45] [JSPHPLog]: {555ecbc9920d7,0,30.7,start new,1}
+
+[22-May-2015 08:26:05] [JSPHPLog]: {555ecb8438b60,0,115.6,start new,1}
+
+[22-May-2015 08:26:06] [JSPHPLog]: {555ecbc9920d7,1,51.7,start new,1}
+
+[22-May-2015 08:26:24] [JSPHPLog]: {555ecbc9920d7,2,69.7,start new,1}
+
+[22-May-2015 08:26:26] [JSPHPLog]: {555ecb8438b60,1,136.6,set material,1}
+
+[22-May-2015 08:26:29] [JSPHPLog]: {555ecbc9920d7,3,74.4,set grasp,1}
+
+[22-May-2015 08:26:33] [JSPHPLog]: {555ecbc9920d7,4,78.4,set material,1}
+
+[22-May-2015 08:26:46] [JSPHPLog]: {555ecb8438b60,2,156.4,change global door options,1}
+
+[22-May-2015 08:26:51] [JSPHPLog]: log message
+
+[22-May-2015 08:26:58] [JSPHPLog]: {555ecbc9920d7,5,103.7,start new,1}
+
+[22-May-2015 08:27:48] [JSPHPLog]: {555ecc28c8b5d,0,56.7,start new,1}
+
+[22-May-2015 08:28:07] [JSPHPLog]: {555ecc28c8b5d,1,76.3,set material,1}
+
+[22-May-2015 08:28:07] [JSPHPLog]: {555ecbc9920d7,6,172.6,start new,1}
+
+[22-May-2015 08:28:18] [JSPHPLog]: log message
+
+[22-May-2015 08:28:19] [JSPHPLog]: {555ecbc9920d7,7,184,set_rows,2}
+
+[22-May-2015 08:28:19] [JSPHPLog]: {555ecc28c8b5d,2,88.6,change global door options,1}
+
+[22-May-2015 08:28:20] [JSPHPLog]: {555ecc28c8b5d,3,89.4,change global door options,1}
+
+[22-May-2015 08:28:22] [JSPHPLog]: {555ecbc9920d7,8,187.6,set_weights,3}
+
+[22-May-2015 08:28:24] [JSPHPLog]: {555ecc28c8b5d,4,92.7,change global door options,1}
+
+[22-May-2015 08:28:25] [JSPHPLog]: {555ecbc9920d7,9,190.2,set_build_variant,5}
+
+[22-May-2015 08:28:29] [JSPHPLog]: {555ecc28c8b5d,5,97.9,set grasp,1}
+
+[22-May-2015 08:28:40] [JSPHPLog]: {555ecbc9920d7,10,205.6,delete_rows,1}
+
+[22-May-2015 08:28:42] [JSPHPLog]: {555ecb8438b60,0,20,start new,1}
+
+[22-May-2015 08:28:47] [JSPHPLog]: {555ecbc9920d7,11,211.9,create savepoint 1,1}
+
+[22-May-2015 08:28:53] [JSPHPLog]: {555ecbc9920d7,12,218.3,set material,1}
+
+[22-May-2015 08:28:57] [JSPHPLog]: {555ecbc9920d7,13,222.3,set material,1}
+
+[22-May-2015 08:29:04] [JSPHPLog]: {555ecbc9920d7,14,229.1,create savepoint 2,1}
+
+[22-May-2015 08:29:06] [JSPHPLog]: {555ecb8438b60,1,48,start new,1}
+
+[22-May-2015 08:29:16] [JSPHPLog]: {555ecb8438b60,2,57.8,set_rows,2}
+
+[22-May-2015 08:29:25] [JSPHPLog]: {555ecb8438b60,3,66.2,set material,2}
+
+[22-May-2015 08:29:30] [JSPHPLog]: log message
+
+[22-May-2015 08:29:36] [JSPHPLog]: {555ecb8438b60,4,77.1,change global door options,2}
+
+[22-May-2015 08:29:40] [JSPHPLog]: {555ecbc9920d7,0,10.9,start new,1}
+
+[22-May-2015 08:29:42] [JSPHPLog]: {555ecb8438b60,5,83.6,change global door options,2}
+
+[22-May-2015 08:29:44] [JSPHPLog]: {555ecb8438b60,6,85.6,change global door options,2}
+
+[22-May-2015 08:29:45] [JSPHPLog]: {555ecbc9920d7,1,15.4,set_rows,2}
+
+[22-May-2015 08:29:50] [JSPHPLog]: {555ecbc9920d7,2,20.4,set grasp,2}
+
+[22-May-2015 08:29:53] [JSPHPLog]: {555ecb8438b60,7,94.7,change global door options,2}
+
+[22-May-2015 08:29:53] [JSPHPLog]: {555ecb8438b60,8,95.1,change global door options,2}
+
+[22-May-2015 08:29:57] [JSPHPLog]: {555ecbc9920d7,3,27.6,set material,2}
+
+[22-May-2015 08:30:01] [JSPHPLog]: {555ecbc9920d7,4,31.1,set material,2}
+
+[22-May-2015 08:30:03] [JSPHPLog]: {555ecb8438b60,9,104.7,set_weights,3}
+
+[22-May-2015 08:30:04] [JSPHPLog]: {555ecbc9920d7,5,34,set material,2}
+
+[22-May-2015 08:30:07] [JSPHPLog]: {555ecbc9920d7,6,37.4,set material,2}
+
+[22-May-2015 08:31:13] [JSPHPLog]: log message
+
+[22-May-2015 08:31:39] [JSPHPLog]: {555ecbc9920d7,7,129.8,set_weights,3}
+
+[22-May-2015 08:31:44] [JSPHPLog]: {555ecbc9920d7,8,134.1,set_build_variant,5}
+
+[22-May-2015 08:31:50] [JSPHPLog]: {555ecbc9920d7,9,140.6,create savepoint 1,5}
+
+[22-May-2015 08:31:51] [JSPHPLog]: {555ecbc9920d7,10,141.6,create savepoint 2,5}
+
+[22-May-2015 08:31:52] [JSPHPLog]: {555ecbc9920d7,11,142.7,create savepoint 3,5}
+
+[22-May-2015 08:32:04] [JSPHPLog]: {555ecbc9920d7,12,154.5,create savepoint 4,5}
+
+[22-May-2015 08:32:25] [JSPHPLog]: log message
+
+[22-May-2015 08:34:15] [JSPHPLog]: log message
+
+[22-May-2015 08:34:59] [JSPHPLog]: log message
+
+[22-May-2015 08:35:54] [JSPHPLog]: {555ecc28c8b5d,0,281.6,start new,1}
+
+[22-May-2015 08:35:57] [JSPHPLog]: {555ecc28c8b5d,1,284.4,set_rows,2}
+
+[22-May-2015 08:35:59] [JSPHPLog]: {555ecc28c8b5d,2,286,set_weights,3}
+
+[22-May-2015 08:36:01] [JSPHPLog]: {555ecc28c8b5d,3,288.1,set_build_variant,5}
+
+[22-May-2015 08:36:12] [JSPHPLog]: {555ecc28c8b5d,4,299.4,set grasp,5}
+
+[22-May-2015 08:36:22] [JSPHPLog]: log message
+
+[22-May-2015 08:36:26] [JSPHPLog]: {555ecbc9920d7,0,3.5,start new,1}
+
+[22-May-2015 08:36:33] [JSPHPLog]: {555ecbc9920d7,1,11.2,start new,1}
+
+[22-May-2015 08:36:35] [JSPHPLog]: {555ecbc9920d7,2,13,set_rows,2}
+
+[22-May-2015 08:36:43] [JSPHPLog]: {555ecbc9920d7,3,21,set_weights,3}
+
+[22-May-2015 08:36:45] [JSPHPLog]: {555ecbc9920d7,4,23.1,set_build_variant,5}
+
+[22-May-2015 08:36:59] [JSPHPLog]: {555ecbc9920d7,5,37.1,create savepoint 1,5}
+
+[22-May-2015 08:37:04] [JSPHPLog]: {555ecbc9920d7,6,41.6,load savepoint 01,5}
+
+[22-May-2015 08:37:04] [JSPHPLog]: {555ecbc9920d7,7,42.2,load savepoint 01,5}
+
+[22-May-2015 08:37:05] [JSPHPLog]: {555ecbc9920d7,8,42.6,load savepoint 01,5}
+
+[22-May-2015 08:37:05] [JSPHPLog]: {555ecbc9920d7,9,43.1,load savepoint 01,5}
+
+[22-May-2015 08:37:07] [JSPHPLog]: {555ecbc9920d7,10,44.4,load savepoint 01,5}
+
+[22-May-2015 08:37:07] [JSPHPLog]: {555ecbc9920d7,11,45,load savepoint 01,5}
+
+[22-May-2015 08:37:09] [JSPHPLog]: {555ecbc9920d7,12,46.4,set grasp,5}
+
+[22-May-2015 08:37:11] [JSPHPLog]: {555ecbc9920d7,13,49.2,set grasp,5}
+
+[22-May-2015 08:37:12] [JSPHPLog]: log message
+
+[22-May-2015 08:37:28] [JSPHPLog]: {555ecbc9920d7,14,66,create savepoint 2,5}
+
+[22-May-2015 08:37:39] [JSPHPLog]: {555ecbc9920d7,15,76.4,create savepoint 3,5}
+
+[22-May-2015 08:37:43] [JSPHPLog]: {555ecc28c8b5d,5,389.9,set grasp,5}
+
+[22-May-2015 08:37:47] [JSPHPLog]: log message
+
+[22-May-2015 08:37:50] [JSPHPLog]: {555ecc28c8b5d,6,396.9,change global door options,5}
+
+[22-May-2015 08:37:59] [JSPHPLog]: {555ecc28c8b5d,7,406.4,delete_rows,1}
+
+[22-May-2015 08:38:04] [JSPHPLog]: log message
+
+[22-May-2015 08:38:10] [JSPHPLog]: log message
+
+[22-May-2015 08:38:16] [JSPHPLog]: {555ecbc9920d7,0,5.6,start new,1}
+
+[22-May-2015 08:38:17] [JSPHPLog]: {555ecbc9920d7,1,7.3,set_rows,2}
+
+[22-May-2015 08:38:18] [JSPHPLog]: {555ecbc9920d7,2,8,set_weights,3}
+
+[22-May-2015 08:38:19] [JSPHPLog]: {555ecbc9920d7,3,8.5,set_build_variant,5}
+
+[22-May-2015 08:38:22] [JSPHPLog]: {555ecbc9920d7,4,12.3,create savepoint 1,5}
+
+[22-May-2015 08:38:34] [JSPHPLog]: {555ecec9e3db3,0,30.7,start new,1}
+
+[22-May-2015 08:38:40] [JSPHPLog]: {555ecec9e3db3,1,36.7,set_rows,2}
+
+[22-May-2015 08:38:42] [JSPHPLog]: {555ecec9e3db3,2,38.4,set_weights,3}
+
+[22-May-2015 08:38:43] [JSPHPLog]: {555ecec9e3db3,3,39.7,set_build_variant,5}
+
+[22-May-2015 08:39:00] [JSPHPLog]: log message
+
+[22-May-2015 08:39:30] [JSPHPLog]: log message
+
+[22-May-2015 08:39:38] [JSPHPLog]: log message
+
+[22-May-2015 08:39:38] [JSPHPLog]: {555ecf0415e24,0,38.4,start new,1}
+
+[22-May-2015 08:39:49] [JSPHPLog]: {555ecf0415e24,1,48.4,start new,1}
+
+[22-May-2015 08:39:56] [JSPHPLog]: {555ecf20ca2da,0,25.1,start new,1}
+
+[22-May-2015 08:40:01] [JSPHPLog]: {555eceb8c24fa,0,133.8,start new,1}
+
+[22-May-2015 08:40:04] [JSPHPLog]: log message
+
+[22-May-2015 08:40:08] [JSPHPLog]: {555ecf20ca2da,1,37.2,set material,1}
+
+[22-May-2015 08:40:11] [JSPHPLog]: {555ecf2c0d705,0,6.6,start new,1}
+
+[22-May-2015 08:40:19] [JSPHPLog]: {555ecf287e9a8,0,41,start new,1}
+
+[22-May-2015 08:40:20] [JSPHPLog]: {555ecf20ca2da,2,49.4,set_rows,2}
+
+[22-May-2015 08:40:26] [JSPHPLog]: log message
+
+[22-May-2015 08:40:28] [JSPHPLog]: {555ecf0415e24,2,88,start new,1}
+
+[22-May-2015 08:40:33] [JSPHPLog]: {555ecf2c0d705,1,29.1,set_rows,2}
+
+[22-May-2015 08:40:34] [JSPHPLog]: {555ecf0415e24,3,93.6,set_rows,2}
+
+[22-May-2015 08:40:36] [JSPHPLog]: {555ecf287e9a8,1,58.6,set_rows,2}
+
+[22-May-2015 08:40:37] [JSPHPLog]: {555ecf287e9a8,2,59.2,set_weights,3}
+
+[22-May-2015 08:40:39] [JSPHPLog]: {555ecf0415e24,4,98.6,set grasp,2}
+
+[22-May-2015 08:40:42] [JSPHPLog]: {555ecf0415e24,5,101.8,set grasp,2}
+
+[22-May-2015 08:40:48] [JSPHPLog]: {555ecf0415e24,6,107.6,change global door options,2}
+
+[22-May-2015 08:40:52] [JSPHPLog]: log message
+
+[22-May-2015 08:40:53] [JSPHPLog]: {555ecf0415e24,7,113.3,change global door options,2}
+
+[22-May-2015 08:40:54] [JSPHPLog]: {555eceb8c24fa,1,185.2,start new,1}
+
+[22-May-2015 08:40:54] [JSPHPLog]: log message
+
+[22-May-2015 08:40:57] [JSPHPLog]: {555ecf287e9a8,3,78.7,set_build_variant,5}
+
+[22-May-2015 08:41:04] [JSPHPLog]: {555ecf0415e24,8,124,set material,2}
+
+[22-May-2015 08:41:15] [JSPHPLog]: {555ecf0415e24,9,135.3,create savepoint 1,2}
+
+[22-May-2015 08:41:16] [JSPHPLog]: {555ecf20ca2da,3,105.3,set_weights,3}
+
+[22-May-2015 08:41:16] [JSPHPLog]: {555eceb8c24fa,2,208.1,set_rows,2}
+
+[22-May-2015 08:41:17] [JSPHPLog]: {555eceb8c24fa,3,209.5,set_weights,3}
+
+[22-May-2015 08:41:22] [JSPHPLog]: {555ecf287e9a8,4,103.8,set grasp,5}
+
+[22-May-2015 08:41:24] [JSPHPLog]: {555ecf2c0d705,2,80,set_weights,3}
+
+[22-May-2015 08:41:26] [JSPHPLog]: {555ecf2c0d705,3,80.1,set_build_variant,5}
+
+[22-May-2015 08:41:29] [JSPHPLog]: {555ecf20ca2da,4,118.4,set_build_variant,5}
+
+[22-May-2015 08:41:37] [JSPHPLog]: log message
+
+[22-May-2015 08:41:44] [JSPHPLog]: {555ecf287e9a8,5,126.5,delete_rows,1}
+
+[22-May-2015 08:41:45] [JSPHPLog]: log message
+
+[22-May-2015 08:41:46] [JSPHPLog]: {555ecf0415e24,0,8.7,start new,1}
+
+[22-May-2015 08:41:52] [JSPHPLog]: {555ecf287e9a8,6,133.8,delete_build_variant,1}
+
+[22-May-2015 08:41:53] [JSPHPLog]: {555ecf287e9a8,7,135.2,delete_weights,1}
+
+[22-May-2015 08:41:55] [JSPHPLog]: {555ecf0415e24,1,17.8,set_rows,2}
+
+[22-May-2015 08:41:59] [JSPHPLog]: {555ecf0415e24,2,21.6,set grasp,2}
+
+[22-May-2015 08:42:01] [JSPHPLog]: log message
+
+[22-May-2015 08:42:06] [JSPHPLog]: {555ecfa76cafa,0,21,start new,1}
+
+[22-May-2015 08:42:13] [JSPHPLog]: {555ecf0415e24,3,35.4,set_weights,3}
+
+[22-May-2015 08:42:13] [JSPHPLog]: {555ecfb84b321,0,12.5,start new,1}
+
+[22-May-2015 08:42:14] [JSPHPLog]: {555ecf0415e24,4,37,set_build_variant,5}
+
+[22-May-2015 08:42:15] [JSPHPLog]: {555ecbc9920d7,5,244.7,create savepoint 2,5}
+
+[22-May-2015 08:42:17] [JSPHPLog]: {555ecfb84b321,1,15.6,set_rows,2}
+
+[22-May-2015 08:42:17] [JSPHPLog]: {555ecfb84b321,2,16.3,set_weights,3}
+
+[22-May-2015 08:42:36] [JSPHPLog]: {555ecf20ca2da,5,185,set material,5}
+
+[22-May-2015 08:42:39] [JSPHPLog]: log message
+
+[22-May-2015 08:42:39] [JSPHPLog]: {555ecf20ca2da,6,188.5,set material,5}
+
+[22-May-2015 08:42:45] [JSPHPLog]: log message
+
+[22-May-2015 08:43:07] [JSPHPLog]: {555ecfdce5cd3,0,28.1,start new,1}
+
+[22-May-2015 08:43:11] [JSPHPLog]: {555ecfdce5cd3,1,32.2,set_rows,2}
+
+[22-May-2015 08:43:11] [JSPHPLog]: {555ecfe45d754,0,26,start new,1}
+
+[22-May-2015 08:43:14] [JSPHPLog]: {555ecfe45d754,1,28.8,set_rows,2}
+
+[22-May-2015 08:43:19] [JSPHPLog]: {555ecf0415e24,5,102.1,start new,1}
+
+[22-May-2015 08:43:21] [JSPHPLog]: {555ecfe45d754,2,35.4,set grasp,2}
+
+[22-May-2015 08:43:24] [JSPHPLog]: {555ecfe45d754,3,38.4,set grasp,2}
+
+[22-May-2015 08:43:25] [JSPHPLog]: {555ecf0415e24,6,107.7,start new,1}
+
+[22-May-2015 08:43:26] [JSPHPLog]: {555ecf0415e24,7,109,set_rows,2}
+
+[22-May-2015 08:43:27] [JSPHPLog]: {555ecfe45d754,4,41.7,set grasp,2}
+
+[22-May-2015 08:43:28] [JSPHPLog]: {555ecf0415e24,8,110.3,set_weights,3}
+
+[22-May-2015 08:43:29] [JSPHPLog]: {555ecf0415e24,9,111.3,set_build_variant,5}
+
+[22-May-2015 08:43:31] [JSPHPLog]: {555ecfe45d754,5,45.3,set grasp,2}
+
+[22-May-2015 08:43:37] [JSPHPLog]: {555ecfe45d754,6,51.8,set grasp,2}
+
+[22-May-2015 08:43:40] [JSPHPLog]: {555ecfe45d754,7,54.7,set grasp,2}
+
+[22-May-2015 08:43:45] [JSPHPLog]: {555ecf0415e24,10,128.2,start new,1}
+
+[22-May-2015 08:43:49] [JSPHPLog]: log message
+
+[22-May-2015 08:43:52] [JSPHPLog]: {555ecfe45d754,8,66.5,set grasp,2}
+
+[22-May-2015 08:43:53] [JSPHPLog]: {555ecf0415e24,11,136,start new,1}
+
+[22-May-2015 08:43:55] [JSPHPLog]: {555ecfb84b321,0,6.7,start new,1}
+
+[22-May-2015 08:43:56] [JSPHPLog]: {555ecfe45d754,9,70.9,set grasp,2}
+
+[22-May-2015 08:43:59] [JSPHPLog]: {555ecf0415e24,12,142.1,set_rows,2}
+
+[22-May-2015 08:44:01] [JSPHPLog]: {555ecfe45d754,10,76.4,change global door options,2}
+
+[22-May-2015 08:44:02] [JSPHPLog]: {555ecfb84b321,1,13.8,set_rows,2}
+
+[22-May-2015 08:44:04] [JSPHPLog]: {555ecf0415e24,13,146.9,set_weights,3}
+
+[22-May-2015 08:44:07] [JSPHPLog]: {555ecfe45d754,11,81.8,change global door options,2}
+
+[22-May-2015 08:44:08] [JSPHPLog]: {555ecf0415e24,14,150.3,set_build_variant,5}
+
+[22-May-2015 08:44:11] [JSPHPLog]: {555ecfe45d754,12,85.6,change global door options,2}
+
+[22-May-2015 08:44:12] [JSPHPLog]: {555ecfe45d754,13,87,change global door options,2}
+
+[22-May-2015 08:44:14] [JSPHPLog]: {555ecf0415e24,15,157.1,delete_rows,1}
+
+[22-May-2015 08:44:15] [JSPHPLog]: {555ecfe45d754,14,90.4,change global door options,2}
+
+[22-May-2015 08:44:16] [JSPHPLog]: {555ecf0415e24,16,158.8,set_rows,5}
+
+[22-May-2015 08:44:17] [JSPHPLog]: {555ecf0415e24,17,160.1,delete_build_variant,3}
+
+[22-May-2015 08:44:18] [JSPHPLog]: {555ecfdce5cd3,2,99.5,set_weights,3}
+
+[22-May-2015 08:44:18] [JSPHPLog]: {555ecf0415e24,18,161.1,delete_weights,2}
+
+[22-May-2015 08:44:19] [JSPHPLog]: {555ecf0415e24,19,161.9,delete_rows,1}
+
+[22-May-2015 08:44:20] [JSPHPLog]: {555ecfdce5cd3,3,101.1,set_build_variant,5}
+
+[22-May-2015 08:44:24] [JSPHPLog]: {555ecf0415e24,20,166.3,set_rows,2}
+
+[22-May-2015 08:44:26] [JSPHPLog]: {555ecf0415e24,21,168.8,set_weights,3}
+
+[22-May-2015 08:44:28] [JSPHPLog]: {555ecf0415e24,22,170.9,set_build_variant,5}
+
+[22-May-2015 08:44:48] [JSPHPLog]: {555ecfe45d754,15,123.4,start new,1}
+
+[22-May-2015 08:44:57] [JSPHPLog]: {555ecf0415e24,23,199.6,set material,5}
+
+[22-May-2015 08:45:04] [JSPHPLog]: {555ecfb84b321,2,75.1,delete_rows,1}
+
+[22-May-2015 08:45:05] [JSPHPLog]: {555ecfe45d754,16,139.5,start new,1}
+
+[22-May-2015 08:45:06] [JSPHPLog]: {555ecfb84b321,3,77.4,set_rows,2}
+
+[22-May-2015 08:45:07] [JSPHPLog]: {555ecfb84b321,4,78.2,set_weights,3}
+
+[22-May-2015 08:45:08] [JSPHPLog]: {555ecfb84b321,5,79.3,set_build_variant,5}
+
+[22-May-2015 08:45:09] [JSPHPLog]: {555ecfb84b321,6,80.8,delete_weights,2}
+
+[22-May-2015 08:45:11] [JSPHPLog]: {555ecfb84b321,7,81.9,delete_build_variant,2}
+
+[22-May-2015 08:45:11] [JSPHPLog]: {555ecfb84b321,8,82.8,delete_rows,1}
+
+[22-May-2015 08:45:13] [JSPHPLog]: {555ecfe45d754,17,147.9,set_rows,2}
+
+[22-May-2015 08:45:15] [JSPHPLog]: {555ecfb84b321,9,85.9,set_rows,2}
+
+[22-May-2015 08:45:15] [JSPHPLog]: {555ecfb84b321,10,86.8,set_weights,3}
+
+[22-May-2015 08:45:16] [JSPHPLog]: {555ecfb84b321,11,87.4,set_build_variant,5}
+
+[22-May-2015 08:45:19] [JSPHPLog]: {555ecfe45d754,18,153.8,set grasp,2}
+
+[22-May-2015 08:45:22] [JSPHPLog]: {555ecfe45d754,19,156.7,set grasp,2}
+
+[22-May-2015 08:45:24] [JSPHPLog]: {555ecfe45d754,20,159.1,set grasp,2}
+
+[22-May-2015 08:45:26] [JSPHPLog]: {555ecfe45d754,21,161,set grasp,2}
+
+[22-May-2015 08:45:29] [JSPHPLog]: log message
+
+[22-May-2015 08:45:37] [JSPHPLog]: {555ecfe45d754,22,171.8,set material,2}
+
+[22-May-2015 08:45:39] [JSPHPLog]: {555ecfb84b321,12,110,create savepoint 1,5}
+
+[22-May-2015 08:45:40] [JSPHPLog]: {555ecfe45d754,23,175.2,set material,2}
+
+[22-May-2015 08:45:45] [JSPHPLog]: {555ecfe45d754,24,180.1,set material,2}
+
+[22-May-2015 08:45:50] [JSPHPLog]: {555ecfe45d754,25,184.7,set material,2}
+
+[22-May-2015 08:45:54] [JSPHPLog]: log message
+
+[22-May-2015 08:46:13] [JSPHPLog]: {555ecfe45d754,26,207.8,change global door options,2}
+
+[22-May-2015 08:46:18] [JSPHPLog]: {555ecfe45d754,27,212.6,set_weights,3}
+
+[22-May-2015 08:46:20] [JSPHPLog]: {555ecfe45d754,28,215.3,set_build_variant,5}
+
+[22-May-2015 08:46:30] [JSPHPLog]: {555ed086e0c2d,0,51.3,start new,1}
+
+[22-May-2015 08:46:31] [JSPHPLog]: log message
+
+[22-May-2015 08:46:34] [JSPHPLog]: {555ecfe45d754,29,229.2,change global door options,5}
+
+[22-May-2015 08:46:36] [JSPHPLog]: {555ecfe45d754,30,230.7,change global door options,5}
+
+[22-May-2015 08:46:38] [JSPHPLog]: {555ed0c6e5cfb,0,7.4,start new,1}
+
+[22-May-2015 08:46:39] [JSPHPLog]: {555ecfe45d754,31,233.6,change global door options,5}
+
+[22-May-2015 08:46:40] [JSPHPLog]: {555ecfe45d754,32,235.1,change global door options,5}
+
+[22-May-2015 08:46:41] [JSPHPLog]: {555ecfe45d754,33,235.7,change global door options,5}
+
+[22-May-2015 08:46:49] [JSPHPLog]: {555ed0c6e5cfb,1,18.7,set_rows,2}
+
+[22-May-2015 08:46:52] [JSPHPLog]: {555ed0c6e5cfb,2,21.2,set_weights,3}
+
+[22-May-2015 08:46:53] [JSPHPLog]: {555ed0c6e5cfb,3,22.6,set_build_variant,5}
+
+[22-May-2015 08:47:11] [JSPHPLog]: {555ed09ee4e3d,0,77.5,start new,1}
+
+[22-May-2015 08:47:29] [JSPHPLog]: {555ed09ee4e3d,1,95.3,set_rows,2}
+
+[22-May-2015 08:47:30] [JSPHPLog]: {555ed09ee4e3d,2,96,set_weights,3}
+
+[22-May-2015 08:47:31] [JSPHPLog]: {555ed09ee4e3d,3,97.7,set_build_variant,5}
+
+[22-May-2015 08:47:40] [JSPHPLog]: log message
+
+[22-May-2015 08:47:40] [JSPHPLog]: log message
+
+[22-May-2015 08:47:46] [JSPHPLog]: {555ed10b51c41,0,5.8,start new,1}
+
+[22-May-2015 08:47:49] [JSPHPLog]: {555ed10b51c41,1,8.9,set_rows,2}
+
+[22-May-2015 08:47:50] [JSPHPLog]: {555ed10b51c41,2,9.4,set_weights,3}
+
+[22-May-2015 08:47:50] [JSPHPLog]: log message
+
+[22-May-2015 08:47:51] [JSPHPLog]: {555ed10b51c41,3,10.5,set_build_variant,5}
+
+[22-May-2015 08:47:52] [JSPHPLog]: {555ed09ee4e3d,0,12.2,start new,1}
+
+[22-May-2015 08:47:54] [JSPHPLog]: {555ed0c6e5cfb,4,83.1,set material,5}
+
+[22-May-2015 08:47:56] [JSPHPLog]: {555ed09ee4e3d,1,16.2,set_rows,2}
+
+[22-May-2015 08:47:59] [JSPHPLog]: {555ed0c6e5cfb,5,88.7,set material,5}
+
+[22-May-2015 08:48:06] [JSPHPLog]: {555ed0c6e5cfb,6,95.1,set material,5}
+
+[22-May-2015 08:48:10] [JSPHPLog]: {555ed0c6e5cfb,7,99.7,set material,5}
+
+[22-May-2015 08:48:12] [JSPHPLog]: {555ed114311a7,0,12.2,start new,1}
+
+[22-May-2015 08:48:13] [JSPHPLog]: {555ed0c6e5cfb,8,102.2,set material,5}
+
+[22-May-2015 08:48:14] [JSPHPLog]: {555ed09ee4e3d,2,34,set material,2}
+
+[22-May-2015 08:48:25] [JSPHPLog]: log message
+
+[22-May-2015 08:48:35] [JSPHPLog]: {555ed09ee4e3d,3,55.3,set grasp,2}
+
+[22-May-2015 08:48:37] [JSPHPLog]: {555ed09ee4e3d,4,57.5,set grasp,2}
+
+[22-May-2015 08:48:39] [JSPHPLog]: {555ed0c6e5cfb,9,128.3,set material,5}
+
+[22-May-2015 08:48:49] [JSPHPLog]: {555ed09ee4e3d,5,69.5,create savepoint 1,2}
+
+[22-May-2015 08:49:10] [JSPHPLog]: {555ed0c6e5cfb,10,159.2,set material,5}
+
+[22-May-2015 08:49:12] [JSPHPLog]: {555ed09ee4e3d,6,92.6,change global door options,2}
+
+[22-May-2015 08:49:15] [JSPHPLog]: {555ed09ee4e3d,7,95.2,change global door options,2}
+
+[22-May-2015 08:49:15] [JSPHPLog]: {555ed10b51c41,4,95,set grasp,5}
+
+[22-May-2015 08:49:18] [JSPHPLog]: {555ed10b51c41,5,97.9,set grasp,5}
+
+[22-May-2015 08:49:23] [JSPHPLog]: log message
+
+[22-May-2015 08:49:29] [JSPHPLog]: {555ed09ee4e3d,8,109.4,set material,2}
+
+[22-May-2015 08:49:31] [JSPHPLog]: {555ed171a5b67,0,7.6,start new,1}
+
+[22-May-2015 08:49:32] [JSPHPLog]: {555ed09ee4e3d,9,112,set material,2}
+
+[22-May-2015 08:50:00] [JSPHPLog]: {555ed171a5b67,1,37.4,start new,1}
+
+[22-May-2015 08:50:11] [JSPHPLog]: log message
+
+[22-May-2015 08:50:18] [JSPHPLog]: {555ed1a24b7bf,0,6.6,start new,1}
+
+[22-May-2015 08:50:21] [JSPHPLog]: {555ed1a24b7bf,1,9.8,set_rows,2}
+
+[22-May-2015 08:50:27] [JSPHPLog]: {555ed1a24b7bf,2,15.4,create savepoint 1,2}
+
+[22-May-2015 08:50:29] [JSPHPLog]: {555ed1a24b7bf,4,17.6,load savepoint 01,3}
+
+[22-May-2015 08:50:29] [JSPHPLog]: {555ed1a24b7bf,3,17.6,set_weights,3}
+
+[22-May-2015 08:50:31] [JSPHPLog]: {555ed171a5b67,2,57.8,start new,1}
+
+[22-May-2015 08:50:53] [JSPHPLog]: {555ed1a24b7bf,5,41.6,set_build_variant,5}
+
+[22-May-2015 08:50:56] [JSPHPLog]: log message
+
+[22-May-2015 08:51:17] [JSPHPLog]: {555ed1a24b7bf,6,65.5,delete_rows,1}
+
+[22-May-2015 08:51:18] [JSPHPLog]: {555ed1a24b7bf,7,67.3,set_rows,5}
+
+[22-May-2015 08:51:21] [JSPHPLog]: {555ed1a24b7bf,8,69.7,delete_build_variant,3}
+
+[22-May-2015 08:51:24] [JSPHPLog]: {555ed1a24b7bf,9,72.8,set_build_variant,5}
+
+[22-May-2015 08:51:27] [JSPHPLog]: {555ed1a24b7bf,10,75.7,delete_build_variant,3}
+
+[22-May-2015 08:51:28] [JSPHPLog]: {555ed1a24b7bf,11,76.9,delete_rows,1}
+
+[22-May-2015 08:51:32] [JSPHPLog]: {555ed1a24b7bf,12,80.8,set material,1}
+
+[22-May-2015 08:51:37] [JSPHPLog]: log message
+
+[22-May-2015 08:51:39] [JSPHPLog]: {555ed1a24b7bf,13,88.1,change global door options,1}
+
+[22-May-2015 08:51:42] [JSPHPLog]: {555ed1ce9a0ae,0,35.8,start new,1}
+
+[22-May-2015 08:51:48] [JSPHPLog]: {555ed1a24b7bf,14,96.5,change global door options,1}
+
+[22-May-2015 08:51:53] [JSPHPLog]: {555ed1a24b7bf,15,102.1,create savepoint 2,1}
+
+[22-May-2015 08:51:55] [JSPHPLog]: {555ed1a24b7bf,16,104,set_rows,3}
+
+[22-May-2015 08:51:55] [JSPHPLog]: {555ed1a24b7bf,17,104,load savepoint 11,3}
+
+[22-May-2015 08:51:56] [JSPHPLog]: {555ed1a24b7bf,18,104.7,set_weights,3}
+
+[22-May-2015 08:51:56] [JSPHPLog]: {555ed1a24b7bf,19,104.7,load savepoint 01,3}
+
+[22-May-2015 08:51:58] [JSPHPLog]: {555ed1a24b7bf,20,106.5,set_rows,3}
+
+[22-May-2015 08:51:58] [JSPHPLog]: {555ed1a24b7bf,21,106.5,load savepoint 11,3}
+
+[22-May-2015 08:51:59] [JSPHPLog]: {555ed1a24b7bf,22,108.3,set_weights,3}
+
+[22-May-2015 08:51:59] [JSPHPLog]: {555ed1a24b7bf,23,108.3,load savepoint 01,3}
+
+[22-May-2015 08:52:11] [JSPHPLog]: log message
+
+[22-May-2015 08:52:28] [JSPHPLog]: {555ed10b51c41,0,16.8,start new,1}
+
+[22-May-2015 08:52:32] [JSPHPLog]: {555ed10b51c41,1,21.4,set_rows,2}
+
+[22-May-2015 08:52:33] [JSPHPLog]: {555ed10b51c41,2,22.2,set_weights,3}
+
+[22-May-2015 08:52:34] [JSPHPLog]: {555ed10b51c41,3,22.7,set_build_variant,5}
+
+[22-May-2015 08:52:44] [JSPHPLog]: {555ed1ce9a0ae,1,107.3,set_rows,2}
+
+[22-May-2015 08:52:47] [JSPHPLog]: log message
+
+[22-May-2015 08:52:47] [JSPHPLog]: {555ed1f81905f,0,70.2,start new,1}
+
+[22-May-2015 08:52:53] [JSPHPLog]: {555ed1f81905f,1,76,set material,1}
+
+[22-May-2015 08:52:55] [JSPHPLog]: {555ed23e421f3,0,7.9,start new,1}
+
+[22-May-2015 08:52:56] [JSPHPLog]: {555ed1f81905f,2,79,set grasp,1}
+
+[22-May-2015 08:52:57] [JSPHPLog]: {555ed23e421f3,1,10,start new,1}
+
+[22-May-2015 08:53:03] [JSPHPLog]: {555ed1f81905f,3,85.8,set_rows,2}
+
+[22-May-2015 08:53:04] [JSPHPLog]: {555ed23e421f3,2,17,start new,1}
+
+[22-May-2015 08:53:09] [JSPHPLog]: {555ed23e421f3,3,22.6,set_rows,2}
+
+[22-May-2015 08:53:10] [JSPHPLog]: {555ed1ce9a0ae,2,133.6,set_weights,3}
+
+[22-May-2015 08:53:10] [JSPHPLog]: {555ed23e421f3,4,23.7,set_weights,3}
+
+[22-May-2015 08:53:15] [JSPHPLog]: {555ed1ce9a0ae,3,138.8,set_build_variant,5}
+
+[22-May-2015 08:53:18] [JSPHPLog]: {555ed23e421f3,5,31.3,set_build_variant,5}
+
+[22-May-2015 08:53:31] [JSPHPLog]: {555ed23e421f3,6,44.2,set grasp,5}
+
+[22-May-2015 08:53:34] [JSPHPLog]: log message
+
+[22-May-2015 08:54:03] [JSPHPLog]: {555ed26d48efd,0,28.8,start new,1}
+
+[22-May-2015 08:54:04] [JSPHPLog]: {555ed1f81905f,4,147.1,set_weights,3}
+
+[22-May-2015 08:54:07] [JSPHPLog]: {555ed1f81905f,5,150.6,set_build_variant,5}
+
+[22-May-2015 08:54:12] [JSPHPLog]: {555ed26d48efd,1,37.8,set_rows,2}
+
+[22-May-2015 08:54:35] [JSPHPLog]: {555ed26d48efd,2,61.1,set_weights,3}
+
+[22-May-2015 08:54:38] [JSPHPLog]: {555ed26d48efd,3,64,set_build_variant,5}
+
+[22-May-2015 08:55:23] [JSPHPLog]: {555ed1f81905f,6,226.2,set grasp,5}
+
+[22-May-2015 08:55:27] [JSPHPLog]: {555ed26d48efd,4,112.7,delete_weights,2}
+
+[22-May-2015 08:55:37] [JSPHPLog]: log message
+
+[22-May-2015 08:55:38] [JSPHPLog]: {555ed26d48efd,5,123.9,delete_rows,1}
+
+[22-May-2015 08:55:43] [JSPHPLog]: {555ed2e931577,0,5.3,start new,1}
+
+[22-May-2015 08:55:44] [JSPHPLog]: {555ed26d48efd,6,130.1,delete_build_variant,1}
+
+[22-May-2015 08:55:44] [JSPHPLog]: {555ed2e931577,1,7,set_rows,2}
+
+[22-May-2015 08:55:46] [JSPHPLog]: {555ed2e931577,2,8.2,set_weights,3}
+
+[22-May-2015 08:55:46] [JSPHPLog]: {555ed2e931577,3,8.3,set_build_variant,5}
+
+[22-May-2015 08:55:48] [JSPHPLog]: {555ecfe45d754,34,782,set material,5}
+
+[22-May-2015 08:55:53] [JSPHPLog]: {555ecfe45d754,35,787.7,set material,5}
+
+[22-May-2015 08:55:54] [JSPHPLog]: {555ed2e931577,4,16.5,set material,5}
+
+[22-May-2015 08:55:57] [JSPHPLog]: {555ed2e931577,5,19.1,set grasp,5}
+
+[22-May-2015 08:55:57] [JSPHPLog]: {555ecfe45d754,36,791.9,set material,5}
+
+[22-May-2015 08:56:14] [JSPHPLog]: {555ecfe45d754,37,808.3,set material,5}
+
+[22-May-2015 08:56:18] [JSPHPLog]: log message
+
+[22-May-2015 08:56:19] [JSPHPLog]: {555ecfe45d754,38,813.6,set material,5}
+
+[22-May-2015 08:56:37] [JSPHPLog]: {555ed2e931577,6,59.5,set grasp,5}
+
+[22-May-2015 08:56:39] [JSPHPLog]: {555ed1204bad9,0,494.2,start new,1}
+
+[22-May-2015 08:56:42] [JSPHPLog]: {555ed1204bad9,1,497.7,set_rows,2}
+
+[22-May-2015 08:56:50] [JSPHPLog]: {555ed1204bad9,2,505.1,set_weights,3}
+
+[22-May-2015 08:57:55] [JSPHPLog]: {555ed26d48efd,0,96.8,start new,1}
+
+[22-May-2015 08:57:56] [JSPHPLog]: {555ed26d48efd,1,98,set_rows,2}
+
+[22-May-2015 08:57:58] [JSPHPLog]: {555ed26d48efd,2,99.4,set_weights,3}
+
+[22-May-2015 08:57:59] [JSPHPLog]: {555ed26d48efd,3,100.5,set_build_variant,5}
+
+[22-May-2015 10:23:27] [JSPHPLog]: log message
+
+[22-May-2015 10:23:33] [JSPHPLog]: {555ee77e1390b,0,5,start new,1}
+
+[22-May-2015 10:23:36] [JSPHPLog]: {555ee77e1390b,1,8.7,set_rows,2}
+
+[22-May-2015 10:23:37] [JSPHPLog]: {555ee77e1390b,2,9.7,set_weights,3}
+
+[22-May-2015 10:23:38] [JSPHPLog]: {555ee77e1390b,3,10.8,set_build_variant,5}
+
+[22-May-2015 21:37:58] [JSPHPLog]: log message
+
+[22-May-2015 21:38:40] [JSPHPLog]: {555f8593b1029,0,41.8,start new,1}
+
+[22-May-2015 21:38:50] [JSPHPLog]: {555f8593b1029,1,51.9,start new,1}
+
+[22-May-2015 21:39:12] [JSPHPLog]: {555f8593b1029,2,74.1,set_rows,2}
+
+[22-May-2015 21:39:25] [JSPHPLog]: {555f8593b1029,3,86.6,delete_rows,1}
+
+[22-May-2015 21:39:27] [JSPHPLog]: {555f8593b1029,4,89,set_rows,2}
+
+[22-May-2015 21:39:39] [JSPHPLog]: {555f8593b1029,5,100.7,set_weights,3}
+
+[17-Jun-2015 09:52:50] [JSPHPLog]: log message
+
+[17-Jun-2015 09:52:59] [JSPHPLog]: log message
+
+[17-Jun-2015 09:54:19] [JSPHPLog]: log message
+
+[17-Jun-2015 09:54:24] [JSPHPLog]: {558127a8a8f42,0,4.4,start new,1}
+
+[17-Jun-2015 10:35:26] [JSPHPLog]: log message
+
+[17-Jun-2015 10:35:29] [JSPHPLog]: log message
+
+[17-Jun-2015 10:35:44] [JSPHPLog]: log message
+
+[17-Jun-2015 10:35:48] [JSPHPLog]: log message
+
+[17-Jun-2015 10:35:50] [JSPHPLog]: log message
+
+[17-Jun-2015 10:37:19] [JSPHPLog]: log message
+
+[17-Jun-2015 10:41:18] [JSPHPLog]: {5581315e566d5,0,334.1,start new,1}
+
+[17-Jun-2015 10:42:03] [JSPHPLog]: {5581315e566d5,1,378.7,start new,1}
+
+[17-Jun-2015 10:42:17] [JSPHPLog]: {5581315e566d5,2,393,start new,1}
+
+[17-Jun-2015 10:42:19] [JSPHPLog]: {5581315e566d5,3,394.6,start new,1}
+
+[17-Jun-2015 10:46:29] [JSPHPLog]: log message
+
+[17-Jun-2015 10:46:50] [JSPHPLog]: {5581315ec6f08,0,660.1,start new,1}
+
+[17-Jun-2015 10:47:06] [JSPHPLog]: {5581314c61851,0,700.1,start new,1}
+
+[17-Jun-2015 10:47:08] [JSPHPLog]: {5581314c61851,1,702.7,set_rows,2}
+
+[17-Jun-2015 10:47:10] [JSPHPLog]: {5581314c61851,2,704.3,set_weights,3}
+
+[17-Jun-2015 10:47:12] [JSPHPLog]: {5581314c61851,3,706.1,set_build_variant,5}
+
+[17-Jun-2015 10:47:18] [JSPHPLog]: {5581314c61851,4,712.6,delete_rows,1}
+
+[17-Jun-2015 10:47:19] [JSPHPLog]: {558133e46b45a,0,49.8,start new,1}
+
+[17-Jun-2015 10:47:19] [JSPHPLog]: {5581314c61851,5,713.9,delete_build_variant,1}
+
+[17-Jun-2015 10:47:20] [JSPHPLog]: log message
+
+[17-Jun-2015 10:47:20] [JSPHPLog]: {5581314c61851,6,714.9,delete_weights,1}
+
+[17-Jun-2015 10:47:32] [JSPHPLog]: {5581315ec6f08,1,701.6,set_rows,2}
+
+[17-Jun-2015 10:47:32] [JSPHPLog]: {5581314c61851,7,727,set material,1}
+
+[17-Jun-2015 10:47:33] [JSPHPLog]: {558133e46b45a,1,64.3,set_rows,2}
+
+[17-Jun-2015 10:47:35] [JSPHPLog]: {5581314c61851,8,729.3,set material,1}
+
+[17-Jun-2015 10:47:36] [JSPHPLog]: {5581314c61851,9,730.9,set material,1}
+
+[17-Jun-2015 10:47:37] [JSPHPLog]: {5581315f04258,0,708.1,start new,1}
+
+[17-Jun-2015 10:47:38] [JSPHPLog]: {5581314c61851,10,732.1,set material,1}
+
+[17-Jun-2015 10:47:39] [JSPHPLog]: {558131505d4cc,0,729,start new,1}
+
+[17-Jun-2015 10:47:39] [JSPHPLog]: {5581314c61851,11,733.3,set material,1}
+
+[17-Jun-2015 10:47:41] [JSPHPLog]: {5581314c61851,12,735.4,set material,1}
+
+[17-Jun-2015 10:47:42] [JSPHPLog]: {5581314c61851,13,736.3,set material,1}
+
+[17-Jun-2015 10:47:44] [JSPHPLog]: {5581314c61851,14,738.6,set material,1}
+
+[17-Jun-2015 10:47:48] [JSPHPLog]: {5581314c61851,15,742,set material,1}
+
+[17-Jun-2015 10:47:49] [JSPHPLog]: {5581314c61851,16,743,set material,1}
+
+[17-Jun-2015 10:47:50] [JSPHPLog]: {5581314c61851,17,744.1,set material,1}
+
+[17-Jun-2015 10:47:51] [JSPHPLog]: {5581314c61851,18,745.1,set material,1}
+
+[17-Jun-2015 10:47:51] [JSPHPLog]: {5581315ec6f08,2,720.6,set_weights,3}
+
+[17-Jun-2015 10:47:55] [JSPHPLog]: {5581315ec6f08,3,724.8,set material,3}
+
+[17-Jun-2015 10:47:57] [JSPHPLog]: {5581314c61851,19,751.3,set grasp,1}
+
+[17-Jun-2015 10:47:58] [JSPHPLog]: {5581315ec6f08,4,727.4,set material,3}
+
+[17-Jun-2015 10:47:59] [JSPHPLog]: {5581315f04258,1,730.5,set_rows,2}
+
+[17-Jun-2015 10:48:00] [JSPHPLog]: {5581314c61851,20,754.7,set grasp,1}
+
+[17-Jun-2015 10:48:01] [JSPHPLog]: {5581315ec6f08,5,730.3,set material,3}
+
+[17-Jun-2015 10:48:07] [JSPHPLog]: {5581315f04258,2,738.8,delete_rows,1}
+
+[17-Jun-2015 10:48:16] [JSPHPLog]: {558134160bb51,0,55.8,start new,1}
+
+[17-Jun-2015 10:48:17] [JSPHPLog]: {558131ba6c743,0,657.7,start new,1}
+
+[17-Jun-2015 10:48:17] [JSPHPLog]: {5581314c61851,21,771.9,set_rows,2}
+
+[17-Jun-2015 10:48:19] [JSPHPLog]: {558134160bb51,1,58.6,set_rows,2}
+
+[17-Jun-2015 10:48:22] [JSPHPLog]: {558134160bb51,2,61.4,set_weights,3}
+
+[17-Jun-2015 10:48:23] [JSPHPLog]: {558134160bb51,3,62.9,set_build_variant,5}
+
+[17-Jun-2015 10:48:23] [JSPHPLog]: log message
+
+[17-Jun-2015 10:48:26] [JSPHPLog]: {558133e46b45a,2,117,set grasp,2}
+
+[17-Jun-2015 10:48:27] [JSPHPLog]: {5581314c61851,22,782,set_weights,3}
+
+[17-Jun-2015 10:48:29] [JSPHPLog]: {5581315f04258,3,760.4,start new,1}
+
+[17-Jun-2015 10:48:31] [JSPHPLog]: {5581314c61851,23,785.2,set_build_variant,5}
+
+[17-Jun-2015 10:48:32] [JSPHPLog]: log message
+
+[17-Jun-2015 10:48:36] [JSPHPLog]: {5581315ec6f08,0,4.3,start new,1}
+
+[17-Jun-2015 10:48:37] [JSPHPLog]: {5581315ec6f08,1,5.8,set_rows,2}
+
+[17-Jun-2015 10:48:38] [JSPHPLog]: {5581315ec6f08,2,6,set_weights,3}
+
+[17-Jun-2015 10:48:38] [JSPHPLog]: {5581315ec6f08,3,6.4,set_build_variant,5}
+
+[17-Jun-2015 10:48:42] [JSPHPLog]: {558134160bb51,4,81.1,set grasp,5}
+
+[17-Jun-2015 10:48:42] [JSPHPLog]: {558131505d4cc,0,18.8,start new,1}
+
+[17-Jun-2015 10:48:47] [JSPHPLog]: {5581315f04258,4,778.4,set grasp,1}
+
+[17-Jun-2015 10:48:50] [JSPHPLog]: {558134160bb51,5,89.4,set material,5}
+
+[17-Jun-2015 10:48:56] [JSPHPLog]: {558131505d4cc,1,32.9,set_rows,2}
+
+[17-Jun-2015 10:48:59] [JSPHPLog]: {5581315f04258,5,790.7,set material,1}
+
+[17-Jun-2015 10:49:01] [JSPHPLog]: {5581315f04258,6,792.9,set material,1}
+
+[17-Jun-2015 10:49:02] [JSPHPLog]: {5581315ec6f08,4,30.5,set grasp,5}
+
+[17-Jun-2015 10:49:04] [JSPHPLog]: {5581315f04258,7,796,set grasp,1}
+
+[17-Jun-2015 10:49:08] [JSPHPLog]: {558131505d4cc,2,44.4,set_weights,3}
+
+[17-Jun-2015 10:49:09] [JSPHPLog]: {558134160bb51,6,108,delete_build_variant,3}
+
+[17-Jun-2015 10:49:09] [JSPHPLog]: {5581315f04258,8,800.9,change global door options,1}
+
+[17-Jun-2015 10:49:10] [JSPHPLog]: {558134160bb51,7,109.1,delete_weights,2}
+
+[17-Jun-2015 10:49:11] [JSPHPLog]: {558131505d4cc,3,47,set_build_variant,5}
+
+[17-Jun-2015 10:49:11] [JSPHPLog]: {5581315f04258,9,802.7,change global door options,1}
+
+[17-Jun-2015 10:49:11] [JSPHPLog]: {558134160bb51,8,110.7,delete_rows,1}
+
+[17-Jun-2015 10:49:13] [JSPHPLog]: {558131ba6c743,1,713.2,start new,1}
+
+[17-Jun-2015 10:49:13] [JSPHPLog]: {5581315ec6f08,5,41,set grasp,5}
+
+[17-Jun-2015 10:49:16] [JSPHPLog]: {5581315ec6f08,6,44.1,set grasp,5}
+
+[17-Jun-2015 10:49:17] [JSPHPLog]: {5581315f04258,10,808.8,change global door options,1}
+
+[17-Jun-2015 10:49:18] [JSPHPLog]: {5581315ec6f08,7,46.7,set grasp,5}
+
+[17-Jun-2015 10:49:18] [JSPHPLog]: {5581315f04258,11,810,change global door options,1}
+
+[17-Jun-2015 10:49:20] [JSPHPLog]: {558133e46b45a,3,171,change global door options,2}
+
+[17-Jun-2015 10:49:23] [JSPHPLog]: {5581315f04258,12,814.3,change global door options,1}
+
+[17-Jun-2015 10:49:24] [JSPHPLog]: {558131ba6c743,2,723.6,set_rows,2}
+
+[17-Jun-2015 10:49:24] [JSPHPLog]: {558131ba6c743,3,724.6,set_weights,3}
+
+[17-Jun-2015 10:49:25] [JSPHPLog]: {5581315f04258,13,816.6,change global door options,1}
+
+[17-Jun-2015 10:49:27] [JSPHPLog]: {558133e46b45a,4,177.4,create savepoint 1,2}
+
+[17-Jun-2015 10:49:27] [JSPHPLog]: {5581315f04258,14,818.6,change global door options,1}
+
+[17-Jun-2015 10:49:28] [JSPHPLog]: {558133e46b45a,5,178.9,create savepoint 2,2}
+
+[17-Jun-2015 10:49:29] [JSPHPLog]: {5581315f04258,15,820.5,change global door options,1}
+
+[17-Jun-2015 10:49:31] [JSPHPLog]: {558133e46b45a,6,181.7,change global door options,2}
+
+[17-Jun-2015 10:49:31] [JSPHPLog]: {558131ba6c743,4,731.1,set grasp,3}
+
+[17-Jun-2015 10:49:32] [JSPHPLog]: {5581315f04258,16,823.6,set grasp,1}
+
+[17-Jun-2015 10:49:35] [JSPHPLog]: {558133e46b45a,7,186.2,create savepoint 3,2}
+
+[17-Jun-2015 10:49:35] [JSPHPLog]: {558131ba6c743,5,735.1,set grasp,3}
+
+[17-Jun-2015 10:49:36] [JSPHPLog]: {558134160bb51,9,135.4,set_rows,2}
+
+[17-Jun-2015 10:49:36] [JSPHPLog]: {558134160bb51,10,135.6,set_weights,3}
+
+[17-Jun-2015 10:49:41] [JSPHPLog]: {558131ba6c743,6,740.8,set grasp,3}
+
+[17-Jun-2015 10:49:42] [JSPHPLog]: {558134160bb51,11,141.3,set_build_variant,5}
+
+[17-Jun-2015 10:49:43] [JSPHPLog]: {558133e46b45a,8,193.8,set material,2}
+
+[17-Jun-2015 10:49:43] [JSPHPLog]: {5581315f04258,17,834.7,set material,1}
+
+[17-Jun-2015 10:49:46] [JSPHPLog]: {558131ba6c743,7,745.5,set grasp,3}
+
+[17-Jun-2015 10:49:47] [JSPHPLog]: {558133e46b45a,9,197.4,set grasp,2}
+
+[17-Jun-2015 10:49:50] [JSPHPLog]: {558131ba6c743,8,750.5,set grasp,3}
+
+[17-Jun-2015 10:49:55] [JSPHPLog]: {558131ba6c743,9,754.2,set grasp,3}
+
+[17-Jun-2015 10:49:58] [JSPHPLog]: {558131ba6c743,10,757.9,set grasp,3}
+
+[17-Jun-2015 10:50:00] [JSPHPLog]: {5581315ec6f08,8,88.3,create savepoint 1,5}
+
+[17-Jun-2015 10:50:03] [JSPHPLog]: {558131ba6c743,11,762.5,set grasp,3}
+
+[17-Jun-2015 10:50:05] [JSPHPLog]: {5581315ec6f08,9,93.3,change global door options,5}
+
+[17-Jun-2015 10:50:06] [JSPHPLog]: {5581315ec6f08,10,94.7,change global door options,5}
+
+[17-Jun-2015 10:50:07] [JSPHPLog]: {5581315f04258,18,858.6,set material,1}
+
+[17-Jun-2015 10:50:07] [JSPHPLog]: {558131ba6c743,12,767.2,set grasp,3}
+
+[17-Jun-2015 10:50:07] [JSPHPLog]: {5581315ec6f08,11,95.9,change global door options,5}
+
+[17-Jun-2015 10:50:08] [JSPHPLog]: {558133e46b45a,10,218.9,delete_rows,1}
+
+[17-Jun-2015 10:50:12] [JSPHPLog]: {558133e46b45a,11,223.2,set_rows,2}
+
+[17-Jun-2015 10:50:13] [JSPHPLog]: {558133e46b45a,12,223.7,set_weights,3}
+
+[17-Jun-2015 10:50:13] [JSPHPLog]: {5581314c61851,24,887.9,change global door options,5}
+
+[17-Jun-2015 10:50:14] [JSPHPLog]: {558131ba6c743,13,774.3,set material,3}
+
+[17-Jun-2015 10:50:15] [JSPHPLog]: {558134160bb51,12,173.6,set material,5}
+
+[17-Jun-2015 10:50:15] [JSPHPLog]: {5581314c61851,25,889.3,change global door options,5}
+
+[17-Jun-2015 10:50:17] [JSPHPLog]: {5581314c61851,26,891.3,change global door options,5}
+
+[17-Jun-2015 10:50:19] [JSPHPLog]: {558133e46b45a,13,230.3,delete_weights,2}
+
+[17-Jun-2015 10:50:20] [JSPHPLog]: {5581314c61851,27,894.3,change global door options,5}
+
+[17-Jun-2015 10:50:21] [JSPHPLog]: {558131ba6c743,14,780.4,set material,3}
+
+[17-Jun-2015 10:50:21] [JSPHPLog]: {5581314c61851,28,895.8,change global door options,5}
+
+[17-Jun-2015 10:50:21] [JSPHPLog]: {5581315ec6f08,12,109.8,change global door options,5}
+
+[17-Jun-2015 10:50:21] [JSPHPLog]: {558134160bb51,13,180.5,set material,5}
+
+[17-Jun-2015 10:50:23] [JSPHPLog]: {558133e46b45a,14,233.4,set_weights,3}
+
+[17-Jun-2015 10:50:23] [JSPHPLog]: {5581314c61851,29,897.3,change global door options,5}
+
+[17-Jun-2015 10:50:23] [JSPHPLog]: {5581315ec6f08,13,111.3,change global door options,5}
+
+[17-Jun-2015 10:50:23] [JSPHPLog]: {558133e46b45a,15,233.8,set_build_variant,5}
+
+[17-Jun-2015 10:50:24] [JSPHPLog]: {5581315ec6f08,14,112.7,change global door options,5}
+
+[17-Jun-2015 10:50:25] [JSPHPLog]: {558131ba6c743,15,785,set material,3}
+
+[17-Jun-2015 10:50:25] [JSPHPLog]: {5581315ec6f08,15,113.6,change global door options,5}
+
+[17-Jun-2015 10:50:25] [JSPHPLog]: {5581314c61851,30,899.8,change global door options,5}
+
+[17-Jun-2015 10:50:27] [JSPHPLog]: {5581314c61851,31,901.3,change global door options,5}
+
+[17-Jun-2015 10:50:28] [JSPHPLog]: {5581315ec6f08,16,116.4,change global door options,5}
+
+[17-Jun-2015 10:50:28] [JSPHPLog]: {558133e46b45a,16,239.1,delete_weights,2}
+
+[17-Jun-2015 10:50:29] [JSPHPLog]: {558133e46b45a,17,240.2,delete_build_variant,2}
+
+[17-Jun-2015 10:50:30] [JSPHPLog]: {5581315ec6f08,17,118.2,change global door options,5}
+
+[17-Jun-2015 10:50:31] [JSPHPLog]: {5581315ec6f08,18,119.8,change global door options,5}
+
+[17-Jun-2015 10:50:32] [JSPHPLog]: {558133e46b45a,18,242.8,delete_rows,1}
+
+[17-Jun-2015 10:50:32] [JSPHPLog]: {558134160bb51,14,191.1,change global door options,5}
+
+[17-Jun-2015 10:50:32] [JSPHPLog]: {5581315ec6f08,19,120.8,change global door options,5}
+
+[17-Jun-2015 10:50:33] [JSPHPLog]: {5581315ec6f08,20,121.7,change global door options,5}
+
+[17-Jun-2015 10:50:37] [JSPHPLog]: {558131ba6c743,16,797.7,change global door options,3}
+
+[17-Jun-2015 10:50:38] [JSPHPLog]: {5581314c61851,32,912.4,set grasp,5}
+
+[17-Jun-2015 10:50:38] [JSPHPLog]: {558131ba6c743,17,798.7,change global door options,3}
+
+[17-Jun-2015 10:50:39] [JSPHPLog]: {558131ba6c743,18,799.7,change global door options,3}
+
+[17-Jun-2015 10:50:42] [JSPHPLog]: {558133e46b45a,19,252.8,start new,1}
+
+[17-Jun-2015 10:50:45] [JSPHPLog]: {558131ba6c743,19,805.9,change global door options,3}
+
+[17-Jun-2015 10:50:46] [JSPHPLog]: {558133e46b45a,20,256.7,set_rows,2}
+
+[17-Jun-2015 10:50:47] [JSPHPLog]: {558133e46b45a,21,257.4,set_weights,3}
+
+[17-Jun-2015 10:50:47] [JSPHPLog]: {558131ba6c743,20,807.7,change global door options,3}
+
+[17-Jun-2015 10:50:50] [JSPHPLog]: {558133e46b45a,22,260.6,set_build_variant,5}
+
+[17-Jun-2015 10:50:55] [JSPHPLog]: {558134160bb51,15,213.9,create savepoint 1,5}
+
+[17-Jun-2015 10:50:57] [JSPHPLog]: {5581315ec6f08,21,145.2,start new,1}
+
+[17-Jun-2015 10:51:00] [JSPHPLog]: {5581315ec6f08,22,148,set_rows,2}
+
+[17-Jun-2015 10:51:00] [JSPHPLog]: {5581315ec6f08,24,148.7,set_build_variant,5}
+
+[17-Jun-2015 10:51:00] [JSPHPLog]: {5581315ec6f08,23,148.5,set_weights,3}
+
+[17-Jun-2015 10:51:00] [JSPHPLog]: {558131505d4cc,4,156.9,delete_build_variant,3}
+
+[17-Jun-2015 10:51:06] [JSPHPLog]: {558131505d4cc,5,162.1,set_build_variant,5}
+
+[17-Jun-2015 10:51:13] [JSPHPLog]: {558131ba6c743,21,834.1,change global door options,3}
+
+[17-Jun-2015 10:51:14] [JSPHPLog]: {558133e46b45a,23,284.6,delete_build_variant,3}
+
+[17-Jun-2015 10:51:15] [JSPHPLog]: {558131505d4cc,6,171,set material,5}
+
+[17-Jun-2015 10:51:16] [JSPHPLog]: {558131ba6c743,22,836.8,change global door options,3}
+
+[17-Jun-2015 10:51:16] [JSPHPLog]: {558133e46b45a,24,287.3,delete_weights,2}
+
+[17-Jun-2015 10:51:23] [JSPHPLog]: {558133e46b45a,25,293.9,set_weights,3}
+
+[17-Jun-2015 10:51:24] [JSPHPLog]: {558133e46b45a,26,294.9,set_build_variant,5}
+
+[17-Jun-2015 10:51:26] [JSPHPLog]: {558131505d4cc,7,182.9,set grasp,5}
+
+[17-Jun-2015 10:51:31] [JSPHPLog]: {558131505d4cc,8,187.1,set grasp,5}
+
+[17-Jun-2015 10:51:40] [JSPHPLog]: {5581314c61851,33,974.6,create savepoint 1,5}
+
+[17-Jun-2015 10:51:43] [JSPHPLog]: {5581315ec6f08,25,191.2,load savepoint 01,5}
+
+[17-Jun-2015 10:51:44] [JSPHPLog]: {558131505d4cc,9,200.5,set material,5}
+
+[17-Jun-2015 10:51:44] [JSPHPLog]: {558133e46b45a,27,315.1,set grasp,5}
+
+[17-Jun-2015 10:51:47] [JSPHPLog]: {5581314c61851,34,981.3,set grasp,5}
+
+[17-Jun-2015 10:51:59] [JSPHPLog]: {5581314c61851,35,992.9,set grasp,5}
+
+[17-Jun-2015 10:52:01] [JSPHPLog]: {5581314c61851,36,995.8,set grasp,5}
+
+[17-Jun-2015 10:52:03] [JSPHPLog]: {558133e46b45a,28,333.7,delete_build_variant,3}
+
+[17-Jun-2015 10:52:04] [JSPHPLog]: {5581314c61851,37,998.6,set grasp,5}
+
+[17-Jun-2015 10:52:05] [JSPHPLog]: {558133e46b45a,29,335.3,delete_weights,2}
+
+[17-Jun-2015 10:52:07] [JSPHPLog]: {558133e46b45a,30,338.1,delete_rows,1}
+
+[17-Jun-2015 10:52:11] [JSPHPLog]: {5581314c61851,38,1005.2,delete_build_variant,3}
+
+[17-Jun-2015 10:52:13] [JSPHPLog]: {5581314c61851,39,1007,delete_weights,2}
+
+[17-Jun-2015 10:52:13] [JSPHPLog]: {5581314c61851,40,1007.5,delete_rows,1}
+
+[17-Jun-2015 10:52:13] [JSPHPLog]: {558133e46b45a,31,344.3,set_rows,2}
+
+[17-Jun-2015 10:52:15] [JSPHPLog]: {558133e46b45a,32,346,set_weights,3}
+
+[17-Jun-2015 10:52:16] [JSPHPLog]: {5581314c61851,41,1010,set_rows,2}
+
+[17-Jun-2015 10:52:18] [JSPHPLog]: {5581314c61851,42,1012.3,set_weights,3}
+
+[17-Jun-2015 10:52:19] [JSPHPLog]: {5581314c61851,43,1013.6,set_build_variant,5}
+
+[17-Jun-2015 10:52:25] [JSPHPLog]: {558133e46b45a,33,356.1,start new,1}
+
+[17-Jun-2015 10:52:27] [JSPHPLog]: {558133e46b45a,34,358,set_rows,2}
+
+[17-Jun-2015 10:52:31] [JSPHPLog]: {558133e46b45a,35,362.1,set_weights,3}
+
+[17-Jun-2015 10:52:41] [JSPHPLog]: {5581314c61851,44,1034.9,set material,5}
+
+[17-Jun-2015 10:52:43] [JSPHPLog]: {5581314c61851,45,1037.5,set material,5}
+
+[17-Jun-2015 10:52:52] [JSPHPLog]: log message
+
+[17-Jun-2015 10:52:52] [JSPHPLog]: {558133e46b45a,36,383.1,set_build_variant,5}
+
+[17-Jun-2015 10:53:00] [JSPHPLog]: {5581314c61851,46,1054.4,create savepoint 2,5}
+
+[17-Jun-2015 11:00:02] [JSPHPLog]: {5581315ec6f08,0,429.6,start new,1}
+
+[17-Jun-2015 11:00:15] [JSPHPLog]: {5581315ec6f08,1,442.2,start new,1}
+
+[17-Jun-2015 11:01:29] [JSPHPLog]: {5581315ec6f08,2,517.4,set_rows,2}
+
+[17-Jun-2015 11:01:30] [JSPHPLog]: {5581315ec6f08,3,518,set_weights,3}
+
+[17-Jun-2015 11:01:32] [JSPHPLog]: {5581315ec6f08,4,520.3,set_build_variant,5}
+
+[17-Jun-2015 11:02:44] [JSPHPLog]: {5581315ec6f08,5,592,set material,5}
+
+[27-Jun-2015 22:21:22] [JSPHPLog]: log message
+
+[27-Jun-2015 22:21:28] [JSPHPLog]: {558f05bf57629,0,5.5,start new,1}
+
+[27-Jun-2015 22:21:32] [JSPHPLog]: {558f05bf57629,1,9.4,set_rows,2}
+
+[28-Jun-2015 12:49:07] [JSPHPLog]: log message
+
+[28-Jun-2015 12:50:20] [JSPHPLog]: {558fd12043453,0,73.3,start new,1}
+
+[28-Jun-2015 12:53:26] [JSPHPLog]: {558fd12043453,1,258.5,set_rows,2}
+
+[28-Jun-2015 12:53:42] [JSPHPLog]: {558fd12043453,2,274.7,set_weights,3}
+
+[28-Jun-2015 12:53:43] [JSPHPLog]: {558fd12043453,3,275.8,set_build_variant,5}
+
+[01-Jul-2015 18:23:48] [JSPHPLog]: log message
+
+[01-Jul-2015 23:48:12] [JSPHPLog]: log message
+
+[01-Jul-2015 23:48:22] [JSPHPLog]: {5594601abc80a,0,9.8,start new,1}
+
+[01-Jul-2015 23:48:41] [JSPHPLog]: {5594601abc80a,1,29.2,start new,1}
+
+[01-Jul-2015 23:49:08] [JSPHPLog]: {5594601abc80a,2,55.8,set_rows,2}
+
+[01-Jul-2015 23:49:11] [JSPHPLog]: {5594601abc80a,3,58.7,create savepoint 1,2}
+
+[06-Jul-2015 10:23:39] [JSPHPLog]: log message
+
+[06-Jul-2015 10:23:50] [JSPHPLog]: {559a3b08928f4,0,10.8,start new,1}
+
+[06-Jul-2015 10:23:52] [JSPHPLog]: {559a3b08928f4,1,13.3,set_rows,2}
+
+[06-Jul-2015 11:09:19] [JSPHPLog]: {559a3b08928f4,2,2739.7,create savepoint 1,2}
+
+[06-Jul-2015 11:09:20] [JSPHPLog]: {559a3b08928f4,3,2741.5,create savepoint 2,2}
+
+[06-Jul-2015 11:09:22] [JSPHPLog]: {559a3b08928f4,4,2742.6,create savepoint 3,2}
+
+[06-Jul-2015 11:09:55] [JSPHPLog]: {559a3b08928f4,5,2775.9,set_weights,3}
+
+[06-Jul-2015 11:09:55] [JSPHPLog]: {559a3b08928f4,6,2775.9,load savepoint 01,3}
+
+[06-Jul-2015 11:12:43] [JSPHPLog]: {559a3b08928f4,7,2943.9,change global door options,3}
+
+[06-Jul-2015 11:12:44] [JSPHPLog]: {559a3b08928f4,8,2945.6,change global door options,3}
+
+[06-Jul-2015 11:12:46] [JSPHPLog]: {559a3b08928f4,9,2947.3,change global door options,3}
+
+[06-Jul-2015 11:12:48] [JSPHPLog]: {559a3b08928f4,10,2949.1,change global door options,3}
+
+[11-Jul-2015 14:17:05] [JSPHPLog]: log message
+
+[11-Jul-2015 14:21:16] [JSPHPLog]: {55a1093f0c830,0,250.9,start new,1}
+
+[11-Jul-2015 14:41:35] [JSPHPLog]: {55a1093f0c830,1,1469.6,set_rows,2}
+
+[11-Jul-2015 14:47:58] [JSPHPLog]: {55a1093f0c830,2,1852.9,create savepoint 1,2}
+
+[11-Jul-2015 14:51:17] [JSPHPLog]: {55a1093f0c830,3,2051.7,start new,1}
+
+[11-Jul-2015 14:52:17] [JSPHPLog]: log message
+
+[11-Jul-2015 14:52:25] [JSPHPLog]: {55a1117ff0637,0,8.4,start new,1}
+
+[11-Jul-2015 14:52:31] [JSPHPLog]: {55a1117ff0637,1,13.5,set_rows,2}
+
+[11-Jul-2015 14:53:47] [JSPHPLog]: {55a1117ff0637,2,90.3,set_weights,3}
+
+[11-Jul-2015 14:54:00] [JSPHPLog]: {55a1117ff0637,3,102.5,set_build_variant,5}
+
+[11-Jul-2015 14:56:10] [JSPHPLog]: {55a1117ff0637,4,233,create savepoint 1,5}
+
+[11-Jul-2015 14:57:10] [JSPHPLog]: {55a1117ff0637,5,292.3,create savepoint 2,5}
+
+[11-Jul-2015 14:57:11] [JSPHPLog]: {55a1117ff0637,6,293.6,create savepoint 3,5}
+
+[11-Jul-2015 14:57:12] [JSPHPLog]: {55a1117ff0637,7,294.6,create savepoint 4,5}
+
+[11-Jul-2015 14:57:14] [JSPHPLog]: {55a1117ff0637,8,295.8,create savepoint 5,5}
+
+[14-Jul-2015 18:02:50] [JSPHPLog]: log message
+
+[18-Jul-2015 14:14:27] [JSPHPLog]: log message
+
+[18-Jul-2015 14:14:35] [JSPHPLog]: {55aa431e3e4a1,0,8.7,start new,1}
+
+[18-Jul-2015 14:14:50] [JSPHPLog]: {55aa431e3e4a1,1,23.4,start new,1}
+
+[18-Jul-2015 14:15:00] [JSPHPLog]: {55aa431e3e4a1,2,33.5,set_rows,2}
+
+[18-Jul-2015 14:15:17] [JSPHPLog]: {55aa431e3e4a1,3,49.4,set_weights,3}
+
+[23-Jul-2015 11:51:01] [JSPHPLog]: log message
+
+[23-Jul-2015 11:51:09] [JSPHPLog]: log message
+
+[23-Jul-2015 11:51:17] [JSPHPLog]: {55b0b90d3fa2d,0,7.6,start new,1}
+
+[23-Jul-2015 11:51:23] [JSPHPLog]: {55b0b90d3fa2d,1,14.1,set grasp,1}
+
+[23-Jul-2015 11:51:24] [JSPHPLog]: {55b0b90d3fa2d,2,15.4,set material,1}
+
+[23-Jul-2015 11:51:45] [JSPHPLog]: log message
+
+[23-Jul-2015 11:51:57] [JSPHPLog]: {55b0b90d3fa2d,0,12,start new,1}
+
+[23-Jul-2015 11:52:04] [JSPHPLog]: {55b0b90d3fa2d,1,18.8,set grasp,1}
+
+[23-Jul-2015 11:52:06] [JSPHPLog]: {55b0b90d3fa2d,2,20.9,set material,1}
+
+[23-Jul-2015 11:52:45] [JSPHPLog]: log message
+
+[23-Jul-2015 11:52:51] [JSPHPLog]: {55b0b96bbe387,0,5.8,start new,1}
+
+[23-Jul-2015 11:53:07] [JSPHPLog]: {55b0b96bbe387,1,22.6,start new,1}
+
+[23-Jul-2015 11:53:10] [JSPHPLog]: {55b0b96bbe387,2,25.5,set material,1}
+
+[23-Jul-2015 11:53:12] [JSPHPLog]: {55b0b96bbe387,3,27.6,set grasp,1}
+
+[28-Jul-2015 17:37:15] [JSPHPLog]: log message
+
+[28-Jul-2015 17:37:26] [JSPHPLog]: {55b7a1aa255eb,0,11,start new,1}
+
+[28-Jul-2015 17:37:34] [JSPHPLog]: {55b7a1aa255eb,1,18.7,set material,1}
+
+[28-Jul-2015 17:38:07] [JSPHPLog]: {55b7a1aa255eb,2,52.1,start new,1}
+
+[28-Jul-2015 17:38:14] [JSPHPLog]: {55b7a1aa255eb,3,58.5,start new,1}
+
+[28-Jul-2015 17:38:18] [JSPHPLog]: {55b7a1aa255eb,4,62.5,start new,1}
+
+[28-Jul-2015 17:38:22] [JSPHPLog]: {55b7a1aa255eb,5,66.4,set_rows,2}
+
+[28-Jul-2015 17:38:41] [JSPHPLog]: {55b7a1aa255eb,6,85.9,create savepoint 1,2}
+
+[28-Jul-2015 17:38:47] [JSPHPLog]: {55b7a1aa255eb,7,92.1,set_weights,3}
+
+[28-Jul-2015 17:40:46] [JSPHPLog]: {55b7a1aa255eb,8,210.7,delete_rows,1}
+
+[28-Jul-2015 17:41:11] [JSPHPLog]: {55b7a1aa255eb,9,236.2,set material,1}
+
+[28-Jul-2015 17:41:14] [JSPHPLog]: {55b7a1aa255eb,10,238.4,set material,1}
+
+[28-Jul-2015 17:41:16] [JSPHPLog]: {55b7a1aa255eb,11,241.3,set material,1}
+
+[31-Aug-2015 13:45:41] [JSPHPLog]: log message
+
+[31-Aug-2015 13:46:12] [JSPHPLog]: {55e43e637819f,0,30.2,start new,1}
+
+[31-Aug-2015 13:46:19] [JSPHPLog]: {55e43e637819f,1,38,set_rows,2}
+
+[31-Aug-2015 13:47:09] [JSPHPLog]: {55e43e637819f,2,87.9,set_weights,3}
+
+[31-Aug-2015 13:47:15] [JSPHPLog]: {55e43e637819f,3,93.4,set_build_variant,5}
+
+[31-Aug-2015 13:48:43] [JSPHPLog]: {55e43e637819f,4,182.1,delete_build_variant,3}
+
+[13-Oct-2015 11:11:11] [JSPHPLog]: log message
+
+[13-Oct-2015 11:11:40] [JSPHPLog]: {561ccaacce49b,0,29.8,start new,1}
+
+[13-Oct-2015 11:11:49] [JSPHPLog]: {561ccaacce49b,1,38.8,set_rows,2}
+
+[13-Oct-2015 11:12:02] [JSPHPLog]: {561ccaacce49b,2,51,set_weights,3}
+
+[13-Oct-2015 11:14:18] [JSPHPLog]: {561ccaacce49b,3,187.4,create savepoint 1,3}
+
+[04-Dec-2015 08:45:54] [JSPHPLog]: log message
+
+[04-Dec-2015 08:51:18] [JSPHPLog]: {566144af935dd,0,324.1,start new,1}
+
+[04-Dec-2015 08:51:30] [JSPHPLog]: {566144af935dd,1,335.9,start new,1}
+
+[04-Dec-2015 08:52:13] [JSPHPLog]: {566144af935dd,2,379.1,set_rows,2}
+
+[04-Dec-2015 09:13:23] [JSPHPLog]: {566144af935dd,3,1648.2,set_weights,3}
+
+[04-Dec-2015 09:13:27] [JSPHPLog]: {566144af935dd,4,1651.7,set_build_variant,5}
+
+[04-Dec-2015 10:39:35] [JSPHPLog]: log message
+
+[04-Dec-2015 10:39:40] [JSPHPLog]: {56615f55c6f42,0,4.2,start new,1}
+
+[04-Dec-2015 10:39:50] [JSPHPLog]: {56615f55c6f42,1,14.6,set_rows,2}
+
+[04-Dec-2015 10:39:59] [JSPHPLog]: {56615f55c6f42,2,23.5,set_weights,3}
+
+[04-Dec-2015 10:40:01] [JSPHPLog]: {56615f55c6f42,3,25.6,set_build_variant,5}
+
+[04-Dec-2015 10:40:38] [JSPHPLog]: log message
+
+[04-Dec-2015 10:40:49] [JSPHPLog]: log message
+
+[04-Dec-2015 10:40:53] [JSPHPLog]: log message
+
+[04-Dec-2015 10:40:57] [JSPHPLog]: {56615fa259970,0,2.6,start new,1}
+
+[04-Dec-2015 10:41:12] [JSPHPLog]: {56615fa259970,1,19.3,set_rows,2}
+
+[04-Dec-2015 10:41:34] [JSPHPLog]: {56615fa259970,2,40.7,start new,1}
+
+[04-Dec-2015 11:12:31] [JSPHPLog]: log message
+
+[04-Dec-2015 11:14:15] [JSPHPLog]: log message
+
+[04-Dec-2015 11:14:21] [JSPHPLog]: {5661670e4e182,0,6.1,start new,1}
+
+[04-Dec-2015 11:14:24] [JSPHPLog]: {5661670e4e182,1,8.7,set_rows,2}
+
+[04-Dec-2015 11:45:57] [JSPHPLog]: log message
+
+[04-Dec-2015 11:45:58] [JSPHPLog]: log message
+
+[04-Dec-2015 11:46:09] [JSPHPLog]: log message
+
+[04-Dec-2015 11:46:10] [JSPHPLog]: log message
+
+[04-Dec-2015 11:46:10] [JSPHPLog]: log message
+
+[04-Dec-2015 11:46:38] [JSPHPLog]: log message
+
+[04-Dec-2015 11:47:09] [JSPHPLog]: {56616ee1d1ce9,0,71.3,start new,1}
+
+[04-Dec-2015 11:47:09] [JSPHPLog]: {56616ef0b5e1f,0,59.6,start new,1}
+
+[04-Dec-2015 11:47:18] [JSPHPLog]: {56616eef01f43,0,66.3,start new,1}
+
+[04-Dec-2015 11:47:22] [JSPHPLog]: {56616ef0b5e1f,1,72,set_rows,2}
+
+[04-Dec-2015 11:47:24] [JSPHPLog]: {56616eef471ae,0,75.1,start new,1}
+
+[04-Dec-2015 11:47:24] [JSPHPLog]: {56616ef0b5e1f,2,74.5,set_weights,3}
+
+[04-Dec-2015 11:47:24] [JSPHPLog]: {56616eef01f43,1,74,set material,1}
+
+[04-Dec-2015 11:47:26] [JSPHPLog]: log message
+
+[04-Dec-2015 11:47:31] [JSPHPLog]: {56616ef0b5e1f,3,81,set_build_variant,5}
+
+[04-Dec-2015 11:47:31] [JSPHPLog]: {56616ee52225c,0,93.2,start new,1}
+
+[04-Dec-2015 11:47:35] [JSPHPLog]: log message
+
+[04-Dec-2015 11:47:35] [JSPHPLog]: {56616eef471ae,1,86.5,start new,1}
+
+[04-Dec-2015 11:47:38] [JSPHPLog]: {56616ee1d1ce9,1,100.7,start new,1}
+
+[04-Dec-2015 11:47:39] [JSPHPLog]: {56616ee52225c,1,101.7,set material,1}
+
+[04-Dec-2015 11:47:40] [JSPHPLog]: {56616eef01f43,2,89.5,start new,1}
+
+[04-Dec-2015 11:47:43] [JSPHPLog]: {56616ee52225c,2,105,set grasp,1}
+
+[04-Dec-2015 11:47:44] [JSPHPLog]: {56616eef471ae,2,95.4,set_rows,2}
+
+[04-Dec-2015 11:47:45] [JSPHPLog]: {56616ef0b5e1f,4,94.9,start new,1}
+
+[04-Dec-2015 11:47:45] [JSPHPLog]: {56616ee52225c,3,106.9,set grasp,1}
+
+[04-Dec-2015 11:47:46] [JSPHPLog]: {56616eef471ae,3,96.9,set_weights,3}
+
+[04-Dec-2015 11:47:48] [JSPHPLog]: {56616eef471ae,4,99.6,delete_weights,2}
+
+[04-Dec-2015 11:47:49] [JSPHPLog]: {56616eef471ae,5,100.4,delete_rows,1}
+
+[04-Dec-2015 11:47:49] [JSPHPLog]: {56616ef0b5e1f,5,99.6,set_rows,2}
+
+[04-Dec-2015 11:47:50] [JSPHPLog]: log message
+
+[04-Dec-2015 11:47:50] [JSPHPLog]: {56616eef471ae,6,101.3,set_rows,2}
+
+[04-Dec-2015 11:47:51] [JSPHPLog]: {56616eef471ae,7,102.5,set_weights,3}
+
+[04-Dec-2015 11:47:53] [JSPHPLog]: {56616eef01f43,3,102.2,start new,1}
+
+[04-Dec-2015 11:47:53] [JSPHPLog]: {56616f2de7283,0,27.3,start new,1}
+
+[04-Dec-2015 11:47:56] [JSPHPLog]: {56616f53d2f34,0,6,start new,1}
+
+[04-Dec-2015 11:48:01] [JSPHPLog]: {56616eef01f43,4,111,set grasp,1}
+
+[04-Dec-2015 11:48:05] [JSPHPLog]: {56616eef01f43,5,114.2,change global door options,1}
+
+[04-Dec-2015 11:48:05] [JSPHPLog]: {56616ee1d1ce9,2,127.2,set material,1}
+
+[04-Dec-2015 11:48:10] [JSPHPLog]: {56616eef01f43,6,119.2,set material,1}
+
+[04-Dec-2015 11:48:11] [JSPHPLog]: {56616ee1d1ce9,3,133.6,set material,1}
+
+[04-Dec-2015 11:48:13] [JSPHPLog]: {56616f53d2f34,1,23.5,set material,1}
+
+[04-Dec-2015 11:48:14] [JSPHPLog]: {56616ee1d1ce9,4,136.6,set material,1}
+
+[04-Dec-2015 11:48:16] [JSPHPLog]: {56616f4620a18,0,41.3,start new,1}
+
+[04-Dec-2015 11:48:17] [JSPHPLog]: {56616eef471ae,8,128.4,start new,1}
+
+[04-Dec-2015 11:48:17] [JSPHPLog]: {56616ee1d1ce9,5,139.8,set material,1}
+
+[04-Dec-2015 11:48:18] [JSPHPLog]: {56616f4620a18,1,43.2,start new,1}
+
+[04-Dec-2015 11:48:19] [JSPHPLog]: {56616f2de7283,1,53.6,start new,1}
+
+[04-Dec-2015 11:48:19] [JSPHPLog]: {56616ee1d1ce9,6,142,set material,1}
+
+[04-Dec-2015 11:48:20] [JSPHPLog]: {56616f53d2f34,2,29.8,change global door options,1}
+
+[04-Dec-2015 11:48:20] [JSPHPLog]: {56616f4620a18,2,45,start new,1}
+
+[04-Dec-2015 11:48:20] [JSPHPLog]: {56616f53d2f34,3,30.6,change global door options,1}
+
+[04-Dec-2015 11:48:21] [JSPHPLog]: {56616ee52225c,4,143,start new,1}
+
+[04-Dec-2015 11:48:23] [JSPHPLog]: {56616f0ac520f,0,105.3,start new,1}
+
+[04-Dec-2015 11:48:24] [JSPHPLog]: {56616f4620a18,3,48.9,set grasp,1}
+
+[04-Dec-2015 11:48:25] [JSPHPLog]: {56616f4620a18,4,50.5,set material,1}
+
+[04-Dec-2015 11:48:28] [JSPHPLog]: {56616f53d2f34,4,38,start new,1}
+
+[04-Dec-2015 11:48:29] [JSPHPLog]: {56616ee1d1ce9,7,151.1,set material,1}
+
+[04-Dec-2015 11:48:30] [JSPHPLog]: {56616f4620a18,5,54.9,start new,1}
+
+[04-Dec-2015 11:48:30] [JSPHPLog]: {56616f0ac520f,1,112.2,start new,1}
+
+[04-Dec-2015 11:48:34] [JSPHPLog]: {56616eef471ae,9,145.6,set_rows,2}
+
+[04-Dec-2015 11:48:37] [JSPHPLog]: {56616eef471ae,10,148,set_weights,3}
+
+[04-Dec-2015 11:48:37] [JSPHPLog]: {56616f0ac520f,2,119.7,set material,1}
+
+[04-Dec-2015 11:48:38] [JSPHPLog]: {56616eef471ae,11,149.5,create savepoint 1,3}
+
+[04-Dec-2015 11:48:42] [JSPHPLog]: {56616ef0b5e1f,6,152.5,start new,1}
+
+[04-Dec-2015 11:48:42] [JSPHPLog]: {56616ee52225c,5,164.6,start new,1}
+
+[04-Dec-2015 11:48:46] [JSPHPLog]: {56616f0ac520f,3,128.4,set grasp,1}
+
+[04-Dec-2015 11:48:48] [JSPHPLog]: {56616ee52225c,6,170.7,set_rows,2}
+
+[04-Dec-2015 11:48:50] [JSPHPLog]: {56616f2de7283,2,84.6,start new,1}
+
+[04-Dec-2015 11:48:51] [JSPHPLog]: log message
+
+[04-Dec-2015 11:48:55] [JSPHPLog]: {56616f53d2f34,5,64.8,start new,1}
+
+[04-Dec-2015 11:48:56] [JSPHPLog]: {56616f4620a18,6,80.9,start new,1}
+
+[04-Dec-2015 11:49:05] [JSPHPLog]: {56616ee52225c,7,187.2,set material,2}
+
+[04-Dec-2015 11:49:07] [JSPHPLog]: {56616f53d2f34,6,77.5,start new,1}
+
+[04-Dec-2015 11:49:09] [JSPHPLog]: {56616ee52225c,8,191.4,set grasp,2}
+
+[04-Dec-2015 11:49:11] [JSPHPLog]: {56616f0ac520f,4,153.4,set material,1}
+
+[04-Dec-2015 11:49:16] [JSPHPLog]: {56616eef471ae,0,24.9,start new,1}
+
+[04-Dec-2015 11:49:16] [JSPHPLog]: {56616f2de7283,3,108.9,set material,1}
+
+[04-Dec-2015 11:49:17] [JSPHPLog]: {56616ee1d1ce9,8,199.1,start new,1}
+
+[04-Dec-2015 11:49:20] [JSPHPLog]: {56616ef0b5e1f,7,190.3,start new,1}
+
+[04-Dec-2015 11:49:22] [JSPHPLog]: {56616ef0b5e1f,8,192.6,set_rows,2}
+
+[04-Dec-2015 11:49:22] [JSPHPLog]: {56616f4620a18,7,107.5,start new,1}
+
+[04-Dec-2015 11:49:23] [JSPHPLog]: {56616ee52225c,9,205.6,change global door options,2}
+
+[04-Dec-2015 11:49:24] [JSPHPLog]: {56616ee1d1ce9,9,206.9,start new,1}
+
+[04-Dec-2015 11:49:24] [JSPHPLog]: {56616f0ac520f,5,166.7,set grasp,1}
+
+[04-Dec-2015 11:49:25] [JSPHPLog]: {56616ee52225c,10,206.9,change global door options,2}
+
+[04-Dec-2015 11:49:25] [JSPHPLog]: {56616ee52225c,11,207.6,change global door options,2}
+
+[04-Dec-2015 11:49:26] [JSPHPLog]: {56616ee52225c,12,208.5,change global door options,2}
+
+[04-Dec-2015 11:49:27] [JSPHPLog]: {56616ee52225c,13,209.2,change global door options,2}
+
+[04-Dec-2015 11:49:33] [JSPHPLog]: {56616f2de7283,4,125.9,set_rows,2}
+
+[04-Dec-2015 11:49:35] [JSPHPLog]: {56616ef0b5e1f,9,205.7,start new,1}
+
+[04-Dec-2015 11:49:35] [JSPHPLog]: {56616f0ac520f,6,177.5,set material,1}
+
+[04-Dec-2015 11:49:36] [JSPHPLog]: {56616f53d2f34,7,105.3,create savepoint 1,1}
+
+[04-Dec-2015 11:49:36] [JSPHPLog]: {56616ee52225c,14,217.9,create savepoint 1,2}
+
+[04-Dec-2015 11:49:36] [JSPHPLog]: {56616eef471ae,1,45,create savepoint 1,1}
+
+[04-Dec-2015 11:49:40] [JSPHPLog]: {56616f2de7283,5,132,set_weights,3}
+
+[04-Dec-2015 11:49:52] [JSPHPLog]: {56616f4620a18,8,136.8,set grasp,1}
+
+[04-Dec-2015 11:49:52] [JSPHPLog]: {56616ef0b5e1f,10,222.2,start new,1}
+
+[04-Dec-2015 11:49:52] [JSPHPLog]: {56616f0ac520f,7,194.4,change global door options,1}
+
+[04-Dec-2015 11:49:54] [JSPHPLog]: {56616f4620a18,9,138.9,set grasp,1}
+
+[04-Dec-2015 11:49:54] [JSPHPLog]: {56616f0ac520f,8,196,change global door options,1}
+
+[04-Dec-2015 11:49:54] [JSPHPLog]: {56616ef0b5e1f,11,224.4,set_rows,2}
+
+[04-Dec-2015 11:49:55] [JSPHPLog]: {56616f0ac520f,9,197.1,change global door options,1}
+
+[04-Dec-2015 11:49:55] [JSPHPLog]: {56616ee1d1ce9,10,237.9,set material,1}
+
+[04-Dec-2015 11:49:56] [JSPHPLog]: {56616f4620a18,10,141.5,set grasp,1}
+
+[04-Dec-2015 11:49:57] [JSPHPLog]: {56616f0ac520f,10,199.1,change global door options,1}
+
+[04-Dec-2015 11:49:58] [JSPHPLog]: {56616eef471ae,2,66.5,set material,1}
+
+[04-Dec-2015 11:49:59] [JSPHPLog]: {56616f4620a18,11,143.5,set material,1}
+
+[04-Dec-2015 11:50:00] [JSPHPLog]: {56616eef471ae,3,69,set material,1}
+
+[04-Dec-2015 11:50:01] [JSPHPLog]: {56616f0ac520f,11,202.8,change global door options,1}
+
+[04-Dec-2015 11:50:01] [JSPHPLog]: {56616f4620a18,12,145.8,set material,1}
+
+[04-Dec-2015 11:50:01] [JSPHPLog]: {56616f0ac520f,12,203.3,change global door options,1}
+
+[04-Dec-2015 11:50:02] [JSPHPLog]: {56616f0ac520f,13,204.3,change global door options,1}
+
+[04-Dec-2015 11:50:02] [JSPHPLog]: {56616eef471ae,4,71.1,set grasp,1}
+
+[04-Dec-2015 11:50:02] [JSPHPLog]: {56616f4620a18,13,147.5,set material,1}
+
+[04-Dec-2015 11:50:03] [JSPHPLog]: {56616f0ac520f,14,205.6,change global door options,1}
+
+[04-Dec-2015 11:50:04] [JSPHPLog]: {56616eef471ae,5,73.2,set grasp,1}
+
+[04-Dec-2015 11:50:06] [JSPHPLog]: log message
+
+[04-Dec-2015 11:50:11] [JSPHPLog]: {56616ef0b5e1f,12,241.6,create savepoint 1,2}
+
+[04-Dec-2015 11:50:17] [JSPHPLog]: {56616f0ac520f,15,219,set material,1}
+
+[04-Dec-2015 11:50:17] [JSPHPLog]: {56616ee52225c,15,259.6,start new,1}
+
+[04-Dec-2015 11:50:19] [JSPHPLog]: {56616f2de7283,6,172.3,start new,1}
+
+[04-Dec-2015 11:50:19] [JSPHPLog]: {56616f4620a18,14,163.9,start new,1}
+
+[04-Dec-2015 11:50:21] [JSPHPLog]: {56616f53d2f34,0,14,start new,1}
+
+[04-Dec-2015 11:50:24] [JSPHPLog]: {56616f2de7283,7,176.9,set_rows,2}
+
+[04-Dec-2015 11:50:26] [JSPHPLog]: {56616f0ac520f,16,228.4,set material,1}
+
+[04-Dec-2015 11:50:32] [JSPHPLog]: {56616f0ac520f,17,233.9,set material,1}
+
+[04-Dec-2015 11:50:35] [JSPHPLog]: {56616f0ac520f,18,236.8,set material,1}
+
+[04-Dec-2015 11:50:36] [JSPHPLog]: {56616ee52225c,16,278.4,set material,1}
+
+[04-Dec-2015 11:50:38] [JSPHPLog]: {56616ee52225c,17,280.2,set material,1}
+
+[04-Dec-2015 11:50:41] [JSPHPLog]: {56616f0ac520f,19,242.9,set material,1}
+
+[04-Dec-2015 11:50:41] [JSPHPLog]: {56616f53d2f34,1,35.1,start new,1}
+
+[04-Dec-2015 11:50:43] [JSPHPLog]: {56616ee52225c,18,285.2,set material,1}
+
+[04-Dec-2015 11:50:47] [JSPHPLog]: {56616ee52225c,19,288.9,set material,1}
+
+[04-Dec-2015 11:50:49] [JSPHPLog]: {56616f0ac520f,20,251.1,set grasp,1}
+
+[04-Dec-2015 11:50:50] [JSPHPLog]: {56616ee52225c,20,291.7,set material,1}
+
+[04-Dec-2015 11:50:52] [JSPHPLog]: {56616ee52225c,21,294.3,set material,1}
+
+[04-Dec-2015 11:50:53] [JSPHPLog]: {56616ef0b5e1f,13,283.9,set material,2}
+
+[04-Dec-2015 11:50:55] [JSPHPLog]: {56616f2de7283,8,208,set material,2}
+
+[04-Dec-2015 11:50:56] [JSPHPLog]: {56616ee52225c,22,298,set material,1}
+
+[04-Dec-2015 11:50:56] [JSPHPLog]: {56616ef0b5e1f,14,286.6,set material,2}
+
+[04-Dec-2015 11:50:59] [JSPHPLog]: {56616ef0b5e1f,15,289,set material,2}
+
+[04-Dec-2015 11:51:00] [JSPHPLog]: {56616ee1d1ce9,11,302.3,create savepoint 1,1}
+
+[04-Dec-2015 11:51:00] [JSPHPLog]: {56616ee52225c,23,302,set material,1}
+
+[04-Dec-2015 11:51:01] [JSPHPLog]: {56616ef0b5e1f,16,291.3,set material,2}
+
+[04-Dec-2015 11:51:02] [JSPHPLog]: {56616ee1d1ce9,12,304,create savepoint 2,1}
+
+[04-Dec-2015 11:51:02] [JSPHPLog]: {56616f0ac520f,21,264,set_rows,2}
+
+[04-Dec-2015 11:51:03] [JSPHPLog]: {56616ef0b5e1f,17,293.9,set material,2}
+
+[04-Dec-2015 11:51:06] [JSPHPLog]: {56616f0ac520f,22,268.6,create savepoint 1,2}
+
+[04-Dec-2015 11:51:07] [JSPHPLog]: {56616ef0b5e1f,18,296.9,load savepoint 01,2}
+
+[04-Dec-2015 11:51:12] [JSPHPLog]: {56616f2de7283,9,223.3,set material,2}
+
+[04-Dec-2015 11:51:13] [JSPHPLog]: {56616f53d2f34,2,67.2,create savepoint 1,1}
+
+[04-Dec-2015 11:51:20] [JSPHPLog]: {56616ee52225c,24,322.5,change global door options,1}
+
+[04-Dec-2015 11:51:21] [JSPHPLog]: {56616ee52225c,25,323.3,change global door options,1}
+
+[04-Dec-2015 11:51:21] [JSPHPLog]: {56616f2de7283,10,232.7,set material,2}
+
+[04-Dec-2015 11:51:22] [JSPHPLog]: {56616ee52225c,26,323.9,change global door options,1}
+
+[04-Dec-2015 11:51:23] [JSPHPLog]: {56616ee52225c,27,325.1,change global door options,1}
+
+[04-Dec-2015 11:51:24] [JSPHPLog]: {56616ee52225c,28,325.8,change global door options,1}
+
+[04-Dec-2015 11:51:30] [JSPHPLog]: {56616f2de7283,11,242,create savepoint 1,2}
+
+[04-Dec-2015 11:51:34] [JSPHPLog]: {56616f4620a18,15,239.2,set material,1}
+
+[04-Dec-2015 11:51:37] [JSPHPLog]: {56616f4620a18,16,241.8,set material,1}
+
+[04-Dec-2015 11:52:29] [JSPHPLog]: {56616f4620a18,17,294,create savepoint 1,1}
+
+[04-Dec-2015 12:14:45] [JSPHPLog]: log message
+
+[04-Dec-2015 12:14:50] [JSPHPLog]: {566175a521c82,0,4.3,start new,1}
+
+[04-Dec-2015 12:15:24] [JSPHPLog]: {566175a521c82,1,38.8,set_rows,2}
+
+[04-Dec-2015 12:15:25] [JSPHPLog]: {566175a521c82,2,40.1,set_weights,3}
+
+[04-Dec-2015 12:15:27] [JSPHPLog]: {566175a521c82,3,41.5,set_build_variant,5}
+
+[04-Dec-2015 12:18:16] [JSPHPLog]: {566175a521c82,4,211,start new,1}
+
+[04-Dec-2015 12:18:47] [JSPHPLog]: {566175a521c82,5,241.8,start new,1}
+
+[04-Dec-2015 12:18:52] [JSPHPLog]: {566175a521c82,6,246.5,start new,1}
+
+[04-Dec-2015 12:18:58] [JSPHPLog]: {566175a521c82,7,252.9,start new,1}
+
+[04-Dec-2015 12:18:59] [JSPHPLog]: {566175a521c82,8,254.1,set_rows,2}
+
+[04-Dec-2015 12:19:04] [JSPHPLog]: {566175a521c82,9,259,set_weights,3}
+
+[04-Dec-2015 12:19:08] [JSPHPLog]: {566175a521c82,10,263,set_build_variant,5}
+
+[04-Dec-2015 12:19:40] [JSPHPLog]: {566175a521c82,11,294.7,start new,1}
+
+[04-Dec-2015 12:20:29] [JSPHPLog]: {566175a521c82,12,344.2,start new,1}
+
+[04-Dec-2015 12:20:37] [JSPHPLog]: {566175a521c82,13,351.4,start new,1}
+
+[04-Dec-2015 12:20:41] [JSPHPLog]: {566175a521c82,14,355.4,set_rows,2}
+
+[07-Dec-2015 10:53:24] [JSPHPLog]: log message
+
+[07-Dec-2015 20:47:24] [JSPHPLog]: log message
+
+[07-Dec-2015 20:47:30] [JSPHPLog]: log message
+
+[07-Dec-2015 20:47:46] [JSPHPLog]: log message
+
+[07-Dec-2015 20:47:46] [JSPHPLog]: log message
+
+[07-Dec-2015 20:48:02] [JSPHPLog]: {5665e2609c922,0,15.9,start new,1}
+
+[07-Dec-2015 20:48:04] [JSPHPLog]: {5665e2609c922,1,18.2,start new,1}
+
+[07-Dec-2015 20:48:06] [JSPHPLog]: {5665e2609c922,2,19.6,start new,1}
+
+[07-Dec-2015 20:48:07] [JSPHPLog]: {5665e2609c922,3,20.9,start new,1}
+
+[07-Dec-2015 20:48:08] [JSPHPLog]: {5665e2609c922,4,21.7,start new,1}
+
+[07-Dec-2015 20:48:14] [JSPHPLog]: log message
+
+[07-Dec-2015 20:48:15] [JSPHPLog]: {5665e27d9c16e,0,0.9,start new,1}
+
+[07-Dec-2015 20:49:08] [JSPHPLog]: log message
+
+[07-Dec-2015 20:49:19] [JSPHPLog]: {5665e2b0c455f,0,11.1,start new,1}
+
+[07-Dec-2015 20:49:36] [JSPHPLog]: log message
+
+[07-Dec-2015 20:49:41] [JSPHPLog]: {5665e2cf8c89d,0,5,start new,1}
+
+[07-Dec-2015 20:49:44] [JSPHPLog]: {5665e2cf8c89d,1,8.5,set_rows,2}
+
+[07-Dec-2015 20:49:45] [JSPHPLog]: {5665e2cf8c89d,2,9.8,set_weights,3}
+
+[07-Dec-2015 20:49:47] [JSPHPLog]: {5665e2cf8c89d,3,11.1,set_build_variant,5}
+
+[07-Dec-2015 20:50:56] [JSPHPLog]: log message
+
+[07-Dec-2015 20:55:11] [JSPHPLog]: log message
+
+[07-Dec-2015 20:55:17] [JSPHPLog]: log message
+
+[07-Dec-2015 20:55:27] [JSPHPLog]: {5665e27d9c16e,0,9.2,start new,1}
+
+[07-Dec-2015 20:55:32] [JSPHPLog]: {5665e27d9c16e,1,14.7,set_rows,2}
+
+[07-Dec-2015 20:55:35] [JSPHPLog]: {5665e27d9c16e,2,17.3,set_weights,3}
+
+[07-Dec-2015 20:55:37] [JSPHPLog]: {5665e27d9c16e,3,19.4,set_build_variant,5}
+
+[07-Dec-2015 20:55:56] [JSPHPLog]: {5665e27d9c16e,4,38.4,start new,1}
+
+[07-Dec-2015 20:55:57] [JSPHPLog]: {5665e27d9c16e,5,39.8,start new,1}
+
+[22-Dec-2015 10:40:55] [JSPHPLog]: log message
+
+[22-Dec-2015 10:41:01] [JSPHPLog]: {56791aa51a98c,0,5.9,start new,1}
+
+[22-Dec-2015 14:45:04] [JSPHPLog]: log message
+
+[22-Dec-2015 16:11:52] [JSPHPLog]: log message
+
+[16-Mar-2016 10:07:18] [JSPHPLog]: log message
+
+[16-Mar-2016 10:07:31] [JSPHPLog]: {56e92243bc753,0,12.5,start new,1}
+
+[16-Mar-2016 10:07:53] [JSPHPLog]: {56e92243bc753,1,35.1,set_rows,2}
+
+[16-Mar-2016 10:08:04] [JSPHPLog]: {56e92243bc753,2,46,set_weights,3}
+
+[16-Mar-2016 10:08:39] [JSPHPLog]: {56e92243bc753,3,80.7,set_build_variant,5}
+
+[28-Mar-2016 10:46:56] [JSPHPLog]: log message
+
+[28-Mar-2016 10:46:56] [JSPHPLog]: log message
+
+[05-Apr-2016 00:46:03] [JSPHPLog]: log message
+
+[06-Apr-2016 14:11:48] [JSPHPLog]: log message
+
+[06-Apr-2016 14:12:06] [JSPHPLog]: {5704fcf9eb468,0,18.9,start new,1}
+
+[06-Apr-2016 14:12:24] [JSPHPLog]: log message
+
+[06-Apr-2016 14:12:29] [JSPHPLog]: {5704fcf9eb468,1,41.1,set_rows,2}
+
+[06-Apr-2016 14:12:52] [JSPHPLog]: {5704fcf9eb468,2,64.6,set_weights,3}
+
+[06-Apr-2016 14:13:15] [JSPHPLog]: {5704fcf9eb468,3,87.8,set material,3}
+
+[06-Apr-2016 14:14:28] [JSPHPLog]: log message
+
+[06-Apr-2016 14:14:38] [JSPHPLog]: {5704fd9cf1781,0,10.4,start new,1}
+
+[06-Apr-2016 14:14:56] [JSPHPLog]: {5704fd9cf1781,1,28.8,set_rows,2}
+
+[06-Apr-2016 14:15:45] [JSPHPLog]: {5704fd9cf1781,2,77.8,delete_rows,1}
+
+[06-Apr-2016 14:15:58] [JSPHPLog]: {5704fd9cf1781,3,90.8,set_rows,2}
+
+[06-Apr-2016 14:16:10] [JSPHPLog]: {5704fd9cf1781,4,102,set_weights,3}
+
+[06-Apr-2016 14:16:27] [JSPHPLog]: {5704fd9cf1781,5,119.3,set grasp,3}
+
+[06-Apr-2016 14:16:43] [JSPHPLog]: {5704fd9cf1781,6,135,set_build_variant,5}
+
+[06-Apr-2016 19:02:21] [JSPHPLog]: log message
+
+[06-Apr-2016 19:02:30] [JSPHPLog]: {5705411ccf429,0,9.2,start new,1}
+
+[06-Apr-2016 19:03:06] [JSPHPLog]: {5705411ccf429,1,44.6,set_rows,2}
+
+[06-Apr-2016 19:03:17] [JSPHPLog]: {5705411ccf429,2,55.5,set_weights,3}
+
+[06-Apr-2016 19:03:43] [JSPHPLog]: {5705411ccf429,3,81.7,set_build_variant,5}
+
+[04-May-2016 10:34:18] [JSPHPLog]: log message
+
+[04-May-2016 10:34:26] [JSPHPLog]: {5729b407e30de,0,7.8,start new,1}
+
+[22-May-2016 23:29:43] [JSPHPLog]: log message
+
+[22-May-2016 23:33:05] [JSPHPLog]: log message
+
+[22-May-2016 23:36:43] [JSPHPLog]: log message
+
+[22-May-2016 23:38:46] [JSPHPLog]: {5742266626abe,0,122.3,start new,1}
+
+[22-May-2016 23:39:14] [JSPHPLog]: {574224c08d662,0,368.8,start new,1}
+
+[22-May-2016 23:39:25] [JSPHPLog]: {5742266626abe,1,161.5,set grasp,1}
+
+[22-May-2016 23:39:28] [JSPHPLog]: {5742266626abe,2,165.2,set material,1}
+
+[22-May-2016 23:39:31] [JSPHPLog]: {5742266626abe,3,167.5,set material,1}
+
+[22-May-2016 23:40:56] [JSPHPLog]: log message
+
+[22-May-2016 23:41:16] [JSPHPLog]: {574224c08d662,1,490.8,create savepoint 1,1}
+
+[22-May-2016 23:41:30] [JSPHPLog]: {5742276846a79,0,33.3,start new,1}
+
+[22-May-2016 23:41:43] [JSPHPLog]: {5742276846a79,1,47,set grasp,1}
+
+[22-May-2016 23:43:17] [JSPHPLog]: log message
+
+[22-May-2016 23:43:27] [JSPHPLog]: {5742276846a79,0,9.5,start new,1}
+
+[22-May-2016 23:43:56] [JSPHPLog]: {5742276846a79,1,38.5,set_rows,2}
+
+[22-May-2016 23:44:04] [JSPHPLog]: {5742276846a79,2,47.1,create savepoint 1,2}
+
+[22-May-2016 23:44:31] [JSPHPLog]: {574224c08d662,2,686,set_rows,2}
+
+[22-May-2016 23:44:37] [JSPHPLog]: {574224c08d662,3,691.5,set_weights,3}
+
+[22-May-2016 23:44:47] [JSPHPLog]: {5742276846a79,3,89.6,set_weights,3}
+
+[22-May-2016 23:44:49] [JSPHPLog]: {5742276846a79,4,91.9,set_build_variant,5}
+
+[22-May-2016 23:45:10] [JSPHPLog]: {5742276846a79,5,112.6,set grasp,5}
+
+[22-May-2016 23:45:33] [JSPHPLog]: {5742276846a79,6,135.7,delete_weights,2}
+
+[22-May-2016 23:45:36] [JSPHPLog]: {5742276846a79,7,138.8,delete_build_variant,2}
+
+[22-May-2016 23:45:38] [JSPHPLog]: {5742276846a79,8,140.7,delete_rows,1}
+
+[22-May-2016 23:46:14] [JSPHPLog]: {574224c08d662,4,788.2,set_build_variant,5}
+
+[22-May-2016 23:46:26] [JSPHPLog]: {574224c08d662,5,800,delete_build_variant,3}
+
+[22-May-2016 23:46:52] [JSPHPLog]: {574224c08d662,6,825.5,delete_weights,2}
+
+[22-May-2016 23:46:52] [JSPHPLog]: {574224c08d662,7,826.3,delete_rows,1}
+
+[22-May-2016 23:48:31] [JSPHPLog]: {574224c08d662,8,924.1,set_rows,2}
+
+[22-May-2016 23:48:36] [JSPHPLog]: {574224c08d662,9,929.2,set_weights,3}
+
+[22-May-2016 23:48:40] [JSPHPLog]: {574224c08d662,10,933.6,set_build_variant,5}
+
+[22-May-2016 23:48:52] [JSPHPLog]: {574224c08d662,11,945.2,delete_build_variant,3}
+
+[22-May-2016 23:49:14] [JSPHPLog]: {574224c08d662,12,967.1,delete_rows,1}
+
+[22-May-2016 23:53:47] [JSPHPLog]: {574224c08d662,13,1239.4,start new,1}
+
+[22-May-2016 23:53:56] [JSPHPLog]: log message
+
+[22-May-2016 23:54:00] [JSPHPLog]: {57422a72095fb,0,4.2,start new,1}
+
+[22-May-2016 23:54:20] [JSPHPLog]: {57422a72095fb,1,24.5,set grasp,1}
+
+[22-May-2016 23:57:25] [JSPHPLog]: {57422a72095fb,2,208.7,start new,1}
+
+[22-May-2016 23:57:31] [JSPHPLog]: {57422a72095fb,3,215.2,set_rows,2}
+
+[22-May-2016 23:57:46] [JSPHPLog]: {57422a72095fb,4,230.5,set_weights,3}
+
+[22-May-2016 23:58:02] [JSPHPLog]: {57422a72095fb,5,245.9,set_build_variant,5}
+
+[22-May-2016 23:59:17] [JSPHPLog]: {57422a72095fb,6,320.5,delete_weights,2}
+
+[22-May-2016 23:59:27] [JSPHPLog]: {57422a72095fb,7,330.8,set_weights,5}
+
+[23-May-2016 00:00:56] [JSPHPLog]: {57422a72095fb,8,419,delete_weights,2}
+
