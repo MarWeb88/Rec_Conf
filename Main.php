@@ -71,10 +71,14 @@
       </script>
     ";
 ?>
+
+<div id="main_caption" class="main_caption"> Feedback based IteRative Solutions Toolkit (FIRST) </div>
 <div id="progress_bar_frame" class="progress_bar_frame">
 <div id="progress_bar" class="progress_bar"> </div>
 </div>
+<div id="history_caption" class="history_caption">Saved Solns</div>
 <div id="history_s" class="history_s"></div>
+<div id="container_left_caption" class="container_left_caption">Selection Preview</div>
 <div id="container_left" class="container_left">
 
     <div id="container_left_in" class="container_left_in">
